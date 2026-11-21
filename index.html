@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kuvanchbek Abdirimov — Software Engineering &amp; Cyber Security</title>
-<meta name="description" content="Kuvanchbek Abdirimov — İstanbul Gelişim Üniversitesi Yazılım Mühendisliği öğrencisi. Siber güvenlik, otomasyon ve sistem geliştirme.">
+<meta name="description" content="Kuvanchbek Abdirimov — 2nd-year Software Engineering student at Istanbul Gelisim University. Focused on cyber security, automation, and systems development.">
 <meta name="theme-color" content="#080807">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -344,7 +344,7 @@
   .bar2{height:3px;background:var(--l);border-radius:3px;overflow:hidden}
   .bar2 span{display:block;height:100%;width:0;background:var(--a);border-radius:3px;transition:width 1.4s var(--ease)}
 
-  /* MUSIC (WITH REAL WEB AUDIO SYNTH) */
+  /* MUSIC */
   .player{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;padding:34px;margin-bottom:18px}
   .vinyl{
     width:150px;height:150px;border-radius:50%;position:relative;flex-shrink:0;
@@ -483,19 +483,19 @@
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="progress"><span id="progress"></span></div>
 <div class="aurora"><i></i><i></i></div>
-<div class="toast" id="toast">E-posta kopyalandı ✓</div>
+<div class="toast" id="toast">Email copied ✓</div>
 
 <!-- Project Inspection Modal -->
 <div class="modal-bg" id="projModal" role="dialog" aria-modal="true">
   <div class="modal">
-    <button class="modal-close" id="modalClose">ESC / kapat ×</button>
+    <button class="modal-close" id="modalClose">ESC / close ×</button>
     <div class="badge" id="mTag">ARCHITECTURE</div>
-    <h3 id="mTitle">Proje Başlığı</h3>
-    <p id="mDesc">Açıklama</p>
+    <h3 id="mTitle">Project Title</h3>
+    <p id="mDesc">Description</p>
     <div class="modal-specs" id="mSpecs"></div>
     <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <a id="mRepo" href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn primary"><i class="fab fa-github"></i> Kaynak Kodu İncele</a>
-      <button class="btn" id="modalClose2">Kapat</button>
+      <a id="mRepo" href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn primary"><i class="fab fa-github"></i> Inspect Source Code</a>
+      <button class="btn" id="modalClose2">Close</button>
     </div>
   </div>
 </div>
@@ -506,50 +506,50 @@
     <nav>
       <a href="#hero" class="logo">kuvanchbek<span class="dot">.</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" data-scramble>Hakkımda</a></li>
-        <li><a href="#skills" data-scramble>Yetenekler</a></li>
-        <li><a href="#roadmap" data-scramble>Gelişim</a></li>
-        <li><a href="#locations" data-scramble>Konum</a></li>
+        <li><a href="#about" data-scramble>About</a></li>
+        <li><a href="#skills" data-scramble>Skills</a></li>
+        <li><a href="#roadmap" data-scramble>Roadmap</a></li>
+        <li><a href="#locations" data-scramble>Locations</a></li>
         <li><a href="#terminal" data-scramble>Terminal</a></li>
-        <li><a href="#projects" data-scramble>Projeler</a></li>
-        <li><a href="#certs" data-scramble>Diller</a></li>
+        <li><a href="#projects" data-scramble>Projects</a></li>
+        <li><a href="#certs" data-scramble>Languages</a></li>
         <li><a href="#music" data-scramble>Vibe</a></li>
-        <li><a href="#contact" data-scramble>İletişim</a></li>
+        <li><a href="#contact" data-scramble>Contact</a></li>
       </ul>
       <div class="nav-right">
         <span class="clock" id="clock">IST --:--</span>
-        <div class="swatches" title="Tema rengi">
-          <button style="--c:#ff4d00" data-t="orange" class="on" aria-label="Turuncu"></button>
-          <button style="--c:#c9ff3f" data-t="lime" aria-label="Limon"></button>
-          <button style="--c:#22d3ee" data-t="cyan" aria-label="Camgöbeği"></button>
-          <button style="--c:#a78bfa" data-t="violet" aria-label="Mor"></button>
-          <button style="--c:#ff4d8d" data-t="pink" aria-label="Pembe"></button>
+        <div class="swatches" title="Accent theme">
+          <button style="--c:#ff4d00" data-t="orange" class="on" aria-label="Orange"></button>
+          <button style="--c:#c9ff3f" data-t="lime" aria-label="Lime"></button>
+          <button style="--c:#22d3ee" data-t="cyan" aria-label="Cyan"></button>
+          <button style="--c:#a78bfa" data-t="violet" aria-label="Violet"></button>
+          <button style="--c:#ff4d8d" data-t="pink" aria-label="Pink"></button>
         </div>
-        <button class="menu-toggle" id="menuOpen">menü</button>
+        <button class="menu-toggle" id="menuOpen">menu</button>
       </div>
     </nav>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <button class="close" id="menuClose">kapat ×</button>
+  <button class="close" id="menuClose">close ×</button>
   <ul>
-    <li><a href="#about">Hakkımda</a></li>
-    <li><a href="#skills">Yetenekler</a></li>
-    <li><a href="#roadmap">Gelişim</a></li>
-    <li><a href="#locations">Konum</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#locations">Locations</a></li>
     <li><a href="#terminal">Terminal</a></li>
-    <li><a href="#projects">Projeler</a></li>
-    <li><a href="#certs">Diller</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certs">Languages</a></li>
     <li><a href="#music">Vibe</a></li>
-    <li><a href="#contact">İletişim</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="swatches">
-    <button style="--c:#ff4d00" data-t="orange" class="on" aria-label="Turuncu"></button>
-    <button style="--c:#c9ff3f" data-t="lime" aria-label="Limon"></button>
-    <button style="--c:#22d3ee" data-t="cyan" aria-label="Camgöbeği"></button>
-    <button style="--c:#a78bfa" data-t="violet" aria-label="Mor"></button>
-    <button style="--c:#ff4d8d" data-t="pink" aria-label="Pembe"></button>
+    <button style="--c:#ff4d00" data-t="orange" class="on" aria-label="Orange"></button>
+    <button style="--c:#c9ff3f" data-t="lime" aria-label="Lime"></button>
+    <button style="--c:#22d3ee" data-t="cyan" aria-label="Cyan"></button>
+    <button style="--c:#a78bfa" data-t="violet" aria-label="Violet"></button>
+    <button style="--c:#ff4d8d" data-t="pink" aria-label="Pink"></button>
   </div>
 </div>
 
@@ -559,7 +559,7 @@
     <canvas id="net"></canvas>
     <div class="container hero-grid">
       <div>
-        <div class="status hero-fade" style="--fd:.1s"><span class="dot"></span> Başakşehir, İstanbul · İşbirliklerine açık</div>
+        <div class="status hero-fade" style="--fd:.1s"><span class="dot"></span> Başakşehir, Istanbul · Open to collaboration</div>
         <h1 class="hero-title">
           <span class="line"><span class="inner">Kuvanchbek</span></span>
           <span class="line"><span class="inner"><em>Abdirimov</em>.</span></span>
@@ -567,17 +567,17 @@
         <div class="typing hero-fade" id="typing" style="--fd:.55s"></div>
         <div class="hero-sub hero-fade" style="--fd:.65s">
           <span class="bar"></span>
-          <p><strong>İstanbul Gelişim Üniversitesi</strong> Yazılım Mühendisliği 2. sınıf öğrencisi. <strong>Türkmenistan</strong> kökenli, <strong>İstanbul Başakşehir</strong>'de yaşayan; siber güvenlik, otomasyon ve akıllı bot sistemleri geliştiren bir yazılımcı.</p>
+          <p>2nd-year Software Engineering student at <strong>Istanbul Gelisim University</strong>. Originally from <strong>Turkmenistan</strong> and based in <strong>Başakşehir, Istanbul</strong> — building cyber security tools, automation pipelines, and practical bot systems.</p>
         </div>
         <div class="hero-cta hero-fade" style="--fd:.8s">
-          <a href="#projects" class="btn primary" data-magnetic><i class="fas fa-arrow-right"></i> Projeler</a>
-          <a href="#terminal" class="btn" data-magnetic><i class="fas fa-terminal"></i> Terminali Aç</a>
-          <a href="#contact" class="btn" data-magnetic><i class="fas fa-paper-plane"></i> İletişim</a>
+          <a href="#projects" class="btn primary" data-magnetic><i class="fas fa-arrow-right"></i> Projects</a>
+          <a href="#terminal" class="btn" data-magnetic><i class="fas fa-terminal"></i> Open Terminal</a>
+          <a href="#contact" class="btn" data-magnetic><i class="fas fa-paper-plane"></i> Contact</a>
         </div>
         <div class="stats hero-fade" style="--fd:.95s">
-          <div class="stat"><b><em data-count="6">0</em></b><span>Konuşulan dil</span></div>
-          <div class="stat"><b><em data-count="4">0</em></b><span>Programlama dili</span></div>
-          <div class="stat"><b><em data-count="2">0</em></b><span>Sınıf · SWE</span></div>
+          <div class="stat"><b><em data-count="6">0</em></b><span>Spoken Languages</span></div>
+          <div class="stat"><b><em data-count="4">0</em></b><span>Programming Languages</span></div>
+          <div class="stat"><b><em data-count="2">0</em></b><span>Year · SWE</span></div>
         </div>
       </div>
 
@@ -589,7 +589,7 @@
           </div>
           <div class="tag-float a"><i class="fas fa-shield-halved"></i>cyber_security</div>
           <div class="tag-float b"><i class="fab fa-python"></i>python_automation</div>
-          <div class="caption"><strong>IST / TR</strong><span>Daşoguz → İstanbul</span></div>
+          <div class="caption"><strong>IST / TR</strong><span>Dashoguz → Istanbul</span></div>
         </div>
       </div>
     </div>
@@ -601,19 +601,19 @@
   <!-- 01 ABOUT -->
   <section class="block paper" id="about">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[01]</b> — Hakkımda</span><h2 class="sec-title">Kısaca <em>ben.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[01]</b> — About</span><h2 class="sec-title">In <em>brief.</em></h2></div>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p><strong>İstanbul Gelişim Üniversitesi Yazılım Mühendisliği</strong> 2. sınıf öğrencisiyim. Nesne yönelimli programlama (OOP), veri yapıları ve algoritma analizi gibi akademik temellerimi güçlendirirken gerçek dünya problemlerine yönelik pratik sistemler inşa ediyorum.</p>
-          <p>Siber güvenlik alanında <em>ağ ve sistem güvenliği</em>, zafiyet analizi ve savunma stratejilerine odaklanıyorum. Python, C/C++ ve Java altyapımla otomasyon araçları, web kazıma (scraping) motorları ve yapay zekâ destekli botlar geliştiriyorum. Amacım hem güvenli hem de tekrarlayan süreçleri ortadan kaldıran <strong>yüksek verimli çözümler</strong> üretmek.</p>
+          <p>I am a 2nd-year <strong>Software Engineering</strong> undergraduate at <strong>Istanbul Gelisim University</strong>. While strengthening my academic foundation in Object-Oriented Programming (OOP), data structures, and algorithm analysis, I focus on building practical systems for real-world problems.</p>
+          <p>In cyber security, I focus on <em>network and system defense</em>, vulnerability assessment, and hardening strategies. Using Python, C/C++, and Java, I develop automation scripts, web scraping engines, and AI-assisted bots aimed at creating <strong>secure, high-efficiency workflows</strong>.</p>
         </div>
         <div class="facts reveal" style="--d:.1s">
-          <div class="fact"><span>Memleket</span><b>Daşoguz, Türkmenistan 🇹🇲</b></div>
-          <div class="fact"><span>Yaşadığı yer</span><b>Başakşehir, İstanbul 🇹🇷</b></div>
-          <div class="fact"><span>Üniversite</span><b>İstanbul Gelişim Üni.</b></div>
-          <div class="fact"><span>Bölüm</span><b>Yazılım Mühendisliği</b></div>
-          <div class="fact"><span>Sınıf</span><b>2. Sınıf · Lisans</b></div>
-          <div class="fact"><span>Odak</span><b>Siber Güvenlik &amp; Otomasyon</b></div>
+          <div class="fact"><span>Hometown</span><b>Dashoguz, Turkmenistan 🇹🇲</b></div>
+          <div class="fact"><span>Based in</span><b>Başakşehir, Istanbul 🇹🇷</b></div>
+          <div class="fact"><span>University</span><b>Istanbul Gelisim University</b></div>
+          <div class="fact"><span>Major</span><b>Software Engineering</b></div>
+          <div class="fact"><span>Year</span><b>2nd Year · Undergraduate</b></div>
+          <div class="fact"><span>Focus</span><b>Cyber Security &amp; Automation</b></div>
         </div>
       </div>
     </div>
@@ -622,10 +622,10 @@
   <!-- 02 SKILLS -->
   <section class="block" id="skills">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[02]</b> — Yetenekler</span><h2 class="sec-title">Yetenekler <em>&amp; araçlar.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[02]</b> — Capabilities</span><h2 class="sec-title">Skills <em>&amp; stack.</em></h2></div>
       <div class="reveal">
         <div class="skill-row">
-          <div class="skill-cat">Programlama Dilleri</div>
+          <div class="skill-cat">Programming Languages</div>
           <div class="chips">
             <span class="chip"><i class="fas fa-terminal"></i>C / C++</span>
             <span class="chip"><i class="fab fa-java"></i>Java</span>
@@ -634,7 +634,7 @@
           </div>
         </div>
         <div class="skill-row">
-          <div class="skill-cat">Araçlar &amp; Sistemler</div>
+          <div class="skill-cat">Tools &amp; Environments</div>
           <div class="chips">
             <span class="chip"><i class="fab fa-linux"></i>Linux &amp; Bash</span>
             <span class="chip"><i class="fas fa-mobile-screen"></i>Termux</span>
@@ -643,13 +643,13 @@
           </div>
         </div>
         <div class="skill-row">
-          <div class="skill-cat">Uzmanlık Alanları</div>
+          <div class="skill-cat">Core Domains</div>
           <div class="chips">
-            <span class="chip"><i class="fas fa-shield-halved"></i>Ağ &amp; Sistem Güvenliği</span>
-            <span class="chip"><i class="fas fa-robot"></i>Bot &amp; Script Geliştirme</span>
+            <span class="chip"><i class="fas fa-shield-halved"></i>Network &amp; System Security</span>
+            <span class="chip"><i class="fas fa-robot"></i>Bot &amp; Script Engineering</span>
             <span class="chip"><i class="fas fa-spider"></i>Web Scraping</span>
-            <span class="chip"><i class="fas fa-gears"></i>Süreç Otomasyonu</span>
-            <span class="chip"><i class="fas fa-diagram-project"></i>Algoritma Analizi</span>
+            <span class="chip"><i class="fas fa-gears"></i>Workflow Automation</span>
+            <span class="chip"><i class="fas fa-diagram-project"></i>Algorithm Analysis</span>
           </div>
         </div>
       </div>
@@ -659,17 +659,17 @@
   <!-- 03 ROADMAP -->
   <section class="block paper" id="roadmap">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[03]</b> — Gelişim</span><h2 class="sec-title">Kendimi geliştirdiğim <em>alanlar.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[03]</b> — Trajectory</span><h2 class="sec-title">Areas of <em>growth.</em></h2></div>
       <div class="road-grid">
-        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-shield-halved"></i></div><span class="status-tag now">Aktif</span></div><h3>Ağ &amp; Sistem Güvenliği</h3><p>Zafiyet analizi, paket inceleme, savunma stratejileri ve güvenli sistem tasarımı.</p></div>
-        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fab fa-linux"></i></div><span class="status-tag now">Aktif</span></div><h3>Linux &amp; Terminal</h3><p>Komut satırı hakimiyeti, Termux ve shell scripting ile otomatik iş akışları.</p></div>
-        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fas fa-robot"></i></div><span class="status-tag now">Aktif</span></div><h3>Otomasyon &amp; Botlar</h3><p>Python ile veri kazıma (scraping), API otomasyonu ve akıllı Telegram/CLI botları.</p></div>
-        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-diagram-project"></i></div><span class="status-tag now">Aktif</span></div><h3>Algoritma &amp; Veri Yapıları</h3><p>C ve Java ile OOP, karmaşıklık analizi, sıralama ve matris algoritmaları.</p></div>
-        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fas fa-brain"></i></div><span class="status-tag">Sırada</span></div><h3>Yapay Zekâ API Sistemleri</h3><p>LLM ve Gemini API entegrasyonlarıyla kod üreten ve depo analiz eden mobil/web araçlar.</p></div>
-        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fas fa-code"></i></div><span class="status-tag">Sırada</span></div><h3>Modern Web &amp; Mobil</h3><p>Flutter ve modern web teknolojileriyle hızlı, güvenli ve estetik arayüzler.</p></div>
-        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-flag"></i></div><span class="status-tag">Hedef</span></div><h3>CTF &amp; Pentest Lab</h3><p>Capture The Flag yarışmaları ve sanal laboratuvarlarda saha güvenliği pratiği.</p></div>
-        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fas fa-graduation-cap"></i></div><span class="status-tag">Hedef</span></div><h3>Erasmus &amp; Yabancı Diller</h3><p>Akademik ortalama ve C1 İngilizce/Almanca hedefleriyle uluslararası değişim vizyonu.</p></div>
-        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fab fa-github"></i></div><span class="status-tag">Hedef</span></div><h3>Açık Kaynak Ekosistemi</h3><p>Geliştirilen araçları GitHub üzerinde modüler, belgelenmiş ve açık kaynak olarak büyütmek.</p></div>
+        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-shield-halved"></i></div><span class="status-tag now">Active</span></div><h3>Network &amp; System Security</h3><p>Vulnerability analysis, packet inspection, defensive architecture, and system hardening.</p></div>
+        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fab fa-linux"></i></div><span class="status-tag now">Active</span></div><h3>Linux &amp; CLI Mastery</h3><p>Command-line operations, Termux environments, and shell scripting for daily automation.</p></div>
+        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fas fa-robot"></i></div><span class="status-tag now">Active</span></div><h3>Automation &amp; Bots</h3><p>Python data scraping pipelines, API automation, and custom Telegram/CLI bots.</p></div>
+        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-diagram-project"></i></div><span class="status-tag now">Active</span></div><h3>Algorithms &amp; Data Structures</h3><p>OOP design, time/space complexity analysis, sorting, and matrix algorithms in C &amp; Java.</p></div>
+        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fas fa-brain"></i></div><span class="status-tag">Next</span></div><h3>AI API Integrations</h3><p>Connecting LLM and Gemini APIs into developer assistants, code generators, and repo analyzers.</p></div>
+        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fas fa-code"></i></div><span class="status-tag">Next</span></div><h3>Modern Web &amp; Mobile</h3><p>Building fast, responsive, and resilient interfaces with modern web tools and Flutter.</p></div>
+        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-flag"></i></div><span class="status-tag">Goal</span></div><h3>CTF &amp; Pentest Labs</h3><p>Hands-on offensive and defensive security practice through Capture The Flag labs.</p></div>
+        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fas fa-graduation-cap"></i></div><span class="status-tag">Goal</span></div><h3>Erasmus &amp; Global Languages</h3><p>Advancing academic standing alongside C1 English and German proficiency for global exchange.</p></div>
+        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fab fa-github"></i></div><span class="status-tag">Goal</span></div><h3>Open Source Ecosystem</h3><p>Publishing modular, well-documented security and automation utilities on GitHub.</p></div>
       </div>
     </div>
   </section>
@@ -677,29 +677,29 @@
   <!-- 04 LOCATIONS -->
   <section class="block" id="locations">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[04]</b> — Coğrafya</span><h2 class="sec-title">Haritada <em>ben.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[04]</b> — Geography</span><h2 class="sec-title">On the <em>map.</em></h2></div>
       <div class="geo-grid">
         <div class="reveal">
           <div class="tabs" id="tabs">
-            <button class="tab on" data-k="dasoguz">🇹🇲 Daşoguz</button>
-            <button class="tab" data-k="igu">🎓 İGÜ Kampüsü</button>
+            <button class="tab on" data-k="dasoguz">🇹🇲 Dashoguz</button>
+            <button class="tab" data-k="igu">🎓 IGU Campus</button>
             <button class="tab" data-k="basaksehir">🏠 Başakşehir</button>
           </div>
           <div class="map-box">
-            <span class="ping" id="mapPing">Daşoguz · Türkmenistan</span>
-            <iframe id="mapFrame" title="Harita" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://maps.google.com/maps?q=Dasoguz%2C%20Turkmenistan&z=9&hl=tr&output=embed"></iframe>
+            <span class="ping" id="mapPing">Dashoguz · Turkmenistan</span>
+            <iframe id="mapFrame" title="Location Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Dasoguz%2C%20Turkmenistan&z=9&hl=en&output=embed"></iframe>
           </div>
         </div>
 
         <div class="spot loc-info reveal" style="--d:.1s">
-          <div class="badge" id="locBadge"><i class="fas fa-earth-asia"></i> Doğduğum yer · Anavatan</div>
-          <h3 id="locTitle">Daşoguz, Türkmenistan 🇹🇲</h3>
-          <p id="locText">Türkmenistan'ın kuzeyinde, Özbekistan sınırına yakın tarihi şehir. Köklerimin ve memleketimin merkezi.</p>
+          <div class="badge" id="locBadge"><i class="fas fa-earth-asia"></i> Birthplace · Homeland</div>
+          <h3 id="locTitle">Dashoguz, Turkmenistan 🇹🇲</h3>
+          <p id="locText">Historic northern city in Turkmenistan near the Uzbek border — where my roots and journey began.</p>
           <div class="loc-meta">
-            <a id="locLink" class="btn" href="https://www.google.com/maps/search/?api=1&query=Dasoguz+Turkmenistan" target="_blank" rel="noopener" data-magnetic>Haritada aç <i class="fas fa-arrow-up-right-from-square"></i></a>
+            <a id="locLink" class="btn" href="https://www.google.com/maps/search/?api=1&query=Dasoguz+Turkmenistan" target="_blank" rel="noopener" data-magnetic>Open in Maps <i class="fas fa-arrow-up-right-from-square"></i></a>
           </div>
-          <svg class="route-svg" viewBox="0 0 400 120" aria-label="Daşoguz'dan İstanbul'a rota">
+          <svg class="route-svg" viewBox="0 0 400 120" aria-label="Route from Dashoguz to Istanbul">
             <path id="routePath" d="M340,82 C 280,10 140,10 60,82" fill="none" stroke="rgba(242,236,225,.2)" stroke-width="2" stroke-dasharray="4 6"/>
             <path d="M340,82 C 280,10 140,10 60,82" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="300" stroke-dashoffset="300" stroke-linecap="round">
               <animate attributeName="stroke-dashoffset" from="300" to="0" dur="3s" repeatCount="indefinite"/>
@@ -708,7 +708,7 @@
             <circle cx="60" cy="82" r="6" fill="#f2ece1"/>
             <circle r="4.5" fill="#fff"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#routePath"/></animateMotion></circle>
           </svg>
-          <div class="route-labels"><span><b>İstanbul</b> 🇹🇷</span><span><b>Daşoguz</b> 🇹🇲</span></div>
+          <div class="route-labels"><span><b>Istanbul</b> 🇹🇷</span><span><b>Dashoguz</b> 🇹🇲</span></div>
         </div>
       </div>
     </div>
@@ -717,7 +717,7 @@
   <!-- 05 TERMINAL -->
   <section class="block paper" id="terminal">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[05]</b> — Terminal</span><h2 class="sec-title">Etkileşimli <em>terminal.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[05]</b> — Console</span><h2 class="sec-title">Interactive <em>terminal.</em></h2></div>
       <div class="term reveal" id="term">
         <div class="term-head">
           <div class="term-dots"><i></i><i></i><i></i></div>
@@ -727,7 +727,7 @@
         <div class="term-out" id="termOut"></div>
         <div class="term-in">
           <span class="p">kuvanch@sec-node:~$</span>
-          <input id="termIn" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal komutu" placeholder="komut yaz… (help, scan, matrix, neofetch)">
+          <input id="termIn" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command" placeholder="type a command… (help, scan, matrix, neofetch)">
         </div>
       </div>
       <div class="quick reveal" id="quick">
@@ -748,48 +748,48 @@
   <!-- 06 PROJECTS -->
   <section class="block" id="projects">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[06]</b> — Projeler</span><h2 class="sec-title">Projeler <em>&amp; deneyler.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[06]</b> — Work</span><h2 class="sec-title">Projects <em>&amp; labs.</em></h2></div>
       <div class="proj-grid">
         <div class="spot proj reveal" data-proj="0" role="button" tabindex="0">
           <span class="big">01</span>
           <div class="ico"><i class="fas fa-robot"></i></div>
           <h3>Automation &amp; Web Scraping Bot</h3>
-          <p>Python kullanılarak geliştirilen, veri toplama ve rutin dijital görevleri otomatikleştiren özel bot mimarisi.</p>
+          <p>Custom Python bot architecture engineered to extract structured web data and automate repetitive digital workflows.</p>
           <div class="tags"><span>#Python</span><span>#WebScraping</span><span>#Automation</span></div>
           <span class="go">↗</span>
         </div>
         <div class="spot proj reveal" style="--d:.1s" data-proj="1" role="button" tabindex="0">
           <span class="big">02</span>
           <div class="ico"><i class="fas fa-diagram-project"></i></div>
-          <h3>Data Structures &amp; Algoritma Çalışmaları</h3>
-          <p>C ve Java dillerinde nesne yönelimli programlama (OOP) ve matris/sıralama algoritmaları üzerine geliştirilmiş uygulamalar.</p>
+          <h3>Data Structures &amp; Algorithm Labs</h3>
+          <p>Systems implementations in C and Java focusing on Object-Oriented Programming (OOP), sorting, and matrix algorithms.</p>
           <div class="tags"><span>#C</span><span>#Java</span><span>#AlgorithmAnalysis</span></div>
           <span class="go">↗</span>
         </div>
       </div>
-      <div class="more reveal"><a href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn primary" data-magnetic><i class="fab fa-github"></i> GitHub'da tüm depoları gör</a></div>
+      <div class="more reveal"><a href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn primary" data-magnetic><i class="fab fa-github"></i> View all repositories on GitHub</a></div>
     </div>
   </section>
 
   <!-- 07 CERTS & LANGUAGES -->
   <section class="block paper" id="certs">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[07]</b> — Sertifika &amp; Diller</span><h2 class="sec-title">Sertifika <em>&amp; diller.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[07]</b> — Credentials</span><h2 class="sec-title">Certification <em>&amp; languages.</em></h2></div>
       <div class="spot cert reveal">
         <div>
           <div class="badge"><i class="fas fa-circle-check"></i> Duolingo Verified</div>
           <h3>Duolingo English Test</h3>
           <p>English Proficiency Certificate — B2 / C1 Level</p>
         </div>
-        <a href="https://certs.duolingo.com/q3a4sguz9vyzo8k9" target="_blank" rel="noopener" class="btn" data-magnetic>Sertifikayı doğrula <i class="fas fa-arrow-up-right-from-square"></i></a>
+        <a href="https://certs.duolingo.com/q3a4sguz9vyzo8k9" target="_blank" rel="noopener" class="btn" data-magnetic>Verify Certificate <i class="fas fa-arrow-up-right-from-square"></i></a>
       </div>
       <div class="langs reveal" id="langs">
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">Türkmençe</span><span class="lang-flag">🇹🇲</span></div><div class="lang-tr">Türkmen dili</div><div class="lang-lvl">Native · Ana dil</div><div class="bar2"><span data-w="100"></span></div></div>
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">Oʻzbekcha</span><span class="lang-flag">🇺🇿</span></div><div class="lang-tr">Özbek dili</div><div class="lang-lvl">Native · Ana dil</div><div class="bar2"><span data-w="100"></span></div></div>
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">Türkçe</span><span class="lang-flag">🇹🇷</span></div><div class="lang-tr">Türkçe</div><div class="lang-lvl">Advanced · İleri</div><div class="bar2"><span data-w="95"></span></div></div>
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">English</span><span class="lang-flag">🇬🇧</span></div><div class="lang-tr">İngilizce</div><div class="lang-lvl">B2 – C1 · Upper-Int.</div><div class="bar2"><span data-w="82"></span></div></div>
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">Русский</span><span class="lang-flag">🇷🇺</span></div><div class="lang-tr">Rusça</div><div class="lang-lvl">A1 – A2 · Temel İletişim</div><div class="bar2"><span data-w="35"></span></div></div>
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">Deutsch</span><span class="lang-flag">🇩🇪</span></div><div class="lang-tr">Almanca</div><div class="lang-lvl">A1 · Başlangıç</div><div class="bar2"><span data-w="25"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">Türkmençe</span><span class="lang-flag">🇹🇲</span></div><div class="lang-tr">Turkmen</div><div class="lang-lvl">Native · Mother Tongue</div><div class="bar2"><span data-w="100"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">Oʻzbekcha</span><span class="lang-flag">🇺🇿</span></div><div class="lang-tr">Uzbek</div><div class="lang-lvl">Native · Mother Tongue</div><div class="bar2"><span data-w="100"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">Türkçe</span><span class="lang-flag">🇹🇷</span></div><div class="lang-tr">Turkish</div><div class="lang-lvl">Advanced · Fluent</div><div class="bar2"><span data-w="95"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">English</span><span class="lang-flag">🇬🇧</span></div><div class="lang-tr">English</div><div class="lang-lvl">B2 – C1 · Upper-Int.</div><div class="bar2"><span data-w="82"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">Русский</span><span class="lang-flag">🇷🇺</span></div><div class="lang-tr">Russian</div><div class="lang-lvl">A1 – A2 · Conversational</div><div class="bar2"><span data-w="35"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">Deutsch</span><span class="lang-flag">🇩🇪</span></div><div class="lang-tr">German</div><div class="lang-lvl">A1 · Elementary</div><div class="bar2"><span data-w="25"></span></div></div>
       </div>
     </div>
   </section>
@@ -797,23 +797,23 @@
   <!-- 08 MUSIC -->
   <section class="block" id="music">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[08]</b> — Vibe</span><h2 class="sec-title">Müzik <em>&amp; rap rotasyonu.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[08]</b> — Sound</span><h2 class="sec-title">Music <em>&amp; rap rotation.</em></h2></div>
 
       <div class="spot player reveal">
         <div class="vinyl" id="vinyl"></div>
         <div>
           <div class="np-label">
             <span class="eq" id="eq"><span></span><span></span><span></span><span></span></span>
-            <span>Şu an rotasyonda</span>
-            <button class="audio-pill" id="synthToggle" title="Tarayıcı içi Synth Beat aç/kapat"><i class="fas fa-volume-xmark"></i> Synth Beat: Kapalı</button>
+            <span>Now in rotation</span>
+            <button class="audio-pill" id="synthToggle" title="Toggle Web Audio Synth Beat"><i class="fas fa-volume-xmark"></i> Synth Beat: Off</button>
           </div>
           <div class="np-name" id="npName">Defkhan</div>
           <div class="np-sub" id="npSub">Turkish Rap · Homie Bak</div>
           <div class="np-bar"><span id="npBar"></span></div>
           <div class="np-ctrl">
-            <button id="npPrev" aria-label="Önceki"><i class="fas fa-backward-step"></i></button>
-            <button id="npPlay" aria-label="Duraklat / Oynat"><i class="fas fa-pause"></i></button>
-            <button id="npNext" aria-label="Sonraki"><i class="fas fa-forward-step"></i></button>
+            <button id="npPrev" aria-label="Previous"><i class="fas fa-backward-step"></i></button>
+            <button id="npPlay" aria-label="Pause / Play"><i class="fas fa-pause"></i></button>
+            <button id="npNext" aria-label="Next"><i class="fas fa-forward-step"></i></button>
           </div>
         </div>
       </div>
@@ -821,7 +821,7 @@
       <div class="music-grid">
         <div class="spot mcard reveal">
           <h3><i class="fas fa-microphone-lines"></i> Turkish Rap</h3>
-          <div class="msub">Kod yazarken dönenler</div>
+          <div class="msub">Heavy coding rotation</div>
           <div class="alist">
             <div class="arow" data-a="Defkhan"><b>Defkhan <i class="fas fa-star fav-star"></i></b><small>Homie Bak</small></div>
             <div class="arow" data-a="Stabil"><b>Stabil</b><small>TR</small></div>
@@ -838,7 +838,7 @@
         </div>
         <div class="spot mcard reveal" style="--d:.16s">
           <h3><i class="fas fa-record-vinyl"></i> US Hip-Hop</h3>
-          <div class="msub">Efsaneler &amp; ikonlar</div>
+          <div class="msub">Legends &amp; icons</div>
           <div class="alist">
             <div class="arow" data-a="2Pac"><b>2Pac</b><small>West Coast</small></div>
             <div class="arow" data-a="Biggie Smalls"><b>Biggie Smalls</b><small>East Coast</small></div>
@@ -850,14 +850,14 @@
       </div>
 
       <div class="hobby reveal">
-        <h4>// boş zamanlarda</h4>
+        <h4>// off the clock</h4>
         <div class="chips">
-          <span class="chip"><i class="fas fa-futbol"></i>Futbol Oynamak</span>
-          <span class="chip"><i class="fas fa-gamepad"></i>Oyun &amp; PlayStation</span>
-          <span class="chip"><i class="fas fa-plane-departure"></i>Seyahat Etmek</span>
-          <span class="chip"><i class="fas fa-book"></i>Kitap Okumak</span>
-          <span class="chip"><i class="fas fa-language"></i>Yeni Diller Öğrenmek</span>
-          <span class="chip"><i class="fas fa-users"></i>Yeni İnsanlarla Tanışmak &amp; Sohbet</span>
+          <span class="chip"><i class="fas fa-futbol"></i>Football</span>
+          <span class="chip"><i class="fas fa-gamepad"></i>Gaming &amp; PlayStation</span>
+          <span class="chip"><i class="fas fa-plane-departure"></i>Traveling</span>
+          <span class="chip"><i class="fas fa-book"></i>Reading</span>
+          <span class="chip"><i class="fas fa-language"></i>Learning Languages</span>
+          <span class="chip"><i class="fas fa-users"></i>Networking &amp; Conversations</span>
         </div>
       </div>
     </div>
@@ -867,11 +867,11 @@
   <section class="block" id="contact">
     <div class="container">
       <div class="reveal">
-        <h2 class="contact-headline">Bir <em>fikir</em> mi var?<br><em>Konuşalım.</em></h2>
+        <h2 class="contact-headline">Have an <em>idea</em>?<br>Let's <em>talk.</em></h2>
         <a href="mailto:abdirimowkuwanchbek2@gmail.com" class="big-email">abdirimowkuwanchbek2<em>@</em>gmail.com</a>
         <div class="mail-actions">
-          <a href="mailto:abdirimowkuwanchbek2@gmail.com" class="btn primary" data-magnetic><i class="fas fa-envelope"></i> E-posta gönder</a>
-          <button class="btn" id="copyBtn" data-magnetic><i class="far fa-copy"></i> Adresi kopyala</button>
+          <a href="mailto:abdirimowkuwanchbek2@gmail.com" class="btn primary" data-magnetic><i class="fas fa-envelope"></i> Send Email</a>
+          <button class="btn" id="copyBtn" data-magnetic><i class="far fa-copy"></i> Copy Address</button>
         </div>
 
         <div class="socials">
@@ -879,14 +879,14 @@
           <a class="social li" href="https://www.linkedin.com/in/kuvanchbek-abdirimov-20baa9386" target="_blank" rel="noopener"><span class="left"><i class="fab fa-linkedin brand"></i>LinkedIn</span><span class="ext">↗</span></a>
           <a class="social ig" href="https://www.instagram.com/kuwanch_the_best_007" target="_blank" rel="noopener"><span class="left"><i class="fab fa-instagram brand"></i>Instagram</span><span class="ext">↗</span></a>
 
-          <a class="social tg" href="https://t.me/kuvanch_3434" target="_blank" rel="noopener" title="Telegram'dan mesaj at">
+          <a class="social tg" href="https://t.me/kuvanch_3434" target="_blank" rel="noopener" title="Message on Telegram">
             <i class="fas fa-paper-plane tg-fly"></i><span class="tg-trail"></span>
             <span class="left"><i class="fab fa-telegram-plane brand"></i>Telegram</span><span class="ext">✈</span>
           </a>
 
           <a class="social tt" href="https://www.tiktok.com/@kuwanch_thebest" target="_blank" rel="noopener"><span class="left"><i class="fab fa-tiktok brand"></i>TikTok</span><span class="ext">↗</span></a>
 
-          <a class="social wa" href="https://wa.me/905342145252" target="_blank" rel="noopener" title="WhatsApp'tan yaz veya ara">
+          <a class="social wa" href="https://wa.me/905342145252" target="_blank" rel="noopener" title="Chat or call on WhatsApp">
             <span class="wa-wave"></span><span class="wa-wave"></span><span class="wa-wave"></span>
             <span class="left"><i class="fab fa-whatsapp brand"></i>WhatsApp</span><span class="ext"><i class="fas fa-phone-volume"></i></span>
           </a>
@@ -900,8 +900,8 @@
   <div class="container">
     <div class="footer-inner">
       <div>© 2026 Kuvanchbek Abdirimov</div>
-      <div><span class="a">♥</span> ile Daşoguz'dan İstanbul'a</div>
-      <a href="#hero" class="totop">Yukarı çık ↑</a>
+      <div>Built with <span class="a">♥</span> from Dashoguz to Istanbul</div>
+      <a href="#hero" class="totop">Back to top ↑</a>
     </div>
   </div>
 </footer>
@@ -930,19 +930,19 @@
     }, 45);
   }
 
-  /* ---------- Fotoğraf yedekleri ---------- */
+  /* ---------- Photo fallback ---------- */
   const photo = $('#photo');
   const srcs = ['profile.jpeg', 'profile.jpg', 'profile.png'];
   let si = 0;
   photo.onerror = () => { si++; if (si < srcs.length) photo.src = srcs[si]; else photo.remove(); };
 
-  /* ---------- Saat ---------- */
+  /* ---------- Clock ---------- */
   const tick = () => {
-    $('#clock').textContent = 'IST ' + new Date().toLocaleTimeString('tr-TR', { timeZone: 'Europe/Istanbul', hour: '2-digit', minute: '2-digit' });
+    $('#clock').textContent = 'IST ' + new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Istanbul', hour: '2-digit', minute: '2-digit' });
   };
   tick(); setInterval(tick, 20000);
 
-  /* ---------- Tema ---------- */
+  /* ---------- Theme ---------- */
   const themes = {
     orange: ['#ff4d00', '255,77,0', '#d93b00', '#ffffff'],
     lime:   ['#c9ff3f', '201,255,63', '#5c8a00', '#080807'],
@@ -964,7 +964,7 @@
   $$('.swatches button').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.t)));
   try { const s = localStorage.getItem('kv-theme'); if (s) setTheme(s); } catch (e) {}
 
-  /* ---------- Mobil menü ---------- */
+  /* ---------- Mobile Menu ---------- */
   const mm = $('#mobileMenu');
   $('#menuOpen').addEventListener('click', () => mm.classList.add('open'));
   $('#menuClose').addEventListener('click', () => mm.classList.remove('open'));
@@ -972,7 +972,7 @@
 
   /* ---------- Marquee ---------- */
   const mw = [['s', 'Cyber Security'], ['m', 'PYTHON AUTOMATION'], ['s', 'Web Scraping'], ['m', 'LINUX · TERMUX'],
-              ['s', 'Daşoguz → İstanbul'], ['m', 'C / C++ · JAVA'], ['s', 'Bot Architecture'], ['m', 'BAŞAKŞEHİR · IST'], ['s', 'Algorithms'], ['m', 'GIT & GITHUB']];
+              ['s', 'Dashoguz → Istanbul'], ['m', 'C / C++ · JAVA'], ['s', 'Bot Architecture'], ['m', 'BAŞAKŞEHİR · IST'], ['s', 'Algorithms'], ['m', 'GIT & GITHUB']];
   const mhtml = mw.map(([k, t]) => `<span class="${k === 's' ? 'sf' : ''}">${t}</span><i>✦</i>`).join('');
   $('#marquee').innerHTML = `<div class="mi">${mhtml}</div><div class="mi">${mhtml}</div>`;
 
@@ -993,8 +993,8 @@
     el.addEventListener('mouseenter', () => scramble(el, orig));
   });
 
-  /* ---------- Yazma efekti ---------- */
-  const phrases = ['Software Engineering Student @ İGÜ', 'Cyber Security & Network Defense', 'Python • C/C++ • Java Developer', 'Automation & Web Scraping Bots'];
+  /* ---------- Typing Effect ---------- */
+  const phrases = ['Software Engineering Student @ IGU', 'Cyber Security & Network Defense', 'Python • C/C++ • Java Developer', 'Automation & Web Scraping Bots'];
   const te = $('#typing');
   let pi = 0, ci = 0, del = false;
   (function type() {
@@ -1006,7 +1006,7 @@
     else { del = false; pi = (pi + 1) % phrases.length; setTimeout(type, 300); }
   })();
 
-  /* ---------- Parçacık Ağı + Matrix Modu ---------- */
+  /* ---------- Particle Network + Matrix Rain ---------- */
   const cv = $('#net'), ctx = cv.getContext('2d');
   let W, H, pts = [], drops = [], mouse = { x: -999, y: -999 }, heroVis = true, matrixMode = false;
   function resize() {
@@ -1057,7 +1057,7 @@
     }
   })();
 
-  /* ---------- Özel imleç ---------- */
+  /* ---------- Custom Cursor ---------- */
   if (finePointer) {
     const cur = $('#cursor'), dot = $('#cursorDot');
     let mx = innerWidth / 2, my = innerHeight / 2, cx = mx, cy = my;
@@ -1127,29 +1127,29 @@
   const toast = $('#toast');
   const showToast = m => { toast.textContent = m; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2100); };
   $('#copyBtn').addEventListener('click', async () => {
-    try { await navigator.clipboard.writeText('abdirimowkuwanchbek2@gmail.com'); showToast('E-posta kopyalandı ✓'); }
-    catch (e) { showToast('Kopyalanamadı — elle seçebilirsin'); }
+    try { await navigator.clipboard.writeText('abdirimowkuwanchbek2@gmail.com'); showToast('Email copied ✓'); }
+    catch (e) { showToast('Copy failed — please select manually'); }
   });
 
-  /* ---------- Harita Sekmeleri ---------- */
+  /* ---------- Map Tabs ---------- */
   const locs = {
     dasoguz: {
-      q: 'Dasoguz, Turkmenistan', z: 9, ping: 'Daşoguz · Türkmenistan',
-      badge: '<i class="fas fa-earth-asia"></i> Doğduğum yer · Anavatan',
-      title: 'Daşoguz, Türkmenistan 🇹🇲',
-      text: "Türkmenistan'ın kuzeyinde, Özbekistan sınırına yakın tarihi şehir. Köklerimin ve memleketimin merkezi."
+      q: 'Dasoguz, Turkmenistan', z: 9, ping: 'Dashoguz · Turkmenistan',
+      badge: '<i class="fas fa-earth-asia"></i> Birthplace · Homeland',
+      title: 'Dashoguz, Turkmenistan 🇹🇲',
+      text: 'Historic northern city in Turkmenistan near the Uzbek border — where my roots and journey began.'
     },
     igu: {
-      q: 'Istanbul Gelisim Universitesi Avcilar', z: 15, ping: 'İGÜ · Avcılar Kampüsü',
-      badge: '<i class="fas fa-graduation-cap"></i> Okuduğum üniversite',
-      title: 'İstanbul Gelişim Üniversitesi 🎓',
-      text: 'Avcılar Kampüsü · Yazılım Mühendisliği Bölümü, 2. sınıf.'
+      q: 'Istanbul Gelisim Universitesi Avcilar', z: 15, ping: 'IGU · Avcılar Campus',
+      badge: '<i class="fas fa-graduation-cap"></i> University',
+      title: 'Istanbul Gelisim University 🎓',
+      text: 'Avcılar Campus · Department of Software Engineering, 2nd Year.'
     },
     basaksehir: {
-      q: 'Basaksehir, Istanbul', z: 12, ping: 'Başakşehir · İstanbul',
-      badge: '<i class="fas fa-house"></i> Yaşadığım bölge',
-      title: 'Başakşehir, İstanbul 🇹🇷',
-      text: "İstanbul'un Başakşehir ilçesinde yaşıyorum; kod, müzik ve kahve burada."
+      q: 'Basaksehir, Istanbul', z: 12, ping: 'Başakşehir · Istanbul',
+      badge: '<i class="fas fa-house"></i> Current Residence',
+      title: 'Başakşehir, Istanbul 🇹🇷',
+      text: 'Currently living in the Başakşehir district of Istanbul — code, music, and late-night builds.'
     }
   };
   const frame = $('#mapFrame');
@@ -1158,7 +1158,7 @@
     $$('#tabs .tab').forEach(t => t.classList.toggle('on', t === tab));
     frame.style.opacity = 0;
     setTimeout(() => {
-      frame.src = `https://maps.google.com/maps?q=${encodeURIComponent(L.q)}&z=${L.z}&hl=tr&output=embed`;
+      frame.src = `https://maps.google.com/maps?q=${encodeURIComponent(L.q)}&z=${L.z}&hl=en&output=embed`;
       frame.onload = () => frame.style.opacity = 1;
       setTimeout(() => frame.style.opacity = 1, 900);
     }, 250);
@@ -1169,29 +1169,29 @@
     $('#locLink').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(L.q);
   }));
 
-  /* ---------- Proje İnceleme Modalı ---------- */
+  /* ---------- Project Inspection Modal ---------- */
   const projData = [
     {
       tag: 'PYTHON · AUTOMATION · SCRAPING',
       title: 'Automation & Web Scraping Bot',
-      desc: 'Hedef web kaynaklarından yapılandırılmış veri çıkaran, hız sınırlamalarını (rate-limit) yöneten ve tekrarlayan dijital iş akışlarını otonom olarak yürüten Python bot sistemi.',
+      desc: 'An autonomous Python bot system engineered to extract structured data from target web endpoints, handle rate limits gracefully, and automate repetitive digital workflows.',
       specs: [
-        ['Dil & Çekirdek', 'Python 3 · Asyncio'],
-        ['Modüller', 'BeautifulSoup · Requests · CLI'],
-        ['Çıktı Formatı', 'JSON / CSV / Otomatik Rapor'],
-        ['Durum', 'Aktif Geliştirme (GitHub)']
+        ['Core Language', 'Python 3 · Asyncio'],
+        ['Modules', 'BeautifulSoup · Requests · CLI'],
+        ['Output Pipeline', 'JSON / CSV / Automated Reports'],
+        ['Status', 'Active Development (GitHub)']
       ],
       url: 'https://github.com/lamer3455'
     },
     {
       tag: 'C / C++ · JAVA · ALGORITHMS',
-      title: 'Data Structures & Algoritma Çalışmaları',
-      desc: 'Bellek yönetimi, pointer aritmetiği, nesne yönelimli mimari (OOP), matris işlemleri ve zaman/alan karmaşıklığı analizleri üzerine inşa edilmiş mühendislik uygulamaları.',
+      title: 'Data Structures & Algorithm Labs',
+      desc: 'Systems-level implementations covering memory management, pointer arithmetic, Object-Oriented Programming (OOP), matrix operations, and time/space complexity analysis.',
       specs: [
-        ['Diller', 'C / C++ & Java (JDK)'],
-        ['Odak Konular', 'Matris · Sıralama · Veri Yapıları'],
-        ['Paradigma', 'OOP & Low-Level Memory'],
-        ['Akademik Bağlam', 'İGÜ Yazılım Mühendisliği']
+        ['Languages', 'C / C++ & Java (JDK)'],
+        ['Core Topics', 'Matrices · Sorting · Data Structures'],
+        ['Paradigm', 'OOP & Low-Level Memory'],
+        ['Academic Context', 'IGU Software Engineering']
       ],
       url: 'https://github.com/lamer3455'
     }
@@ -1216,10 +1216,10 @@
   modalBg.addEventListener('click', e => { if (e.target === modalBg) closeModal(); });
   addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); mm.classList.remove('open'); } });
 
-  /* ---------- Müzik Rotasyonu + Web Audio API Synth Beat ---------- */
+  /* ---------- Music Rotation + Web Audio API Synth Beat ---------- */
   const rot = [
-    ['Defkhan', 'Turkish Rap · Homie Bak'], ['Stabil', 'Turkish Rap · Lirik & Flow'], ['Uzi', 'Turkish Rap'],
-    ['Central Cee', 'UK Rap · En sevdiğim UK rapçi'], ['BM', 'UK Rap · "London View"'],
+    ['Defkhan', 'Turkish Rap · Homie Bak'], ['Stabil', 'Turkish Rap · Lyricism & Flow'], ['Uzi', 'Turkish Rap'],
+    ['Central Cee', 'UK Rap · Favorite UK Artist'], ['BM', 'UK Rap · "London View"'],
     ['2Pac', 'US Hip-Hop · West Coast'], ['Biggie Smalls', 'US Hip-Hop · East Coast'],
     ['Snoop Dogg', 'US Hip-Hop · G-Funk'], ['50 Cent', 'US Hip-Hop · G-Unit'], ['Eminem', 'US Hip-Hop · Shady']
   ];
@@ -1248,7 +1248,6 @@
     const i = rot.findIndex(x => x[0] === r.dataset.a); if (i >= 0) setTrack(i);
   }));
 
-  // Zero-dependency Web Audio API Lo-Fi / Cyber Bass Synth
   let audioCtx = null, synthTimer = null, synthOn = false, step = 0;
   const notes = [110, 110, 130.81, 146.83, 98, 98, 130.81, 164.81];
   const synthBtn = $('#synthToggle');
@@ -1258,7 +1257,7 @@
       if (audioCtx.state === 'suspended') audioCtx.resume();
       synthOn = true;
       synthBtn.classList.add('on');
-      synthBtn.innerHTML = '<i class="fas fa-volume-high"></i> Synth Beat: Açık';
+      synthBtn.innerHTML = '<i class="fas fa-volume-high"></i> Synth Beat: On';
       synthTimer = setInterval(() => {
         if (!playing || !synthOn) return;
         const now = audioCtx.currentTime;
@@ -1276,7 +1275,7 @@
       synthOn = false;
       clearInterval(synthTimer);
       synthBtn.classList.remove('on');
-      synthBtn.innerHTML = '<i class="fas fa-volume-xmark"></i> Synth Beat: Kapalı';
+      synthBtn.innerHTML = '<i class="fas fa-volume-xmark"></i> Synth Beat: Off';
     }
   }
   synthBtn.addEventListener('click', toggleSynth);
@@ -1288,33 +1287,33 @@
   const row = (k, v) => `<span class="p">${k.padEnd(13)}</span>${v}`;
   const cmds = {
     help: () => [
-      '<span class="k">Kullanılabilir komutlar:</span>',
-      row('whoami', 'kısa tanıtım'), row('scan', 'ağ & port güvenlik taraması'),
-      row('matrix', 'arka planı Matrix yağmuruna çevir'), row('location', 'memleket, üniversite, ikamet'),
-      row('skills', 'yetenekler'), row('roadmap', 'gelişim alanlarım'),
-      row('music', 'favori sanatçılar'), row('languages', 'konuştuğum diller'),
-      row('projects', 'projelerim'), row('contact', 'iletişim bilgileri'),
-      row('neofetch', 'sistem özeti'), row('theme', 'theme orange|lime|cyan|violet|pink|random'),
-      row('clear', 'ekranı temizle'),
-      '<span class="d">İpucu: ↑ / ↓ geçmiş, Tab tamamlama. Bir de sudo dene 😏</span>'
+      '<span class="k">Available commands:</span>',
+      row('whoami', 'short bio & role'), row('scan', 'run network & port security scan'),
+      row('matrix', 'toggle Matrix rain background'), row('location', 'hometown, university, residence'),
+      row('skills', 'technical stack & tools'), row('roadmap', 'current & upcoming focus areas'),
+      row('music', 'favorite hip-hop & rap rotation'), row('languages', 'spoken languages'),
+      row('projects', 'featured engineering repositories'), row('contact', 'direct communication channels'),
+      row('neofetch', 'system summary'), row('theme', 'theme orange|lime|cyan|violet|pink|random'),
+      row('clear', 'clear console output'),
+      '<span class="d">Tip: ↑ / ↓ for history, Tab for autocomplete. Also try sudo 😏</span>'
     ],
-    whoami: () => ['kuvanchbek_abdirimov', '<span class="d">İGÜ Yazılım Mühendisliği · Cyber Security &amp; Automation Developer</span>'],
-    location: () => [row('memleket', 'Daşoguz, Türkmenistan 🇹🇲'), row('ikamet', 'Başakşehir, İstanbul 🇹🇷'), row('üniversite', 'İstanbul Gelişim Üniversitesi (Avcılar)')],
-    skills: () => [row('diller', 'C / C++, Java, Python, HTML/CSS/JS'), row('araçlar', 'Linux, Termux, Git &amp; GitHub, VS Code'), row('alanlar', 'Ağ Güvenliği, Bot &amp; Script, Web Scraping, Algoritma')],
+    whoami: () => ['kuvanchbek_abdirimov', '<span class="d">IGU Software Engineering · Cyber Security &amp; Automation Developer</span>'],
+    location: () => [row('hometown', 'Dashoguz, Turkmenistan 🇹🇲'), row('residence', 'Başakşehir, Istanbul 🇹🇷'), row('university', 'Istanbul Gelisim University (Avcılar)')],
+    skills: () => [row('languages', 'C / C++, Java, Python, HTML/CSS/JS'), row('tools', 'Linux, Termux, Git &amp; GitHub, VS Code'), row('domains', 'Network Security, Bots &amp; Scripts, Web Scraping, Algorithms')],
     roadmap: () => [
-      row('aktif', 'Ağ &amp; Sistem Güvenliği · Linux · Otomasyon · Algoritmalar'),
-      row('sırada', 'Yapay Zekâ API Entegrasyonları · Modern Web &amp; Flutter'),
-      row('hedef', 'CTF &amp; Pentest · Erasmus &amp; Diller · Açık Kaynak')
+      row('active', 'Network &amp; System Security · Linux · Automation · Algorithms'),
+      row('next', 'AI API Integrations · Modern Web &amp; Flutter'),
+      row('goals', 'CTF &amp; Pentest Labs · Erasmus &amp; Languages · Open Source')
     ],
     music: () => [row('Turkish Rap', 'Defkhan ★, Stabil, Uzi'), row('UK Rap', 'Central Cee ★, BM'), row('US Hip-Hop', '2Pac, Biggie, Snoop Dogg, 50 Cent, Eminem')],
     languages: () => [row('Türkmençe', 'Native'), row('Oʻzbekcha', 'Native'), row('Türkçe', 'Advanced'), row('English', 'B2 – C1'), row('Русский', 'A1–A2'), row('Deutsch', 'A1')],
     projects: () => [
       '<span class="p">[01]</span> Automation &amp; Web Scraping Bot  <span class="d">#Python #WebScraping</span>',
-      '<span class="p">[02]</span> Data Structures &amp; Algoritmalar  <span class="d">#C #Java #OOP</span>',
+      '<span class="p">[02]</span> Data Structures &amp; Algorithm Labs  <span class="d">#C #Java #OOP</span>',
       '<a href="https://github.com/lamer3455" target="_blank" rel="noopener">github.com/lamer3455</a>'
     ],
     contact: () => [
-      row('e-posta', '<a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>'),
+      row('email', '<a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>'),
       row('github', '<a href="https://github.com/lamer3455" target="_blank" rel="noopener">lamer3455</a>'),
       row('telegram', '<a href="https://t.me/kuvanch_3434" target="_blank" rel="noopener">@kuvanch_3434</a>'),
       row('whatsapp', '<a href="https://wa.me/905342145252" target="_blank" rel="noopener">+90 534 214 52 52</a>')
@@ -1322,18 +1321,18 @@
     neofetch: () => [
       '<span class="p">kuvanch</span>@<span class="p">sec-node</span>',
       '<span class="d">----------------------</span>',
-      row('OS', 'Cyber-Editorial OS v5.0'), row('Host', 'İstanbul / Başakşehir'), row('Origin', 'Daşoguz, Türkmenistan'),
-      row('Uni', 'İstanbul Gelişim Üni. (SWE)'), row('Shell', 'zsh + python3'), row('Langs', 'TM · UZ · TR · EN · RU · DE'),
+      row('OS', 'Cyber-Editorial OS v5.0'), row('Host', 'Istanbul / Başakşehir'), row('Origin', 'Dashoguz, Turkmenistan'),
+      row('Uni', 'Istanbul Gelisim Uni. (SWE)'), row('Shell', 'zsh + python3'), row('Langs', 'TM · UZ · TR · EN · RU · DE'),
       row('Focus', 'Cyber Security · Automation'), row('Audio', 'WebAudio Synth Ready 🎧')
     ],
     matrix: () => {
       matrixMode = !matrixMode;
       return [matrixMode
-        ? '<span class="ok">[✓] Matrix rain aktif!</span> <span class="d">(Hero arka planına bak; kapatmak için tekrar matrix yaz)</span>'
-        : '<span class="p">[✓] Neural network moduna dönüldü.</span>'];
+        ? '<span class="ok">[✓] Matrix rain enabled!</span> <span class="d">(Check the hero canvas; run matrix again to revert)</span>'
+        : '<span class="p">[✓] Reverted to neural network mesh.</span>'];
     },
-    ls: () => ['<span class="p">about.txt  daşoguz.map  igu_campus.loc  skills.txt  roadmap.md  synth.audio  .secret</span>'],
-    date: () => [new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' })],
+    ls: () => ['<span class="p">about.txt  dashoguz.map  igu_campus.loc  skills.txt  roadmap.md  synth.audio  .secret</span>'],
+    date: () => [new Date().toLocaleString('en-GB', { timeZone: 'Europe/Istanbul' })],
     clear: () => { out.innerHTML = ''; return []; }
   };
   const hist = []; let hi = -1;
@@ -1345,11 +1344,11 @@
     if (low.startsWith('theme')) {
       let a = low.split(/\s+/)[1];
       if (a === 'random') a = Object.keys(themes)[Math.floor(Math.random() * 5)];
-      return line(setTheme(a) ? `Tema değişti → <span class="p">${a}</span>` : 'Kullanım: theme orange | lime | cyan | violet | pink | random');
+      return line(setTheme(a) ? `Accent theme switched → <span class="p">${a}</span>` : 'Usage: theme orange | lime | cyan | violet | pink | random');
     }
     if (low.startsWith('sudo')) {
-      if (/hire/.test(low)) { line('<span class="ok">[sudo] yetki verildi ✓</span>'); line('Harika karar! 😄 Hemen yaz: <a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>'); return; }
-      return line('<span class="warn">Güzel deneme 😏</span> — bu kullanıcı sudoers dosyasında yok. Olay loglandı.');
+      if (/hire/.test(low)) { line('<span class="ok">[sudo] privileges granted ✓</span>'); line('Great call! 😄 Reach out directly: <a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>'); return; }
+      return line('<span class="warn">Nice try 😏</span> — user is not in the sudoers file. This incident has been logged.');
     }
     if (low === 'scan' || low.startsWith('nmap') || low.startsWith('hack')) {
       const steps = [
@@ -1357,15 +1356,15 @@
         '22/tcp   <span class="ok">open</span>     ssh (OpenSSH 9.6)',
         '80/tcp   <span class="ok">open</span>     http (lamer3455.github.io)',
         '443/tcp  <span class="ok">open</span>     https (TLS 1.3 · Strict)',
-        '<span class="ok">[✓] Tarama tamamlandı: 0 kritik zafiyet, sistem güvenli.</span>'
+        '<span class="ok">[✓] Scan complete: 0 critical vulnerabilities, host hardened.</span>'
       ];
       steps.forEach((s, i) => setTimeout(() => line(s), i * 320));
       return;
     }
-    if (low === 'cat .secret') return line('Gizli dosya yok… ya da var mı? 👀 <span class="d">(sudo hire kuvanchbek dene)</span>');
+    if (low === 'cat .secret') return line('No hidden files here… or is there? 👀 <span class="d">(try sudo hire kuvanchbek)</span>');
     const fn = cmds[low];
     if (fn) { const r = fn(); r && r.forEach(line); }
-    else line(`<span class="d">komut bulunamadı:</span> ${esc(cmd)} <span class="d">— 'help' yaz.</span>`);
+    else line(`<span class="d">command not found:</span> ${esc(cmd)} <span class="d">— type 'help'.</span>`);
   }
   inp.addEventListener('keydown', e => {
     if (e.key === 'Enter') { run(inp.value); inp.value = ''; }
@@ -1375,8 +1374,8 @@
   });
   $('#term').addEventListener('click', () => inp.focus({ preventScroll: true }));
   $$('#quick button').forEach(b => b.addEventListener('click', () => run(b.dataset.c)));
-  line('<span class="p">Kuvanchbek Cyber-Editorial OS v5.0</span> <span class="d">— Başakşehir / İstanbul</span>');
-  line('<span class="d">Komutlar için</span> <span class="k">help</span> <span class="d">yaz ya da</span> <span class="k">scan</span> / <span class="k">matrix</span> <span class="d">komutlarını dene.</span>');
+  line('<span class="p">Kuvanchbek Cyber-Editorial OS v5.0</span> <span class="d">— Başakşehir / Istanbul</span>');
+  line('<span class="d">Type</span> <span class="k">help</span> <span class="d">for available commands or try</span> <span class="k">scan</span> / <span class="k">matrix</span><span class="d">.</span>');
   line('');
 })();
 </script>
