@@ -3,655 +3,555 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kuvanchbek Abdirimov — Software Engineering & Cyber Security</title>
-<meta name="description" content="Kuvanchbek Abdirimov — İstanbul Gelişim Üniversitesi Yazılım Mühendisliği öğrencisi, siber güvenlik ve otomasyon geliştiricisi.">
-<meta name="theme-color" content="#07080a">
+<title>Kuvanchbek Abdirimov — Software Engineering &amp; Cyber Security</title>
+<meta name="description" content="Kuvanchbek Abdirimov — İstanbul Gelişim Üniversitesi Yazılım Mühendisliği öğrencisi. Siber güvenlik, otomasyon ve sistem geliştirme.">
+<meta name="theme-color" content="#080807">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.loader{display:none!important}.hero-title .inner{transform:none!important}.hero-fade{opacity:1!important}</style></noscript>
 <style>
-  :root {
-    --bg: #07080a; --surface: #0d0f13; --surface-2: #14171d; --border: #20242c;
-    --text: #eceef2; --muted: #8b919d;
-    --accent: #c9ff3f; --accent-rgb: 201, 255, 63;
-    --sans: 'Space Grotesk', system-ui, sans-serif;
-    --serif: 'Instrument Serif', Georgia, serif;
-    --mono: 'JetBrains Mono', ui-monospace, monospace;
-    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  :root{
+    --ink:#080807; --ink-2:#11100e; --paper:#f2ece1; --paper-2:#e5ddd0;
+    --accent:#ff4d00; --accent-rgb:255,77,0; --accent-d:#d93b00; --on-accent:#ffffff;
+    --serif:'Instrument Serif',Georgia,serif;
+    --sans:'Inter',system-ui,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+    --ease:cubic-bezier(.22,1,.36,1);
   }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; scroll-padding-top: 95px; }
-  body {
-    background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px;
-    line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden;
-    cursor: none;
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+  body{
+    --t:#f2ece1; --m:#8c867a; --l:rgba(242,236,225,.13); --c:#11100e; --c2:#191714; --a:var(--accent);
+    background:var(--ink);color:var(--t);font-family:var(--sans);font-size:16px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
   }
-  body::before {
-    content: ''; position: fixed; inset: 0; z-index: -2; pointer-events: none;
-    background-image: radial-gradient(rgba(255,255,255,0.038) 1px, transparent 1px);
-    background-size: 28px 28px;
+  .paper{
+    --t:#080807; --m:#635d52; --l:rgba(8,8,7,.14); --c:#faf6ee; --c2:#e8e0d2; --a:var(--accent-d);
+    background:var(--paper);color:var(--t);
   }
-  body::after {
-    content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9990;
-    opacity: 0.038; mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  body::after{
+    content:'';position:fixed;inset:0;pointer-events:none;z-index:9990;opacity:.042;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  a { color: inherit; text-decoration: none; }
-  button { font: inherit; background: none; border: none; color: inherit; cursor: none; }
-  ::selection { background: var(--accent); color: #000; }
-  ::-webkit-scrollbar { width: 8px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-  .container { max-width: 1160px; margin: 0 auto; padding: 0 26px; }
-  .accent { color: var(--accent); }
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--accent);color:var(--on-accent)}
+  ::-webkit-scrollbar{width:8px}
+  ::-webkit-scrollbar-track{background:var(--ink)}
+  ::-webkit-scrollbar-thumb{background:#292722;border-radius:4px}
+  ::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+  .container{max-width:1240px;margin:0 auto;padding:0 36px}
+  em.s,.serif-i{font-family:var(--serif);font-style:italic;font-weight:400}
 
-  /* ========== BOOT LOADER ========== */
-  #boot {
-    position: fixed; inset: 0; z-index: 99999; background: #050607;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--mono); transition: opacity 0.7s var(--ease), visibility 0.7s;
+  /* Ambient */
+  .aurora{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+  .aurora i{position:absolute;border-radius:50%;filter:blur(135px);background:var(--accent);opacity:.13;transition:background .6s}
+  .aurora i:nth-child(1){width:560px;height:560px;top:-170px;left:-140px;animation:drift 24s ease-in-out infinite alternate}
+  .aurora i:nth-child(2){width:460px;height:460px;bottom:-150px;right:-110px;opacity:.09;animation:drift 30s ease-in-out infinite alternate-reverse}
+  @keyframes drift{to{transform:translate(130px,90px) scale(1.15)}}
+
+  /* Loader */
+  .loader{
+    position:fixed;inset:0;z-index:10000;background:var(--ink);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:16px;transition:transform .85s var(--ease) .1s;
+    animation:loaderFail 0s linear 4.5s forwards;
   }
-  #boot.done { opacity: 0; visibility: hidden; }
-  #boot .boot-inner {
-    max-width: 640px; width: 90%; color: #b8bec9; font-size: 0.85rem;
-    line-height: 1.9;
-  }
-  #boot .boot-head {
-    color: var(--accent); font-weight: 700; margin-bottom: 20px;
-    font-size: 1rem; letter-spacing: 0.1em;
-  }
-  #boot .boot-line { opacity: 0; animation: bootIn 0.4s var(--ease) forwards; }
-  #boot .boot-line .ok { color: var(--accent); }
-  #boot .boot-line .arrow { color: var(--accent); margin-right: 8px; }
-  #boot .boot-bar {
-    margin-top: 22px; height: 3px; background: var(--border); border-radius: 2px;
-    overflow: hidden;
-  }
-  #boot .boot-bar span {
-    display: block; height: 100%; width: 0; background: var(--accent);
-    box-shadow: 0 0 12px var(--accent); transition: width 0.15s linear;
-  }
-  #boot .boot-pct {
-    margin-top: 8px; display: flex; justify-content: space-between;
-    font-size: 0.75rem; color: var(--muted);
-  }
-  @keyframes bootIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes glowPulse {
-    0%, 100% { text-shadow: 0 0 0 transparent; }
-    50% { text-shadow: 0 0 20px var(--accent), 0 0 40px var(--accent); }
+  .loader.done{transform:translateY(-100%)}
+  @keyframes loaderFail{to{visibility:hidden}}
+  .loader .brand{font-family:var(--serif);font-style:italic;font-size:clamp(2.4rem,8vw,4.6rem);letter-spacing:-.02em;color:var(--paper)}
+  .loader .brand b{color:var(--accent);font-style:normal}
+  .loader .sys{font-family:var(--mono);font-size:.72rem;color:var(--accent);letter-spacing:.14em;text-transform:uppercase}
+  .loader .count{font-family:var(--mono);font-size:.8rem;color:var(--m);letter-spacing:.2em}
+  .loader .bar{width:min(280px,65vw);height:2px;background:rgba(242,236,225,.12);overflow:hidden;border-radius:2px}
+  .loader .bar span{display:block;height:100%;width:0;background:var(--accent);transition:width .1s linear}
+
+  /* Custom Cursor */
+  .cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;display:none}
+  .cursor{width:34px;height:34px;border-radius:50%;border:1.5px solid #fff;transition:width .25s var(--ease),height .25s var(--ease),background .25s,opacity .2s}
+  .cursor-dot{width:5px;height:5px;border-radius:50%;background:#fff}
+  .cursor.grow{width:68px;height:68px;background:rgba(255,255,255,.1)}
+  .cursor.hide{opacity:0}
+  @media (hover:hover) and (pointer:fine){
+    body,a,button{cursor:none}
+    input{cursor:text}
+    .cursor,.cursor-dot{display:block}
   }
 
-  /* ========== CUSTOM CURSOR ========== */
-  .cursor-dot, .cursor-ring {
-    position: fixed; top: 0; left: 0; pointer-events: none; z-index: 99997;
-    transform: translate(-50%, -50%); will-change: transform;
-  }
-  .cursor-dot {
-    width: 5px; height: 5px; border-radius: 50%;
-    background: var(--accent); mix-blend-mode: difference;
-  }
-  .cursor-ring {
-    width: 34px; height: 34px; border-radius: 50%;
-    border: 1.5px solid var(--accent);
-    transition: width 0.25s var(--ease), height 0.25s var(--ease),
-                background 0.25s, border-color 0.25s;
-    mix-blend-mode: difference;
-  }
-  .cursor-ring.grow {
-    width: 60px; height: 60px; background: rgba(var(--accent-rgb), 0.15);
-    border-color: rgba(var(--accent-rgb), 0.5);
-  }
-  .cursor-ring.click { transform: translate(-50%, -50%) scale(0.8); }
-  @media (max-width: 720px), (hover: none) {
-    body, button, a { cursor: auto; }
-    .cursor-dot, .cursor-ring { display: none; }
-  }
+  /* Scroll Progress */
+  .progress{position:fixed;top:0;left:0;right:0;height:2.5px;z-index:9998}
+  .progress span{display:block;height:100%;width:0;background:var(--accent);box-shadow:0 0 12px var(--accent)}
 
-  /* ========== MATRIX RAIN ========== */
-  #matrix {
-    position: fixed; inset: 0; z-index: 9995; pointer-events: none;
-    opacity: 0; transition: opacity 0.5s; display: none;
-  }
-  #matrix.on { display: block; opacity: 0.85; }
+  /* Header */
+  header{position:fixed;top:0;left:0;right:0;z-index:500;padding:20px 0;transition:padding .3s var(--ease),background .3s,border-color .3s;border-bottom:1px solid transparent}
+  header.scrolled{padding:12px 0;background:rgba(8,8,7,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom-color:rgba(242,236,225,.12)}
+  nav{display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--paper)}
+  .logo{font-family:var(--serif);font-size:1.45rem;font-style:italic;letter-spacing:-.01em;white-space:nowrap}
+  .logo .dot{color:var(--accent);font-style:normal}
+  .nav-links{display:flex;gap:4px;list-style:none;font-family:var(--mono);font-size:.69rem;text-transform:uppercase;letter-spacing:.08em}
+  .nav-links a{display:block;padding:7px 11px;border-radius:99px;color:#8c867a;transition:all .25s var(--ease)}
+  .nav-links a:hover{color:var(--paper)}
+  .nav-links a.active{color:var(--on-accent);background:var(--accent);font-weight:700}
+  .nav-right{display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:.73rem}
+  .clock{white-space:nowrap}
+  .clock::before{content:'●';color:var(--accent);margin-right:7px;font-size:.65rem;animation:blink 2s infinite}
+  @keyframes blink{50%{opacity:.3}}
+  .swatches{display:flex;gap:7px}
+  .swatches button{width:15px;height:15px;border-radius:50%;border:2px solid transparent;background:var(--c);transition:transform .2s}
+  .swatches button:hover{transform:scale(1.28)}
+  .swatches button.on{border-color:#fff}
+  .menu-toggle{display:none;font-family:var(--mono);font-size:.78rem;padding:8px 16px;border:1px solid rgba(242,236,225,.2);border-radius:99px}
 
-  /* ========== AURORA + GLOW ========== */
-  .aurora { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
-  .aurora i {
-    position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.15;
-    background: var(--accent); transition: background 0.6s ease;
+  /* Mobile Drawer */
+  .mobile-menu{
+    position:fixed;inset:0;background:var(--ink);z-index:700;display:flex;flex-direction:column;justify-content:center;
+    padding:40px;transform:translateY(-100%);transition:transform .65s var(--ease);color:var(--paper)
   }
-  .aurora i:nth-child(1) { width: 540px; height: 540px; top: -170px; left: -120px; animation: drift 22s ease-in-out infinite alternate; }
-  .aurora i:nth-child(2) { width: 450px; height: 450px; bottom: -140px; right: -100px; opacity: 0.11; animation: drift 28s ease-in-out infinite alternate-reverse; }
-  @keyframes drift { to { transform: translate(120px, 90px) scale(1.15); } }
-  .cursor-glow {
-    position: fixed; width: 520px; height: 520px; border-radius: 50%; pointer-events: none; z-index: -1;
-    background: radial-gradient(circle, rgba(var(--accent-rgb), 0.09), transparent 65%);
-    transform: translate(-50%, -50%); left: -999px; top: -999px;
-  }
+  .mobile-menu.open{transform:none}
+  .mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+  .mobile-menu li a{font-family:var(--serif);font-style:italic;font-size:clamp(2rem,9vw,3.2rem);line-height:1.12;transition:color .2s,padding .3s var(--ease);display:inline-block}
+  .mobile-menu li a:hover{color:var(--accent);padding-left:14px}
+  .mobile-menu .close{position:absolute;top:24px;right:24px;font-family:var(--mono);font-size:.82rem;color:#8c867a}
+  .mobile-menu .swatches{margin-top:34px}
+  .mobile-menu .swatches button{width:24px;height:24px}
 
-  .progress {
-    position: fixed; top: 0; left: 0; height: 2.5px; width: 0;
-    background: var(--accent); z-index: 250; box-shadow: 0 0 14px var(--accent);
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:14px 25px;border-radius:99px;
+    font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;font-weight:500;
+    border:1px solid var(--l);color:var(--t);transition:all .3s var(--ease);will-change:transform
   }
+  .btn:hover{border-color:var(--a);color:var(--a)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+  .btn.primary:hover{box-shadow:0 12px 38px -8px var(--accent);color:var(--on-accent);filter:brightness(1.08)}
 
-  /* NAV */
-  header { position: fixed; top: 14px; left: 0; right: 0; z-index: 200; pointer-events: none; }
-  nav {
-    pointer-events: auto; max-width: 1140px; width: calc(100% - 32px); margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    padding: 9px 14px 9px 22px; border-radius: 999px;
-    background: rgba(13,15,19,0.78); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-    border: 1px solid var(--border); box-shadow: 0 12px 42px rgba(0,0,0,0.5);
+  /* Sections */
+  section.block{position:relative;padding:116px 0;border-top:1px solid var(--l)}
+  .sec-head{display:flex;align-items:flex-end;gap:24px;margin-bottom:60px;padding-bottom:22px;border-bottom:1px solid var(--l)}
+  .sec-label{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--m);white-space:nowrap;padding-bottom:8px}
+  .sec-label b{color:var(--a);font-weight:700}
+  .sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,6vw,4.3rem);line-height:.95;letter-spacing:-.02em}
+  .sec-title em{color:var(--a);font-style:italic}
+
+  /* Spotlight Cards */
+  .spot{
+    position:relative;overflow:hidden;background:var(--c);border:1px solid var(--l);border-radius:18px;padding:28px;
+    transition:border-color .3s,transform .35s var(--ease)
   }
-  .logo { font-family: var(--mono); font-weight: 700; font-size: 0.95rem; white-space: nowrap; }
-  .logo span { color: var(--accent); }
-  .nav-links { display: flex; gap: 2px; list-style: none; font-family: var(--mono); font-size: 0.72rem; }
-  .nav-links a {
-    display: block; padding: 7px 10px; border-radius: 999px; color: var(--muted);
-    transition: all 0.25s var(--ease);
+  .spot::before{
+    content:'';position:absolute;inset:0;opacity:0;transition:opacity .35s;pointer-events:none;
+    background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(var(--accent-rgb),.14),transparent 60%)
   }
-  .nav-links a:hover { color: var(--text); }
-  .nav-links a.active { color: #000; background: var(--accent); font-weight: 700; }
-  .nav-right { display: flex; align-items: center; gap: 12px; }
-  .clock { font-family: var(--mono); font-size: 0.72rem; color: var(--text); white-space: nowrap; }
-  .clock::before { content: '●'; color: var(--accent); margin-right: 6px; font-size: 0.65rem; animation: pulse 2s infinite; }
-  @keyframes pulse { 50% { opacity: 0.35; transform: scale(0.85); } }
-  .swatches { display: flex; gap: 6px; }
-  .swatches button {
-    width: 15px; height: 15px; border-radius: 50%; border: 2px solid transparent;
-    background: var(--c); transition: transform 0.2s;
+  .spot:hover{border-color:rgba(var(--accent-rgb),.55)}
+  .spot:hover::before{opacity:1}
+  .spot>*{position:relative;z-index:1}
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{
+    font-family:var(--mono);font-size:.79rem;padding:9px 16px;border-radius:99px;border:1px solid var(--l);
+    color:var(--t);display:inline-flex;align-items:center;gap:8px;transition:all .25s var(--ease);background:transparent
   }
-  .swatches button:hover { transform: scale(1.25); }
-  .swatches button.on { border-color: #fff; }
-  .menu-toggle {
-    display: none; background: var(--surface-2); border: 1px solid var(--border); color: var(--text);
-    font-family: var(--mono); font-size: 0.78rem; padding: 7px 14px; border-radius: 999px;
-  }
+  .chip i{color:var(--a);font-size:.8rem}
+  .chip:hover{border-color:var(--a);color:var(--a);transform:translateY(-2px);background:rgba(var(--accent-rgb),.08)}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .85s var(--ease),transform .85s var(--ease);transition-delay:var(--d,0s)}
+  .reveal.in{opacity:1;transform:none}
 
   /* HERO */
-  #hero {
-    position: relative; padding: 165px 0 95px; min-height: 100vh;
-    display: flex; align-items: center; overflow: hidden;
+  #hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 0 90px;overflow:hidden;border-top:0}
+  #net{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.75}
+  #hero .container{position:relative;z-index:1;width:100%}
+  .hero-grid{display:grid;grid-template-columns:1.45fr .95fr;gap:64px;align-items:center}
+  .hero-fade{opacity:0}
+  body.loaded .hero-fade{animation:fadeUp .85s var(--ease) var(--fd,.2s) forwards}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+  .status{
+    display:inline-flex;align-items:center;gap:10px;padding:8px 16px;margin-bottom:28px;border:1px solid var(--l);border-radius:99px;
+    font-family:var(--mono);font-size:.7rem;color:var(--m);text-transform:uppercase;letter-spacing:.1em;background:rgba(8,8,7,.65)
   }
-  #net { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.75; }
-  #hero .container { position: relative; z-index: 1; width: 100%; }
-  .hero-grid { display: grid; grid-template-columns: 1.38fr 0.92fr; gap: 56px; align-items: center; }
-  .status {
-    display: inline-flex; align-items: center; gap: 10px; padding: 7px 15px; margin-bottom: 24px;
-    border: 1px solid var(--border); background: rgba(13,15,19,0.85); border-radius: 999px;
-    font-family: var(--mono); font-size: 0.75rem; color: var(--muted);
-  }
-  .status .dot {
-    width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
-    box-shadow: 0 0 10px var(--accent); animation: pulse 2s infinite;
-  }
-  .hero-name {
-    font-size: clamp(2.8rem, 7vw, 5.3rem); line-height: 0.96;
-    font-weight: 700; letter-spacing: -0.04em; margin-bottom: 18px;
-  }
-  .hero-name .l2 {
-    display: block; font-family: var(--serif); font-style: italic;
-    font-weight: 400; color: var(--accent); letter-spacing: -0.02em;
-  }
-  .typing {
-    font-family: var(--mono); color: var(--accent); font-size: 1.05rem;
-    min-height: 1.7em; margin-bottom: 16px;
-  }
-  .typing::after { content: '▍'; margin-left: 3px; animation: blink 1s steps(1) infinite; }
-  @keyframes blink { 50% { opacity: 0; } }
-  .hero-desc {
-    color: var(--muted); font-size: 1.05rem; max-width: 540px; margin-bottom: 30px;
-  }
-  .hero-desc strong { color: var(--text); font-weight: 600; }
-  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 42px; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 10px; padding: 14px 25px;
-    border-radius: 12px; font-family: var(--mono); font-size: 0.84rem; font-weight: 600;
-    border: 1px solid var(--border); background: var(--surface); color: var(--text);
-    transition: all 0.25s var(--ease);
-  }
-  .btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
-  .btn.primary { background: var(--accent); color: #000; border-color: var(--accent); }
-  .btn.primary:hover { color: #000; box-shadow: 0 14px 34px rgba(var(--accent-rgb),0.32); filter: brightness(1.07); }
-  .stats {
-    display: flex; gap: 32px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--border);
-  }
-  .stat b { display: block; font-size: 1.95rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
-  .stat span { font-family: var(--mono); font-size: 0.71rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .status .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);animation:blink 2s infinite}
+  .hero-title{font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,9.5vw,7.6rem);line-height:.9;letter-spacing:-.035em;margin-bottom:28px}
+  .hero-title .line{display:block;overflow:hidden;padding-bottom:.06em}
+  .hero-title .inner{display:inline-block;transform:translateY(112%)}
+  body.loaded .hero-title .inner{animation:rise 1.05s var(--ease) forwards}
+  body.loaded .hero-title .line:nth-child(1) .inner{animation-delay:.12s}
+  body.loaded .hero-title .line:nth-child(2) .inner{animation-delay:.26s}
+  @keyframes rise{to{transform:none}}
+  .hero-title em{font-style:italic;color:var(--accent)}
+  .typing{font-family:var(--mono);color:var(--accent);font-size:1.02rem;min-height:1.7em;margin-bottom:18px}
+  .typing::after{content:'▍';margin-left:3px;animation:blink 1s steps(1) infinite}
+  .hero-sub{display:flex;gap:18px;margin-bottom:36px}
+  .hero-sub .bar{width:40px;height:1px;background:var(--accent);margin-top:14px;flex-shrink:0}
+  .hero-sub p{font-size:1.06rem;color:var(--m);max-width:530px}
+  .hero-sub strong{color:var(--t);font-weight:500}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:44px}
+  .stats{display:flex;gap:38px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--l)}
+  .stat b{display:block;font-family:var(--serif);font-size:2.9rem;font-weight:400;line-height:1;letter-spacing:-.03em}
+  .stat b em{color:var(--accent)}
+  .stat span{font-family:var(--mono);font-size:.68rem;color:var(--m);text-transform:uppercase;letter-spacing:.12em}
 
-  /* Photo */
-  .hero-visual { display: flex; justify-content: center; perspective: 950px; }
-  .photo-wrap {
-    position: relative; width: min(100%, 305px);
-    transform-style: preserve-3d; transition: transform 0.15s ease-out;
+  .hero-visual{display:flex;justify-content:flex-end;perspective:1000px}
+  .portrait-wrap{position:relative;width:min(100%,355px);transform-style:preserve-3d;transition:transform .15s ease-out}
+  .portrait-wrap::before{
+    content:'';position:absolute;inset:0;border:1.5px solid var(--accent);border-radius:8px;transform:translate(16px,16px);
+    transition:transform .4s var(--ease);z-index:0
   }
-  .photo-wrap::before {
-    content: ''; position: absolute; inset: -14px; border-radius: 30px; z-index: 0;
-    background: conic-gradient(from 0deg, transparent 0 55%, var(--accent) 100%);
-    animation: spin 5s linear infinite;
+  .portrait-wrap:hover::before{transform:translate(8px,8px)}
+  .portrait{position:relative;z-index:1;aspect-ratio:4/5;background:var(--ink-2);border:1px solid var(--l);border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .portrait .initials{font-family:var(--serif);font-style:italic;font-size:8rem;color:var(--accent);letter-spacing:-.05em}
+  .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:contrast(1.06) saturate(.94);z-index:2}
+  .portrait::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(8,8,7,.6));z-index:3;pointer-events:none}
+  .caption{
+    position:absolute;z-index:5;bottom:-16px;left:-18px;background:var(--accent);color:var(--on-accent);padding:12px 16px;border-radius:6px;
+    font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;display:flex;flex-direction:column;gap:3px;box-shadow:0 12px 28px rgba(0,0,0,.4)
   }
-  .photo-wrap::after { content: ''; position: absolute; inset: -10px; border-radius: 26px; background: var(--bg); z-index: 0; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .photo-wrap img {
-    position: relative; z-index: 1; width: 100%; aspect-ratio: 4/4.8;
-    object-fit: cover; object-position: center top; border-radius: 20px; display: block;
-    background: var(--surface-2); filter: saturate(0.95) contrast(1.05);
+  .tag-float{
+    position:absolute;z-index:5;font-family:var(--mono);font-size:.7rem;padding:8px 13px;border-radius:10px;background:rgba(8,8,7,.92);
+    border:1px solid var(--l);backdrop-filter:blur(8px);white-space:nowrap;animation:float 5s ease-in-out infinite;color:var(--paper)
   }
-  .tag-float {
-    position: absolute; z-index: 2; font-family: var(--mono); font-size: 0.72rem;
-    padding: 7px 12px; border-radius: 10px; background: rgba(13,15,19,0.92);
-    border: 1px solid var(--border); backdrop-filter: blur(8px); white-space: nowrap;
-    animation: float 5s ease-in-out infinite;
-  }
-  .tag-float i { color: var(--accent); margin-right: 6px; }
-  .tag-float.a { top: 7%; left: -34px; }
-  .tag-float.b { bottom: 12%; right: -28px; animation-delay: -2.5s; }
-  @keyframes float { 50% { transform: translateY(-10px); } }
+  .tag-float i{color:var(--accent);margin-right:6px}
+  .tag-float.a{top:9%;right:-26px}
+  .tag-float.b{top:52%;left:-38px;animation-delay:-2.5s}
+  @keyframes float{50%{transform:translateY(-10px)}}
 
   /* MARQUEE */
-  .marquee { border-block: 1px solid var(--border); overflow: hidden; padding: 18px 0; background: var(--surface); }
-  .marquee-track { display: flex; width: max-content; animation: scroll 38s linear infinite; }
-  .marquee:hover .marquee-track { animation-play-state: paused; }
-  @keyframes scroll { to { transform: translateX(-50%); } }
-  .marquee-item {
-    font-family: var(--mono); font-size: 0.82rem; color: var(--muted);
-    letter-spacing: 0.06em; padding: 0 26px; display: flex; align-items: center;
-    gap: 26px; white-space: nowrap;
-  }
-  .marquee-item em { font-family: var(--serif); font-size: 1.35rem; color: var(--text); text-transform: none; }
-  .marquee-item::after { content: '✦'; color: var(--accent); font-size: 0.72rem; }
+  .marquee{border-top:1px solid var(--l);border-bottom:1px solid var(--l);padding:22px 0;overflow:hidden;background:var(--ink)}
+  .marquee-track{display:flex;width:max-content;animation:scroll 40s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+  .mi{display:flex;align-items:center;gap:36px;padding-right:36px;white-space:nowrap}
+  .mi span{font-family:var(--mono);font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--m)}
+  .mi span.sf{font-family:var(--serif);font-style:italic;font-size:1.65rem;text-transform:none;letter-spacing:-.01em;color:var(--t)}
+  .mi i{color:var(--accent);font-style:normal;font-size:.9rem}
 
-  /* SECTIONS */
-  section.block { padding: 98px 0; border-bottom: 1px solid var(--border); }
-  .sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 46px; }
-  .sec-num { font-family: var(--mono); color: var(--accent); font-size: 0.9rem; font-weight: 700; }
-  .sec-head h2 { font-size: clamp(1.9rem, 4.2vw, 2.7rem); font-weight: 600; letter-spacing: -0.03em; }
-  .sec-head h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--accent); }
-  .sec-head::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;align-items:start}
+  .about-text p{font-size:1.12rem;line-height:1.78;color:var(--m);margin-bottom:22px}
+  .about-text p strong{color:var(--t);font-weight:600}
+  .about-text p em{font-family:var(--serif);font-style:italic;color:var(--a);font-size:1.22em}
+  .about-text p:first-child::first-letter{font-family:var(--serif);font-style:italic;font-size:4.5rem;float:left;line-height:.82;padding:8px 12px 0 0;color:var(--a)}
+  .facts{display:flex;flex-direction:column}
+  .fact{display:flex;justify-content:space-between;gap:14px;padding:15px 0;border-bottom:1px solid var(--l);font-family:var(--mono);font-size:.8rem}
+  .fact:first-child{border-top:1px solid var(--l)}
+  .fact span{color:var(--m);text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;padding-top:2px}
+  .fact b{font-weight:600;text-align:right}
 
-  .spot {
-    position: relative; overflow: hidden; background: var(--surface);
-    border: 1px solid var(--border); border-radius: 20px; padding: 28px;
-    transition: border-color 0.3s, transform 0.3s var(--ease);
-  }
-  .spot::before {
-    content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s; pointer-events: none;
-    background: radial-gradient(380px circle at var(--mx,50%) var(--my,50%), rgba(var(--accent-rgb),0.13), transparent 60%);
-  }
-  .spot:hover { border-color: rgba(var(--accent-rgb),0.45); }
-  .spot:hover::before { opacity: 1; }
-  .spot > * { position: relative; z-index: 1; }
+  /* SKILLS */
+  .skill-row{display:grid;grid-template-columns:270px 1fr;gap:40px;padding:32px 0;border-top:1px solid var(--l);align-items:center;transition:padding .3s var(--ease)}
+  .skill-row:last-child{border-bottom:1px solid var(--l)}
+  .skill-row:hover{padding-left:16px}
+  .skill-row:hover .skill-cat{color:var(--a)}
+  .skill-cat{font-family:var(--mono);font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--m);transition:color .25s}
+  .skill-cat::before{content:'/ ';color:var(--a)}
 
-  /* Bento */
-  .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
-  .s4 { grid-column: span 4; }
-  .s2 { grid-column: span 2; }
-  .bento h3.lbl {
-    font-family: var(--mono); font-size: 0.78rem; font-weight: 500;
-    color: var(--muted); margin-bottom: 16px; letter-spacing: 0.04em;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .bento h3.lbl i { color: var(--accent); margin-right: 8px; }
-  .about-text p { color: var(--muted); font-size: 1.04rem; margin-bottom: 16px; }
-  .about-text p:last-child { margin-bottom: 0; }
-  .about-text strong { color: var(--text); font-weight: 600; }
-  .facts div {
-    display: flex; justify-content: space-between; gap: 12px; padding: 10px 0;
-    border-bottom: 1px dashed var(--border); font-family: var(--mono); font-size: 0.81rem;
-  }
-  .facts div:last-child { border: 0; }
-  .facts span { color: var(--muted); }
-  .facts b { text-align: right; font-weight: 500; }
-  .chips { display: flex; flex-wrap: wrap; gap: 9px; }
-  .chip {
-    font-family: var(--mono); font-size: 0.81rem; padding: 8px 14px; border-radius: 10px;
-    background: var(--surface-2); border: 1px solid var(--border);
-    transition: all 0.2s var(--ease); display: inline-flex; align-items: center; gap: 7px;
-  }
-  .chip i { color: var(--accent); font-size: 0.78rem; }
-  .chip:hover {
-    border-color: var(--accent); color: var(--accent);
-    background: rgba(var(--accent-rgb),0.1); transform: translateY(-2px);
-  }
+  /* ROADMAP */
+  .road-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .road{display:flex;flex-direction:column;min-height:225px}
+  .road .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:auto}
+  .road .ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.15rem;color:var(--a);background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.28)}
+  .status-tag{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;padding:5px 11px;border-radius:99px;border:1px solid var(--l);color:var(--m)}
+  .status-tag.now{color:var(--a);border-color:rgba(var(--accent-rgb),.5);background:rgba(var(--accent-rgb),.08)}
+  .status-tag.now::before{content:'● ';font-size:.6rem}
+  .road h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.05;letter-spacing:-.01em;margin:26px 0 8px}
+  .road p{color:var(--m);font-size:.93rem}
 
-  /* ========== GITHUB STATS ========== */
-  .gh-stats {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 12px; margin-top: 16px;
-  }
-  .gh-cell {
-    padding: 18px; border-radius: 12px;
-    background: var(--surface-2); border: 1px solid var(--border);
-    text-align: center; transition: all 0.25s var(--ease);
-  }
-  .gh-cell:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .gh-cell .num {
-    font-family: var(--serif); font-size: 2rem; line-height: 1;
-    color: var(--accent); margin-bottom: 4px; letter-spacing: -0.02em;
-  }
-  .gh-cell .lbl {
-    font-family: var(--mono); font-size: 0.68rem; color: var(--muted);
-    text-transform: uppercase; letter-spacing: 0.1em;
-  }
-
-  /* ========== JOURNEY TIMELINE ========== */
-  .journey { position: relative; padding-left: 40px; }
-  .journey::before {
-    content: ''; position: absolute; left: 12px; top: 8px; bottom: 8px;
-    width: 2px; background: linear-gradient(to bottom, var(--accent), transparent);
-  }
-  .j-item { position: relative; padding: 0 0 36px 0; }
-  .j-item:last-child { padding-bottom: 0; }
-  .j-item::before {
-    content: ''; position: absolute; left: -34px; top: 6px;
-    width: 12px; height: 12px; border-radius: 50%;
-    background: var(--accent); border: 3px solid var(--bg);
-    box-shadow: 0 0 0 2px var(--accent), 0 0 20px var(--accent);
-  }
-  .j-year {
-    font-family: var(--mono); font-size: 0.72rem; color: var(--accent);
-    text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 6px;
-  }
-  .j-title {
-    font-family: var(--serif); font-size: 1.55rem; line-height: 1.15;
-    margin-bottom: 6px; letter-spacing: -0.01em;
-  }
-  .j-desc { color: var(--muted); font-size: 0.94rem; max-width: 540px; }
-  .j-loc {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-family: var(--mono); font-size: 0.72rem; color: var(--muted);
-    margin-top: 8px; padding: 4px 10px; border-radius: 99px;
-    border: 1px solid var(--border);
-  }
-  .j-loc i { color: var(--accent); }
-
-  /* GEOGRAPHY */
-  .geo-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 18px; }
-  .map-box { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); background: #0a0c10; }
-  .map-box iframe {
-    width: 100%; height: 250px; border: 0; display: block;
-    filter: invert(90%) hue-rotate(180deg) contrast(95%) saturate(80%);
-  }
-  .map-badge {
-    display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.74rem;
-    color: var(--accent); background: rgba(var(--accent-rgb),0.1);
-    border: 1px solid rgba(var(--accent-rgb),0.25);
-    padding: 5px 12px; border-radius: 99px; margin-bottom: 12px;
-  }
-  .tm-svg-box {
-    background: radial-gradient(circle at center, rgba(var(--accent-rgb),0.12), rgba(10,12,16,0.9));
-    border: 1px solid var(--border); border-radius: 14px; padding: 12px;
-    position: relative; overflow: hidden;
-  }
-  .tm-path { fill: rgba(var(--accent-rgb),0.18); stroke: var(--accent); stroke-width: 2.2; filter: drop-shadow(0 0 12px rgba(var(--accent-rgb),0.35)); transition: all 0.4s var(--ease); }
-  .tm-svg-box:hover .tm-path { fill: rgba(var(--accent-rgb),0.3); }
-  .radar-ping { fill: var(--accent); animation: radar 2.2s infinite; transform-origin: center; }
-  @keyframes radar { 0% { r: 4; opacity: 1; } 100% { r: 20; opacity: 0; } }
-  .city-label { font-family: var(--mono); font-size: 9px; fill: var(--accent); font-weight: 700; }
-  .city-label.sub { fill: #8b919d; font-weight: 400; font-size: 8px; }
-  .route-line {
-    display: flex; align-items: center; justify-content: space-between; gap: 10px;
-    margin-top: 14px; padding: 12px 16px; border-radius: 12px;
-    background: var(--surface-2); border: 1px solid var(--border);
-    font-family: var(--mono); font-size: 0.78rem;
-  }
-  .route-line i.plane { color: var(--accent); animation: flyAcross 3s ease-in-out infinite; }
-  @keyframes flyAcross { 0%,100% { transform: translateX(-4px); } 50% { transform: translateX(4px); } }
+  /* LOCATIONS */
+  .geo-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .tab{font-family:var(--mono);font-size:.74rem;padding:9px 16px;border-radius:99px;border:1px solid var(--l);color:var(--m);transition:all .25s var(--ease)}
+  .tab:hover{color:var(--t);border-color:var(--t)}
+  .tab.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:700}
+  .map-box{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--l);background:#0b0a09;aspect-ratio:16/10}
+  .map-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(92%) hue-rotate(180deg) contrast(92%) saturate(.7);transition:opacity .4s}
+  .map-box .ping{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--mono);font-size:.68rem;background:rgba(8,8,7,.88);color:var(--paper);padding:6px 12px;border-radius:99px;border:1px solid rgba(242,236,225,.15);display:flex;gap:8px;align-items:center}
+  .map-box .ping::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);animation:blink 1.6s infinite}
+  .loc-info{display:flex;flex-direction:column;height:100%}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--a);background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.3);padding:6px 13px;border-radius:99px;width:fit-content;margin-bottom:18px}
+  .loc-info h3{font-family:var(--serif);font-weight:400;font-size:2.05rem;line-height:1.05;letter-spacing:-.01em;margin-bottom:10px}
+  .loc-info p{color:var(--m);font-size:.96rem;margin-bottom:20px}
+  .loc-meta{margin-top:auto;display:flex;flex-direction:column;gap:12px}
+  .route-svg{margin-top:20px;width:100%;height:auto;border:1px solid var(--l);border-radius:14px;background:var(--c2)}
+  .route-labels{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.72rem;color:var(--m);margin-top:10px}
+  .route-labels b{color:var(--t);font-weight:500}
 
   /* TERMINAL */
-  .term {
-    background: #0a0c0f; border: 1px solid var(--border); border-radius: 18px;
-    overflow: hidden; box-shadow: 0 30px 70px rgba(0,0,0,0.55), 0 0 0 1px rgba(var(--accent-rgb),0.05);
-    font-family: var(--mono); font-size: 0.85rem;
-  }
-  .term-head { display: flex; align-items: center; gap: 7px; padding: 12px 16px; background: var(--surface-2); border-bottom: 1px solid var(--border); }
-  .term-head i { width: 11px; height: 11px; border-radius: 50%; }
-  .term-head i:nth-child(1) { background: #ff5f57; }
-  .term-head i:nth-child(2) { background: #febc2e; }
-  .term-head i:nth-child(3) { background: #28c840; }
-  .term-head small { margin: 0 auto; color: var(--muted); font-size: 0.75rem; transform: translateX(-24px); }
-  .term-out { height: 380px; overflow-y: auto; padding: 18px 20px 6px; scroll-behavior: smooth; }
-  .tl { white-space: pre-wrap; word-break: break-word; line-height: 1.75; color: #b8bec9; }
-  .tl .p { color: var(--accent); }
-  .tl .d { color: var(--muted); }
-  .tl a { color: var(--accent); border-bottom: 1px dashed rgba(var(--accent-rgb),0.5); }
-  .tl .k { color: #fff; }
-  .tl .nf-key { color: var(--accent); display: inline-block; min-width: 90px; }
-  .term-in { display: flex; align-items: center; gap: 10px; padding: 8px 20px 16px; }
-  .term-in .p { color: var(--accent); white-space: nowrap; }
-  .term-in input { flex: 1; background: none; border: 0; outline: 0; color: #fff; font: inherit; caret-color: var(--accent); }
-  .quick { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-  .quick button {
-    font-family: var(--mono); font-size: 0.77rem; padding: 7px 14px; border-radius: 999px;
-    background: var(--surface); color: var(--muted); border: 1px solid var(--border);
-    transition: all 0.2s;
-  }
-  .quick button:hover { color: var(--accent); border-color: var(--accent); }
+  .term{background:#090b0e;border:1px solid #22262f;border-radius:16px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.48);font-family:var(--mono);font-size:.84rem;color:#c2c8d3}
+  .term-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#13161c;border-bottom:1px solid #22262f}
+  .term-dots{display:flex;gap:7px}
+  .term-dots i{width:11px;height:11px;border-radius:50%;display:block}
+  .term-dots i:nth-child(1){background:#ff5f57}.term-dots i:nth-child(2){background:#febc2e}.term-dots i:nth-child(3){background:#28c840}
+  .term-head small{color:#8b919d;font-size:.73rem}
+  .term-badge{font-size:.66rem;color:var(--accent);border:1px solid rgba(var(--accent-rgb),.35);padding:2px 8px;border-radius:99px}
+  .term-out{height:365px;overflow-y:auto;padding:18px 20px 6px;scroll-behavior:smooth}
+  .tl{white-space:pre-wrap;word-break:break-word;line-height:1.75}
+  .tl .p{color:var(--accent)}.tl .d{color:#8b919d}.tl .k{color:#fff}.tl .ok{color:#34d399}.tl .warn{color:#fbbf24}
+  .tl a{color:var(--accent);border-bottom:1px dashed rgba(var(--accent-rgb),.5)}
+  .term-in{display:flex;align-items:center;gap:10px;padding:8px 20px 16px}
+  .term-in .p{color:var(--accent);white-space:nowrap}
+  .term-in input{flex:1;background:none;border:0;outline:0;color:#fff;font:inherit;caret-color:var(--accent)}
+  .quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .quick button{font-family:var(--mono);font-size:.74rem;padding:8px 15px;border-radius:99px;border:1px solid var(--l);color:var(--m);transition:all .2s}
+  .quick button:hover{color:var(--a);border-color:var(--a)}
 
   /* PROJECTS */
-  .proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-  .proj { display: flex; flex-direction: column; min-height: 295px; padding: 30px; }
-  .proj .big {
-    position: absolute !important; right: 22px; top: 6px; font-size: 6.5rem; font-weight: 700;
-    line-height: 1; color: transparent; -webkit-text-stroke: 1px var(--border);
-    transition: -webkit-text-stroke-color 0.3s;
-  }
-  .proj:hover .big { -webkit-text-stroke-color: rgba(var(--accent-rgb),0.5); }
-  .proj .ico {
-    width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center;
-    font-size: 1.25rem; color: var(--accent); background: rgba(var(--accent-rgb),0.1);
-    border: 1px solid rgba(var(--accent-rgb),0.25); margin-bottom: auto;
-  }
-  .proj h3 { font-size: 1.38rem; font-weight: 600; letter-spacing: -0.02em; margin: 32px 0 10px; transition: color 0.25s; }
-  .proj:hover h3 { color: var(--accent); }
-  .proj p { color: var(--muted); font-size: 0.96rem; margin-bottom: 18px; }
-  .proj .tags { display: flex; flex-wrap: wrap; gap: 8px 14px; font-family: var(--mono); font-size: 0.78rem; color: var(--accent); }
-  .proj .go { position: absolute !important; right: 26px; bottom: 26px; font-size: 1.3rem; color: var(--muted); transition: all 0.3s var(--ease); }
-  .proj:hover .go { color: var(--accent); transform: translate(5px,-5px); }
-  .more { margin-top: 30px; text-align: center; }
+  .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .proj{display:flex;flex-direction:column;min-height:310px;padding:32px;cursor:pointer;text-align:left}
+  .proj .big{position:absolute!important;right:24px;top:8px;font-family:var(--serif);font-style:italic;font-size:7rem;line-height:1;color:transparent;-webkit-text-stroke:1px var(--l);transition:-webkit-text-stroke-color .3s}
+  .proj:hover .big{-webkit-text-stroke-color:rgba(var(--accent-rgb),.6)}
+  .proj .ico{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:1.25rem;color:var(--a);background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.28);margin-bottom:auto}
+  .proj h3{font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.02;letter-spacing:-.015em;margin:34px 0 10px;transition:color .25s}
+  .proj:hover h3{color:var(--a)}
+  .proj p{color:var(--m);font-size:.96rem;margin-bottom:18px;max-width:440px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:.74rem;color:var(--a)}
+  .proj .go{position:absolute!important;right:28px;bottom:26px;font-size:1.3rem;color:var(--m);transition:all .3s var(--ease)}
+  .proj:hover .go{color:var(--a);transform:translate(5px,-5px)}
+  .more{margin-top:44px;text-align:center}
 
-  /* CERTS */
-  .cert { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; }
-  .cert h3 { font-size: 1.25rem; margin-bottom: 4px; }
-  .cert p { color: var(--muted); font-size: 0.95rem; }
-  .langs { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; }
-  .lang { padding: 20px; }
-  .lang-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-  .lang-top h4 { font-size: 1.05rem; font-weight: 600; }
-  .lang-top .flag { font-size: 1.5rem; }
-  .lvl { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); margin-bottom: 12px; }
-  .bar { height: 4px; background: var(--border); border-radius: 3px; overflow: hidden; }
-  .bar-fill {
-    height: 100%; width: 0; background: var(--accent); border-radius: 3px;
-    transition: width 1.3s var(--ease); box-shadow: 0 0 10px rgba(var(--accent-rgb),0.6);
+  /* Project Modal */
+  .modal-bg{
+    position:fixed;inset:0;z-index:8500;background:rgba(0,0,0,.78);backdrop-filter:blur(10px);
+    display:grid;place-items:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)
   }
+  .modal-bg.open{opacity:1;pointer-events:auto}
+  .modal{
+    width:min(640px,100%);background:var(--ink-2);border:1px solid rgba(242,236,225,.18);border-radius:22px;
+    padding:36px;color:var(--paper);transform:translateY(24px) scale(.97);transition:transform .35s var(--ease);position:relative
+  }
+  .modal-bg.open .modal{transform:none}
+  .modal-close{position:absolute;top:22px;right:22px;font-family:var(--mono);font-size:.8rem;color:var(--m);padding:6px 12px;border:1px solid var(--l);border-radius:99px}
+  .modal-close:hover{color:var(--accent);border-color:var(--accent)}
+  .modal h3{font-family:var(--serif);font-size:2.3rem;font-weight:400;line-height:1.05;margin:12px 0 14px}
+  .modal p{color:#a8a296;font-size:.98rem;margin-bottom:20px}
+  .modal-specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+  .mspec{padding:14px;border-radius:12px;background:#0a0908;border:1px solid rgba(242,236,225,.1)}
+  .mspec span{display:block;font-family:var(--mono);font-size:.66rem;color:var(--m);text-transform:uppercase;margin-bottom:4px}
+  .mspec b{font-family:var(--mono);font-size:.82rem;color:var(--accent);font-weight:500}
 
-  /* MUSIC */
-  .music-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .music-card h3 { font-size: 1.15rem; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
-  .music-card h3 i { color: var(--accent); }
-  .music-sub { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); margin-bottom: 16px; }
-  .artist-list { display: flex; flex-direction: column; gap: 9px; }
-  .artist-row {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 10px 14px; border-radius: 10px; background: var(--surface-2);
-    border: 1px solid var(--border); font-size: 0.9rem;
-    transition: all 0.25s var(--ease);
+  /* CERTS & LANGS */
+  .cert{display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap;margin-bottom:50px;padding:36px}
+  .cert .badge{margin-bottom:12px}
+  .cert h3{font-family:var(--serif);font-weight:400;font-size:2rem;letter-spacing:-.01em;margin-bottom:4px}
+  .cert p{font-family:var(--mono);font-size:.82rem;color:var(--m)}
+  .langs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+  .lang{padding:24px}
+  .lang-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+  .lang-name{font-family:var(--serif);font-size:1.75rem;line-height:1;letter-spacing:-.01em}
+  .lang-flag{font-size:1.5rem}
+  .lang-tr{font-family:var(--mono);font-size:.68rem;color:var(--m);margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em}
+  .lang-lvl{font-family:var(--mono);font-size:.72rem;color:var(--a);margin-bottom:10px;text-transform:uppercase;letter-spacing:.1em}
+  .bar2{height:3px;background:var(--l);border-radius:3px;overflow:hidden}
+  .bar2 span{display:block;height:100%;width:0;background:var(--a);border-radius:3px;transition:width 1.4s var(--ease)}
+
+  /* MUSIC (WITH REAL WEB AUDIO SYNTH) */
+  .player{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;padding:34px;margin-bottom:18px}
+  .vinyl{
+    width:150px;height:150px;border-radius:50%;position:relative;flex-shrink:0;
+    background:repeating-radial-gradient(circle at center,#0c0b0a 0 2px,#1a1712 2px 4px);
+    border:1px solid var(--l);box-shadow:0 14px 40px rgba(0,0,0,.55);animation:spin 7s linear infinite
   }
-  .artist-row:hover { border-color: var(--accent); transform: translateX(4px); }
-  .artist-name { font-weight: 600; display: flex; align-items: center; gap: 8px; }
-  .artist-note { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
-  .eq-bars { display: inline-flex; align-items: flex-end; gap: 2px; height: 12px; }
-  .eq-bars span { width: 2.5px; background: var(--accent); animation: eq 0.9s ease-in-out infinite alternate; }
-  .eq-bars span:nth-child(1) { height: 5px; animation-delay: 0s; }
-  .eq-bars span:nth-child(2) { height: 11px; animation-delay: 0.25s; }
-  .eq-bars span:nth-child(3) { height: 7px; animation-delay: 0.45s; }
-  @keyframes eq { to { height: 12px; } }
+  .vinyl.paused{animation-play-state:paused}
+  .vinyl::before{content:'';position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 20deg,transparent 0 20%,rgba(255,255,255,.12) 25%,transparent 30% 70%,rgba(255,255,255,.09) 75%,transparent 80%)}
+  .vinyl::after{content:'';position:absolute;inset:36%;border-radius:50%;background:var(--accent);box-shadow:0 0 0 7px #0c0b0a}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .np-label{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:var(--m);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .audio-pill{font-size:.64rem;padding:3px 9px;border-radius:99px;border:1px solid var(--l);color:var(--a);cursor:pointer;transition:all .2s}
+  .audio-pill.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+  .eq{display:inline-flex;align-items:flex-end;gap:2.5px;height:13px}
+  .eq span{width:3px;background:var(--a);animation:eq .9s ease-in-out infinite alternate}
+  .eq span:nth-child(1){height:5px}.eq span:nth-child(2){height:12px;animation-delay:.25s}.eq span:nth-child(3){height:8px;animation-delay:.45s}.eq span:nth-child(4){height:11px;animation-delay:.15s}
+  .eq.off span{animation-play-state:paused}
+  @keyframes eq{to{height:13px}}
+  .np-name{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-.02em;margin-bottom:4px;min-height:1.1em}
+  .np-sub{font-family:var(--mono);font-size:.76rem;color:var(--m);margin-bottom:18px}
+  .np-bar{height:3px;background:var(--l);border-radius:3px;overflow:hidden;margin-bottom:14px}
+  .np-bar span{display:block;height:100%;width:0;background:var(--a)}
+  .np-ctrl{display:flex;gap:10px;align-items:center}
+  .np-ctrl button{width:40px;height:40px;border-radius:50%;border:1px solid var(--l);display:grid;place-items:center;font-size:.85rem;transition:all .25s}
+  .np-ctrl button:hover{border-color:var(--a);color:var(--a)}
+  .music-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .mcard h3{font-family:var(--serif);font-weight:400;font-size:1.75rem;line-height:1;margin-bottom:4px;display:flex;align-items:center;gap:12px}
+  .mcard h3 i{color:var(--a);font-size:1.1rem}
+  .msub{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--m);margin-bottom:18px}
+  .alist{display:flex;flex-direction:column;gap:9px}
+  .arow{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 15px;border-radius:12px;border:1px solid var(--l);transition:all .25s var(--ease);cursor:pointer}
+  .arow:hover,.arow.cur{border-color:var(--a);transform:translateX(5px);background:rgba(var(--accent-rgb),.07)}
+  .arow b{font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:9px}
+  .arow small{font-family:var(--mono);font-size:.68rem;color:var(--m);text-align:right}
+  .fav-star{color:var(--a);font-size:.7rem}
+  .hobby{margin-top:44px}
+  .hobby h4{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--m);margin-bottom:16px;font-weight:500}
 
   /* CONTACT */
-  .mail-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 38px; }
-  .big-mail { font-size: clamp(1.2rem,3.6vw,2.2rem); font-weight: 600; letter-spacing: -0.02em; word-break: break-all; transition: color 0.25s; }
-  .big-mail:hover { color: var(--accent); }
-  .copy-btn { padding: 10px 16px; font-size: 0.78rem; }
-  .socials { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 14px; }
-  .social {
-    position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 20px; border-radius: 14px; background: var(--surface); border: 1px solid var(--border);
-    font-family: var(--mono); font-size: 0.85rem; transition: all 0.28s var(--ease);
+  #contact{padding-bottom:70px}
+  #contact::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:900px;max-width:100%;height:500px;background:radial-gradient(ellipse at top,rgba(var(--accent-rgb),.13),transparent 65%);pointer-events:none}
+  .contact-headline{font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,9.5vw,7.8rem);line-height:.92;letter-spacing:-.035em;text-align:center;margin-bottom:54px}
+  .contact-headline em{color:var(--a);font-style:italic}
+  .big-email{display:block;text-align:center;font-family:var(--serif);font-size:clamp(1.4rem,4.6vw,2.8rem);letter-spacing:-.01em;padding:38px 0;border-top:1px solid var(--l);border-bottom:1px solid var(--l);word-break:break-all;transition:color .3s,letter-spacing .3s}
+  .big-email:hover{color:var(--a);letter-spacing:.01em}
+  .big-email em{font-style:italic;opacity:.55}
+  .mail-actions{display:flex;justify-content:center;gap:12px;margin:26px 0 54px;flex-wrap:wrap}
+  .socials{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+  .social{
+    position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;padding:22px 24px;border:1px solid var(--l);border-radius:14px;
+    font-family:var(--mono);font-size:.84rem;transition:border-color .3s,color .3s,transform .3s var(--ease),box-shadow .3s
   }
-  .social span.left { display: flex; align-items: center; gap: 12px; position: relative; z-index: 2; }
-  .social .brand { color: var(--accent); font-size: 1.2rem; transition: transform 0.3s var(--ease); }
-  .social .ext { position: relative; z-index: 2; transition: transform 0.3s var(--ease); }
-  .social:hover {
-    border-color: var(--accent); color: var(--accent);
-    transform: translateY(-4px); box-shadow: 0 14px 30px rgba(0,0,0,0.45);
-  }
-  .social:hover .ext { transform: translate(3px,-3px); }
+  .social .left{display:flex;align-items:center;gap:13px;position:relative;z-index:2}
+  .social .brand{font-size:1.25rem;color:var(--a);display:inline-block;transition:color .3s}
+  .social .ext{position:relative;z-index:2;opacity:.45;transition:all .3s var(--ease)}
+  .social:hover{transform:translateY(-4px);border-color:var(--a);color:var(--a);box-shadow:0 18px 36px rgba(0,0,0,.35)}
+  .social:hover .ext{opacity:1;transform:translate(4px,-4px)}
+  .social.gh:hover .brand{animation:spin .9s linear}
+  .social.ig:hover{border-color:#e1306c;color:#e1306c}.social.ig:hover .brand{color:#e1306c;animation:pop .6s var(--ease)}
+  .social.li:hover{border-color:#4aa3ff;color:#4aa3ff}.social.li:hover .brand{color:#4aa3ff;animation:pop .6s var(--ease)}
+  .social.tt:hover{border-color:#25f4ee;color:#fff}.social.tt:hover .brand{color:#fff;animation:glitch .5s steps(2) infinite}
+  @keyframes pop{40%{transform:scale(1.35) rotate(-8deg)}100%{transform:scale(1)}}
+  @keyframes glitch{0%{text-shadow:2px 0 #fe2c55,-2px 0 #25f4ee}50%{text-shadow:-2px 1px #fe2c55,2px -1px #25f4ee;transform:translate(1px,-1px)}100%{text-shadow:2px -1px #fe2c55,-2px 1px #25f4ee}}
 
-  .social.tg-card::after {
-    content: '✈ ✈ ✈'; position: absolute; left: -60px; bottom: 6px;
-    font-size: 0.72rem; letter-spacing: 8px; color: rgba(34,211,238,0.35);
-    opacity: 0; pointer-events: none;
-  }
-  .social.tg-card:hover { border-color: #22d3ee; color: #22d3ee; box-shadow: 0 14px 32px rgba(34,211,238,0.22); }
-  .social.tg-card:hover .brand { color: #22d3ee; animation: planeFly 0.85s var(--ease) forwards; }
-  .social.tg-card:hover::after { animation: trailFly 1.1s linear infinite; }
-  @keyframes planeFly {
-    0% { transform: translate(0,0) scale(1); }
-    45% { transform: translate(16px,-16px) scale(0.7); opacity: 0; }
-    50% { transform: translate(-14px,14px) scale(0.7); opacity: 0; }
-    100% { transform: translate(0,0) scale(1.12); opacity: 1; }
-  }
-  @keyframes trailFly {
-    0% { transform: translateX(0); opacity: 0; }
-    30% { opacity: 0.8; }
-    100% { transform: translateX(260px); opacity: 0; }
-  }
+  .social.tg:hover{border-color:#2aabee;color:#2aabee;box-shadow:0 18px 40px rgba(42,171,238,.22)}
+  .social.tg:hover .brand{color:#2aabee;animation:tgIcon .9s var(--ease) infinite}
+  .tg-fly{position:absolute;left:24px;top:50%;font-size:1rem;color:#2aabee;opacity:0;z-index:1;pointer-events:none}
+  .tg-trail{position:absolute;left:24px;top:calc(50% + 5px);height:0;width:0;border-bottom:2px dotted rgba(42,171,238,.6);opacity:0;z-index:1;pointer-events:none}
+  .social.tg:hover .tg-fly{animation:tgFly 1.3s linear infinite}
+  .social.tg:hover .tg-trail{animation:tgTrail 1.3s linear infinite}
+  @keyframes tgIcon{0%,100%{transform:none}40%{transform:translate(-3px,3px) scale(.9)}}
+  @keyframes tgFly{0%{transform:translate(0,-50%) rotate(-12deg) scale(.7);opacity:0}15%{opacity:1}100%{transform:translate(190px,-95%) rotate(-12deg) scale(1.1);opacity:0}}
+  @keyframes tgTrail{0%{width:0;opacity:0}20%{opacity:.9}100%{width:170px;opacity:0;transform:translateY(-10px)}}
 
-  .social.wa-card .ring-wave {
-    position: absolute; left: 26px; top: 50%; width: 12px; height: 12px;
-    border-radius: 50%; border: 1.5px solid #25d366;
-    transform: translate(-50%,-50%) scale(0.5); opacity: 0; pointer-events: none;
-  }
-  .social.wa-card:hover { border-color: #25d366; color: #25d366; box-shadow: 0 14px 32px rgba(37,211,102,0.22); }
-  .social.wa-card:hover .brand { color: #25d366; animation: phoneRing 0.55s ease-in-out infinite; }
-  .social.wa-card:hover .ring-wave { animation: soundPulse 1s ease-out infinite; }
-  @keyframes phoneRing {
-    0%,100% { transform: rotate(0deg) scale(1.1); }
-    20% { transform: rotate(-18deg) scale(1.15); }
-    40% { transform: rotate(18deg) scale(1.15); }
-    60% { transform: rotate(-14deg) scale(1.15); }
-    80% { transform: rotate(14deg) scale(1.15); }
-  }
-  @keyframes soundPulse {
-    0% { transform: translate(-50%,-50%) scale(0.6); opacity: 0.9; }
-    100% { transform: translate(-50%,-50%) scale(3.4); opacity: 0; }
-  }
+  .social.wa:hover{border-color:#25d366;color:#25d366;box-shadow:0 18px 40px rgba(37,211,102,.22)}
+  .social.wa:hover .brand{color:#25d366;animation:ring .6s ease-in-out infinite;transform-origin:50% 60%}
+  .wa-wave{position:absolute;left:41px;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;border:2px solid #25d366;opacity:0;z-index:1;pointer-events:none}
+  .social.wa:hover .wa-wave{animation:wave 1.4s ease-out infinite}
+  .social.wa:hover .wa-wave:nth-of-type(2){animation-delay:.45s}
+  .social.wa:hover .wa-wave:nth-of-type(3){animation-delay:.9s}
+  @keyframes ring{0%,100%{transform:rotate(0) scale(1.12)}15%{transform:rotate(-20deg) scale(1.18)}30%{transform:rotate(20deg) scale(1.18)}45%{transform:rotate(-15deg) scale(1.18)}60%{transform:rotate(15deg) scale(1.18)}75%{transform:rotate(0) scale(1.12)}}
+  @keyframes wave{0%{transform:scale(.6);opacity:.9}100%{transform:scale(3.8);opacity:0}}
 
-  footer { padding: 34px 0; text-align: center; color: var(--muted); font-family: var(--mono); font-size: 0.78rem; background: #050607; }
-  footer .accent { margin: 0 3px; }
+  /* FOOTER */
+  footer{padding:36px 0 30px;border-top:1px solid var(--l)}
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--m)}
+  .footer-inner .a{color:var(--a)}
+  .totop{display:inline-flex;align-items:center;gap:8px;transition:color .2s}
+  .totop:hover{color:var(--a)}
 
-  .toast {
-    position: fixed; left: 50%; bottom: 30px; transform: translate(-50%,40px);
-    opacity: 0; z-index: 300; background: var(--accent); color: #000;
-    font-family: var(--mono); font-size: 0.82rem; font-weight: 700;
-    padding: 11px 20px; border-radius: 999px; transition: all 0.4s var(--ease);
-    pointer-events: none;
+  /* Toast */
+  .toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,40px);opacity:0;z-index:9000;background:var(--accent);color:var(--on-accent);font-family:var(--mono);font-size:.8rem;font-weight:700;padding:12px 22px;border-radius:99px;transition:all .4s var(--ease);pointer-events:none}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  @media (max-width:1100px){
+    .nav-links,.nav-right .swatches,.clock{display:none}
+    .menu-toggle{display:block}
   }
-  .toast.show { opacity: 1; transform: translate(-50%,0); }
-
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); transition-delay: var(--d,0s); }
-  .reveal.in { opacity: 1; transform: none; }
-
-  /* Responsive */
-  @media (max-width: 960px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 46px; }
-    .hero-visual { order: -1; }
-    .photo-wrap { width: 225px; }
-    .tag-float.a { left: -18px; }
-    .tag-float.b { right: -16px; }
-    .bento { grid-template-columns: 1fr; }
-    .s4, .s2 { grid-column: auto; }
-    .geo-grid, .proj-grid, .music-grid { grid-template-columns: 1fr; }
-    .menu-toggle { display: block; }
-    .swatches, .clock { display: none; }
-    .nav-links {
-      display: none; position: absolute; top: 62px; left: 0; right: 0;
-      flex-direction: column; gap: 0; background: rgba(13,15,19,0.96);
-      backdrop-filter: blur(18px); border: 1px solid var(--border);
-      border-radius: 20px; padding: 8px;
-    }
-    .nav-links.open { display: flex; }
-    .nav-links a { padding: 14px 18px; border-radius: 12px; }
-    #hero { padding-top: 130px; }
-    .term-out { height: 320px; }
-    .proj .big { font-size: 4.8rem; }
-    .journey { padding-left: 32px; }
-    .j-item::before { left: -28px; }
+  @media (max-width:900px){
+    .container{padding:0 22px}
+    section.block{padding:90px 0}
+    .hero-grid{grid-template-columns:1fr;gap:64px}
+    .hero-visual{order:-1;justify-content:center}
+    .portrait-wrap{width:240px}
+    .tag-float.a{right:-14px}.tag-float.b{left:-18px}
+    #hero{padding-top:120px}
+    .about-grid,.geo-grid,.proj-grid,.music-grid{grid-template-columns:1fr;gap:44px}
+    .geo-grid,.proj-grid,.music-grid{gap:16px}
+    .road-grid{grid-template-columns:1fr}
+    .skill-row{grid-template-columns:1fr;gap:16px}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:12px}
+    .player{grid-template-columns:1fr;justify-items:center;text-align:center}
+    .np-ctrl,.np-label{justify-content:center}
+    .term-out{height:320px}
+    .proj .big{font-size:5rem}
+    .modal-specs{grid-template-columns:1fr}
   }
-  @media (hover: none) { .cursor-glow { display: none; } }
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-    .reveal { opacity: 1; transform: none; }
-    #boot { display: none; }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    .reveal{opacity:1;transform:none}
+    .hero-fade{opacity:1}.hero-title .inner{transform:none}
   }
 </style>
 </head>
 <body>
 
-<!-- BOOT LOADER -->
-<div id="boot">
-  <div class="boot-inner">
-    <div class="boot-head">&gt; KUVANCHBEK_OS v4.0 // INITIALIZING</div>
-    <div id="bootLines"></div>
-    <div class="boot-bar"><span id="bootBar"></span></div>
-    <div class="boot-pct"><span id="bootStatus">booting…</span><span id="bootPct">0%</span></div>
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="brand">kuvanchbek<b>.</b></div>
+  <div class="sys">[ INITIALIZING CYBER-EDITORIAL OS v5.0 ]</div>
+  <div class="bar"><span id="loadBar"></span></div>
+  <div class="count" id="loadCount">000%</div>
+</div>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="progress"><span id="progress"></span></div>
+<div class="aurora"><i></i><i></i></div>
+<div class="toast" id="toast">E-posta kopyalandı ✓</div>
+
+<!-- Project Inspection Modal -->
+<div class="modal-bg" id="projModal" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">ESC / kapat ×</button>
+    <div class="badge" id="mTag">ARCHITECTURE</div>
+    <h3 id="mTitle">Proje Başlığı</h3>
+    <p id="mDesc">Açıklama</p>
+    <div class="modal-specs" id="mSpecs"></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a id="mRepo" href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn primary"><i class="fab fa-github"></i> Kaynak Kodu İncele</a>
+      <button class="btn" id="modalClose2">Kapat</button>
+    </div>
   </div>
 </div>
 
-<!-- Custom cursor -->
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<!-- Matrix overlay -->
-<canvas id="matrix"></canvas>
-
-<div class="progress" id="progress"></div>
-<div class="aurora"><i></i><i></i></div>
-<div class="cursor-glow" id="glow"></div>
-<div class="toast" id="toast">E-posta kopyalandı ✓</div>
-
-<header>
-  <nav>
-    <a href="#hero" class="logo"><span>~/</span>kuvanchbek<span>.dev</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">hakkımda</a></li>
-      <li><a href="#journey">yolculuk</a></li>
-      <li><a href="#locations">konum</a></li>
-      <li><a href="#terminal">terminal</a></li>
-      <li><a href="#projects">projeler</a></li>
-      <li><a href="#certs">diller</a></li>
-      <li><a href="#music">vibe</a></li>
-      <li><a href="#contact">iletişim</a></li>
-    </ul>
-    <div class="nav-right">
-      <span class="clock" id="clock">IST --:--</span>
-      <div class="swatches" id="swatches">
-        <button style="--c:#c9ff3f" data-t="lime" class="on" aria-label="Lime"></button>
-        <button style="--c:#22d3ee" data-t="cyan" aria-label="Cyan"></button>
-        <button style="--c:#a78bfa" data-t="violet" aria-label="Violet"></button>
-        <button style="--c:#ff8a3d" data-t="orange" aria-label="Orange"></button>
-        <button style="--c:#ff4d8d" data-t="pink" aria-label="Pink"></button>
+<!-- HEADER -->
+<header id="header">
+  <div class="container">
+    <nav>
+      <a href="#hero" class="logo">kuvanchbek<span class="dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-scramble>Hakkımda</a></li>
+        <li><a href="#skills" data-scramble>Yetenekler</a></li>
+        <li><a href="#roadmap" data-scramble>Gelişim</a></li>
+        <li><a href="#locations" data-scramble>Konum</a></li>
+        <li><a href="#terminal" data-scramble>Terminal</a></li>
+        <li><a href="#projects" data-scramble>Projeler</a></li>
+        <li><a href="#certs" data-scramble>Diller</a></li>
+        <li><a href="#music" data-scramble>Vibe</a></li>
+        <li><a href="#contact" data-scramble>İletişim</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="clock" id="clock">IST --:--</span>
+        <div class="swatches" title="Tema rengi">
+          <button style="--c:#ff4d00" data-t="orange" class="on" aria-label="Turuncu"></button>
+          <button style="--c:#c9ff3f" data-t="lime" aria-label="Limon"></button>
+          <button style="--c:#22d3ee" data-t="cyan" aria-label="Camgöbeği"></button>
+          <button style="--c:#a78bfa" data-t="violet" aria-label="Mor"></button>
+          <button style="--c:#ff4d8d" data-t="pink" aria-label="Pembe"></button>
+        </div>
+        <button class="menu-toggle" id="menuOpen">menü</button>
       </div>
-      <button class="menu-toggle" id="menuBtn">menü</button>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close" id="menuClose">kapat ×</button>
+  <ul>
+    <li><a href="#about">Hakkımda</a></li>
+    <li><a href="#skills">Yetenekler</a></li>
+    <li><a href="#roadmap">Gelişim</a></li>
+    <li><a href="#locations">Konum</a></li>
+    <li><a href="#terminal">Terminal</a></li>
+    <li><a href="#projects">Projeler</a></li>
+    <li><a href="#certs">Diller</a></li>
+    <li><a href="#music">Vibe</a></li>
+    <li><a href="#contact">İletişim</a></li>
+  </ul>
+  <div class="swatches">
+    <button style="--c:#ff4d00" data-t="orange" class="on" aria-label="Turuncu"></button>
+    <button style="--c:#c9ff3f" data-t="lime" aria-label="Limon"></button>
+    <button style="--c:#22d3ee" data-t="cyan" aria-label="Camgöbeği"></button>
+    <button style="--c:#a78bfa" data-t="violet" aria-label="Mor"></button>
+    <button style="--c:#ff4d8d" data-t="pink" aria-label="Pembe"></button>
+  </div>
+</div>
 
 <main>
   <!-- HERO -->
@@ -659,32 +559,37 @@
     <canvas id="net"></canvas>
     <div class="container hero-grid">
       <div>
-        <div class="status"><span class="dot"></span> Başakşehir, İstanbul · İşbirliklerine açık</div>
-        <h1 class="hero-name">
-          <span id="n1">Kuvanchbek</span>
-          <span class="l2" id="n2">Abdirimov.</span>
+        <div class="status hero-fade" style="--fd:.1s"><span class="dot"></span> Başakşehir, İstanbul · İşbirliklerine açık</div>
+        <h1 class="hero-title">
+          <span class="line"><span class="inner">Kuvanchbek</span></span>
+          <span class="line"><span class="inner"><em>Abdirimov</em>.</span></span>
         </h1>
-        <div class="typing" id="typing"></div>
-        <p class="hero-desc">
-          <strong>İstanbul Gelişim Üniversitesi</strong> Yazılım Mühendisliği 2. sınıf öğrencisi.
-          <strong>Türkmenistan</strong> kökenli, <strong>Başakşehir / İstanbul</strong>'da yaşayan; siber güvenlik,
-          otomasyon ve pratik bot çözümleri geliştiren bir yazılım geliştiricisiyim.
-        </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn primary" data-magnetic><i class="fas fa-code"></i> Projelerimi Gör</a>
-          <a href="#terminal" class="btn" data-magnetic><i class="fas fa-terminal"></i> Terminali Aç</a>
+        <div class="typing hero-fade" id="typing" style="--fd:.55s"></div>
+        <div class="hero-sub hero-fade" style="--fd:.65s">
+          <span class="bar"></span>
+          <p><strong>İstanbul Gelişim Üniversitesi</strong> Yazılım Mühendisliği 2. sınıf öğrencisi. <strong>Türkmenistan</strong> kökenli, <strong>İstanbul Başakşehir</strong>'de yaşayan; siber güvenlik, otomasyon ve akıllı bot sistemleri geliştiren bir yazılımcı.</p>
         </div>
-        <div class="stats">
-          <div class="stat"><b data-count="6">0</b><span>Konuşulan Dil</span></div>
-          <div class="stat"><b data-count="4">0</b><span>Programlama Dili</span></div>
-          <div class="stat"><b data-count="2">0</b><span>Sınıf · SWE</span></div>
+        <div class="hero-cta hero-fade" style="--fd:.8s">
+          <a href="#projects" class="btn primary" data-magnetic><i class="fas fa-arrow-right"></i> Projeler</a>
+          <a href="#terminal" class="btn" data-magnetic><i class="fas fa-terminal"></i> Terminali Aç</a>
+          <a href="#contact" class="btn" data-magnetic><i class="fas fa-paper-plane"></i> İletişim</a>
+        </div>
+        <div class="stats hero-fade" style="--fd:.95s">
+          <div class="stat"><b><em data-count="6">0</em></b><span>Konuşulan dil</span></div>
+          <div class="stat"><b><em data-count="4">0</em></b><span>Programlama dili</span></div>
+          <div class="stat"><b><em data-count="2">0</em></b><span>Sınıf · SWE</span></div>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="photo-wrap" id="tilt">
-          <img id="photo" src="profile.jpeg" alt="Kuvanchbek Abdirimov">
+
+      <div class="hero-visual hero-fade" style="--fd:.4s">
+        <div class="portrait-wrap" id="tilt">
+          <div class="portrait">
+            <span class="initials">KA</span>
+            <img id="photo" src="profile.jpeg" alt="Kuvanchbek Abdirimov">
+          </div>
           <div class="tag-float a"><i class="fas fa-shield-halved"></i>cyber_security</div>
-          <div class="tag-float b"><i class="fas fa-location-dot"></i>Başakşehir · IST</div>
+          <div class="tag-float b"><i class="fab fa-python"></i>python_automation</div>
+          <div class="caption"><strong>IST / TR</strong><span>Daşoguz → İstanbul</span></div>
         </div>
       </div>
     </div>
@@ -694,379 +599,296 @@
   <div class="marquee"><div class="marquee-track" id="marquee"></div></div>
 
   <!-- 01 ABOUT -->
-  <section class="block" id="about">
+  <section class="block paper" id="about">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-num">01</span><h2>Hakkımda <em>&amp; gelişim alanlarım.</em></h2></div>
-      <div class="bento">
-        <div class="spot s4 reveal about-text">
-          <h3 class="lbl"><span><i class="fas fa-user-shield"></i>// hakkımda</span><span>İGÜ · SWE</span></h3>
-          <p><strong>İstanbul Gelişim Üniversitesi Yazılım Mühendisliği</strong> 2. sınıf öğrencisiyim. Nesne yönelimli programlama (OOP), veri yapıları ve algoritma analizi gibi akademik temellerimi güçlendirirken gerçek dünya problemlerine yönelik pratik projeler üretiyorum.</p>
-          <p>Siber güvenlik alanında <strong class="accent">ağ ve sistem güvenliği, zafiyet analizi, Linux sistem yönetimi ve savunma stratejileri</strong> üzerine yoğunlaşıyorum. Bununla birlikte Python, C/C++ ve Java altyapımı kullanarak otomasyon araçları, web scraping botları ve komut satırı iş akışları geliştiriyorum.</p>
+      <div class="sec-head reveal"><span class="sec-label"><b>[01]</b> — Hakkımda</span><h2 class="sec-title">Kısaca <em>ben.</em></h2></div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p><strong>İstanbul Gelişim Üniversitesi Yazılım Mühendisliği</strong> 2. sınıf öğrencisiyim. Nesne yönelimli programlama (OOP), veri yapıları ve algoritma analizi gibi akademik temellerimi güçlendirirken gerçek dünya problemlerine yönelik pratik sistemler inşa ediyorum.</p>
+          <p>Siber güvenlik alanında <em>ağ ve sistem güvenliği</em>, zafiyet analizi ve savunma stratejilerine odaklanıyorum. Python, C/C++ ve Java altyapımla otomasyon araçları, web kazıma (scraping) motorları ve yapay zekâ destekli botlar geliştiriyorum. Amacım hem güvenli hem de tekrarlayan süreçleri ortadan kaldıran <strong>yüksek verimli çözümler</strong> üretmek.</p>
         </div>
-        <div class="spot s2 reveal facts" style="--d:.08s">
-          <h3 class="lbl"><span><i class="fas fa-id-card"></i>// künye</span><span>2026</span></h3>
-          <div><span>memleket</span><b>Türkmenistan 🇹🇲</b></div>
-          <div><span>doğduğum yer</span><b>Daşoğuz / Dashoguz</b></div>
-          <div><span>yaşadığım yer</span><b>Başakşehir, İST</b></div>
-          <div><span>üniversite</span><b>İstanbul Gelişim Üni.</b></div>
-          <div><span>bölüm</span><b>Yazılım Müh. (2. Sınıf)</b></div>
-          <div><span>odak</span><b>Cyber &amp; Otomasyon</b></div>
+        <div class="facts reveal" style="--d:.1s">
+          <div class="fact"><span>Memleket</span><b>Daşoguz, Türkmenistan 🇹🇲</b></div>
+          <div class="fact"><span>Yaşadığı yer</span><b>Başakşehir, İstanbul 🇹🇷</b></div>
+          <div class="fact"><span>Üniversite</span><b>İstanbul Gelişim Üni.</b></div>
+          <div class="fact"><span>Bölüm</span><b>Yazılım Mühendisliği</b></div>
+          <div class="fact"><span>Sınıf</span><b>2. Sınıf · Lisans</b></div>
+          <div class="fact"><span>Odak</span><b>Siber Güvenlik &amp; Otomasyon</b></div>
         </div>
-        <div class="spot s2 reveal" style="--d:.05s">
-          <h3 class="lbl"><span><i class="fas fa-code"></i>// programlama_dilleri</span></h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 SKILLS -->
+  <section class="block" id="skills">
+    <div class="container">
+      <div class="sec-head reveal"><span class="sec-label"><b>[02]</b> — Yetenekler</span><h2 class="sec-title">Yetenekler <em>&amp; araçlar.</em></h2></div>
+      <div class="reveal">
+        <div class="skill-row">
+          <div class="skill-cat">Programlama Dilleri</div>
           <div class="chips">
             <span class="chip"><i class="fas fa-terminal"></i>C / C++</span>
             <span class="chip"><i class="fab fa-java"></i>Java</span>
             <span class="chip"><i class="fab fa-python"></i>Python</span>
-            <span class="chip"><i class="fas fa-globe"></i>HTML / CSS / JS</span>
+            <span class="chip"><i class="fab fa-js"></i>HTML / CSS / JS</span>
           </div>
         </div>
-        <div class="spot s2 reveal" style="--d:.1s">
-          <h3 class="lbl"><span><i class="fas fa-toolbox"></i>// araçlar_ve_sistemler</span></h3>
+        <div class="skill-row">
+          <div class="skill-cat">Araçlar &amp; Sistemler</div>
           <div class="chips">
-            <span class="chip"><i class="fab fa-linux"></i>Linux</span>
+            <span class="chip"><i class="fab fa-linux"></i>Linux &amp; Bash</span>
             <span class="chip"><i class="fas fa-mobile-screen"></i>Termux</span>
             <span class="chip"><i class="fab fa-git-alt"></i>Git &amp; GitHub</span>
             <span class="chip"><i class="fas fa-laptop-code"></i>VS Code &amp; NetBeans</span>
           </div>
         </div>
-        <div class="spot s2 reveal" style="--d:.15s">
-          <h3 class="lbl"><span><i class="fas fa-rocket"></i>// geliştirme_alanlarım</span></h3>
+        <div class="skill-row">
+          <div class="skill-cat">Uzmanlık Alanları</div>
           <div class="chips">
-            <span class="chip"><i class="fas fa-shield-halved"></i>Penetration &amp; Ağ Güvenliği</span>
-            <span class="chip"><i class="fas fa-robot"></i>Bot &amp; Otomasyon</span>
+            <span class="chip"><i class="fas fa-shield-halved"></i>Ağ &amp; Sistem Güvenliği</span>
+            <span class="chip"><i class="fas fa-robot"></i>Bot &amp; Script Geliştirme</span>
             <span class="chip"><i class="fas fa-spider"></i>Web Scraping</span>
-            <span class="chip"><i class="fas fa-brain"></i>AI API Entegrasyonları</span>
+            <span class="chip"><i class="fas fa-gears"></i>Süreç Otomasyonu</span>
             <span class="chip"><i class="fas fa-diagram-project"></i>Algoritma Analizi</span>
-            <span class="chip"><i class="fas fa-graduation-cap"></i>Erasmus &amp; Global Vizyon</span>
-          </div>
-        </div>
-        <!-- GITHUB LIVE STATS -->
-        <div class="spot s4 reveal" style="--d:.2s">
-          <h3 class="lbl"><span><i class="fab fa-github"></i>// github_stats</span><span id="ghUsername">@lamer3455</span></h3>
-          <div class="gh-stats" id="ghStats">
-            <div class="gh-cell"><div class="num" id="ghRepos">—</div><div class="lbl">Repositories</div></div>
-            <div class="gh-cell"><div class="num" id="ghFollowers">—</div><div class="lbl">Followers</div></div>
-            <div class="gh-cell"><div class="num" id="ghStars">—</div><div class="lbl">Total Stars</div></div>
-            <div class="gh-cell"><div class="num" id="ghLang">—</div><div class="lbl">Top Language</div></div>
-          </div>
-        </div>
-        <div class="spot s2 reveal" style="--d:.22s">
-          <h3 class="lbl"><span><i class="fas fa-hourglass-half"></i>// şu_anda</span></h3>
-          <div class="facts">
-            <div><span>öğreniyorum</span><b>Pentesting · AI APIs</b></div>
-            <div><span>üstünde çalışıyorum</span><b>Automation Bot v2</b></div>
-            <div><span>hedefim</span><b>Erasmus &amp; Bug Bounty</b></div>
-            <div><span>mood</span><b>Kod + Kahve ☕</b></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 02 JOURNEY -->
-  <section class="block" id="journey">
+  <!-- 03 ROADMAP -->
+  <section class="block paper" id="roadmap">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-num">02</span><h2>Yolculuk <em>&amp; dönüm noktaları.</em></h2></div>
-      <div class="journey reveal">
-        <div class="j-item">
-          <div class="j-year">2003 — Doğum</div>
-          <div class="j-title">Daşoğuz, Türkmenistan</div>
-          <p class="j-desc">Orta Asya'nın kalbinde, tarihi İpek Yolu üzerindeki kadim bir şehirde gözlerimi açtım.</p>
-          <span class="j-loc"><i class="fas fa-location-dot"></i>Daşoğuz, TM</span>
-        </div>
-        <div class="j-item">
-          <div class="j-year">2014 — İlk temas</div>
-          <div class="j-title">Bilgisayarla tanışma</div>
-          <p class="j-desc">İlk kez bir bilgisayara dokunduğumda "bunun içinde ne var?" sorusu beni hiç bırakmadı. HTML ile ilk web sayfamı yapmam burada başladı.</p>
-          <span class="j-loc"><i class="fas fa-computer"></i>İlk kod satırı</span>
-        </div>
-        <div class="j-item">
-          <div class="j-year">2022 — Göç</div>
-          <div class="j-title">İstanbul'a yolculuk</div>
-          <p class="j-desc">Eğitim için Türkmenistan'dan Türkiye'ye taşındım. Yeni bir dil, yeni bir kültür, yeni bir başlangıç.</p>
-          <span class="j-loc"><i class="fas fa-plane"></i>TM → TR</span>
-        </div>
-        <div class="j-item">
-          <div class="j-year">2023 — Üniversite</div>
-          <div class="j-title">İstanbul Gelişim Üniversitesi</div>
-          <p class="j-desc">Yazılım Mühendisliği bölümüne başladım. Algoritmalar, veri yapıları ve OOP ile profesyonel yolculuğum resmen başladı.</p>
-          <span class="j-loc"><i class="fas fa-graduation-cap"></i>İGÜ · SWE</span>
-        </div>
-        <div class="j-item">
-          <div class="j-year">2024 — Siber Güvenlik</div>
-          <div class="j-title">Güvenlik dünyasına giriş</div>
-          <p class="j-desc">Linux, ağ güvenliği ve zafiyet analizi üzerine yoğunlaştım. Python ile ilk otomasyon botlarımı ve scraping araçlarımı geliştirdim.</p>
-          <span class="j-loc"><i class="fas fa-shield-halved"></i>Cyber Security</span>
-        </div>
-        <div class="j-item">
-          <div class="j-year">2026 — Şimdi</div>
-          <div class="j-title">Ve yolculuk devam ediyor</div>
-          <p class="j-desc">Başakşehir'de yaşıyor, İGÜ'de 2. sınıfı bitiriyor ve bir yandan gerçek dünya projeleri geliştiriyorum. Hedef: Erasmus + bug bounty dünyası.</p>
-          <span class="j-loc"><i class="fas fa-rocket"></i>Başakşehir, İST</span>
-        </div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[03]</b> — Gelişim</span><h2 class="sec-title">Kendimi geliştirdiğim <em>alanlar.</em></h2></div>
+      <div class="road-grid">
+        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-shield-halved"></i></div><span class="status-tag now">Aktif</span></div><h3>Ağ &amp; Sistem Güvenliği</h3><p>Zafiyet analizi, paket inceleme, savunma stratejileri ve güvenli sistem tasarımı.</p></div>
+        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fab fa-linux"></i></div><span class="status-tag now">Aktif</span></div><h3>Linux &amp; Terminal</h3><p>Komut satırı hakimiyeti, Termux ve shell scripting ile otomatik iş akışları.</p></div>
+        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fas fa-robot"></i></div><span class="status-tag now">Aktif</span></div><h3>Otomasyon &amp; Botlar</h3><p>Python ile veri kazıma (scraping), API otomasyonu ve akıllı Telegram/CLI botları.</p></div>
+        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-diagram-project"></i></div><span class="status-tag now">Aktif</span></div><h3>Algoritma &amp; Veri Yapıları</h3><p>C ve Java ile OOP, karmaşıklık analizi, sıralama ve matris algoritmaları.</p></div>
+        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fas fa-brain"></i></div><span class="status-tag">Sırada</span></div><h3>Yapay Zekâ API Sistemleri</h3><p>LLM ve Gemini API entegrasyonlarıyla kod üreten ve depo analiz eden mobil/web araçlar.</p></div>
+        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fas fa-code"></i></div><span class="status-tag">Sırada</span></div><h3>Modern Web &amp; Mobil</h3><p>Flutter ve modern web teknolojileriyle hızlı, güvenli ve estetik arayüzler.</p></div>
+        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-flag"></i></div><span class="status-tag">Hedef</span></div><h3>CTF &amp; Pentest Lab</h3><p>Capture The Flag yarışmaları ve sanal laboratuvarlarda saha güvenliği pratiği.</p></div>
+        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fas fa-graduation-cap"></i></div><span class="status-tag">Hedef</span></div><h3>Erasmus &amp; Yabancı Diller</h3><p>Akademik ortalama ve C1 İngilizce/Almanca hedefleriyle uluslararası değişim vizyonu.</p></div>
+        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fab fa-github"></i></div><span class="status-tag">Hedef</span></div><h3>Açık Kaynak Ekosistemi</h3><p>Geliştirilen araçları GitHub üzerinde modüler, belgelenmiş ve açık kaynak olarak büyütmek.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- 03 GEOGRAPHY -->
+  <!-- 04 LOCATIONS -->
   <section class="block" id="locations">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-num">03</span><h2>Coğrafya <em>&amp; üniversite konumu.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[04]</b> — Coğrafya</span><h2 class="sec-title">Haritada <em>ben.</em></h2></div>
       <div class="geo-grid">
-        <div class="spot reveal">
-          <div class="map-badge"><i class="fas fa-university"></i> Okuduğum Üniversite &amp; Yaşadığım Bölge</div>
-          <h3 style="font-size:1.35rem; margin-bottom:6px;">İstanbul Gelişim Üniversitesi (İGÜ)</h3>
-          <p style="color:var(--muted); font-size:0.94rem; margin-bottom:16px;">
-            Avcılar Kampüsü — Yazılım Mühendisliği · İkamet: <strong style="color:var(--text);">Başakşehir, İstanbul</strong>
-          </p>
-          <div class="map-box">
-            <iframe title="İstanbul Gelişim Üniversitesi Konumu" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=28.6900%2C40.9920%2C28.7200%2C41.0080&layer=mapnik&marker=40.9997%2C28.7055"></iframe>
+        <div class="reveal">
+          <div class="tabs" id="tabs">
+            <button class="tab on" data-k="dasoguz">🇹🇲 Daşoguz</button>
+            <button class="tab" data-k="igu">🎓 İGÜ Kampüsü</button>
+            <button class="tab" data-k="basaksehir">🏠 Başakşehir</button>
           </div>
-          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:14px; font-family:var(--mono); font-size:0.78rem; color:var(--muted);">
-            <span><i class="fas fa-house accent"></i> Bölge: Başakşehir / İstanbul</span>
-            <a href="https://www.google.com/maps/search/?api=1&query=Istanbul+Gelisim+Universitesi" target="_blank" rel="noopener" class="accent">Haritada Aç ↗</a>
+          <div class="map-box">
+            <span class="ping" id="mapPing">Daşoguz · Türkmenistan</span>
+            <iframe id="mapFrame" title="Harita" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Dasoguz%2C%20Turkmenistan&z=9&hl=tr&output=embed"></iframe>
           </div>
         </div>
 
-        <div class="spot reveal" style="--d:.1s">
-          <div class="map-badge"><i class="fas fa-earth-asia"></i> Doğduğum Ülke · Dashoguz</div>
-          <h3 style="font-size:1.35rem; margin-bottom:6px;">Türkmenistan 🇹🇲</h3>
-          <p style="color:var(--muted); font-size:0.94rem; margin-bottom:12px;">
-            Daşoğuz (Dashoguz) doğumluyum. Orta Asya'nın kalbinden İstanbul'a uzanan eğitim ve teknoloji yolculuğu.
-          </p>
-          <div class="tm-svg-box">
-            <svg viewBox="0 0 380 230" width="100%" height="220" aria-label="Türkmenistan Haritası">
-              <line x1="0" y1="55" x2="380" y2="55" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4"/>
-              <line x1="0" y1="110" x2="380" y2="110" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4"/>
-              <line x1="0" y1="165" x2="380" y2="165" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4"/>
-              <line x1="95" y1="0" x2="95" y2="230" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4"/>
-              <line x1="190" y1="0" x2="190" y2="230" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4"/>
-              <line x1="285" y1="0" x2="285" y2="230" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4"/>
-              <path class="tm-path" d="M58,72 L82,58 L118,66 L136,52 L168,48 L196,40 L232,54 L262,68 L298,90 L328,118 L316,140 L286,148 L268,176 L238,184 L210,164 L174,152 L136,138 L98,136 L70,128 L60,104 L74,88 Z"/>
-              <circle cx="200" cy="60" r="6" fill="rgba(201,255,63,0.25)"/>
-              <circle class="radar-ping" cx="200" cy="60" r="4" style="transform-origin:200px 60px"/>
-              <circle cx="200" cy="60" r="3.5" fill="#fff"/>
-              <text class="city-label" x="200" y="48" text-anchor="middle">DAŞOĞUZ</text>
-              <text class="city-label sub" x="200" y="80" text-anchor="middle">41.83°N, 59.97°E</text>
-              <circle cx="150" cy="130" r="2.5" fill="#8b919d"/>
-              <text class="city-label sub" x="150" y="122" text-anchor="middle">AŞKABAT</text>
-              <circle cx="85" cy="105" r="2" fill="#8b919d"/>
-              <text class="city-label sub" x="85" y="97" text-anchor="middle">TÜRKMENBAŞI</text>
-              <circle cx="240" cy="155" r="2" fill="#8b919d"/>
-              <text class="city-label sub" x="240" y="170" text-anchor="middle">MARY</text>
-            </svg>
+        <div class="spot loc-info reveal" style="--d:.1s">
+          <div class="badge" id="locBadge"><i class="fas fa-earth-asia"></i> Doğduğum yer · Anavatan</div>
+          <h3 id="locTitle">Daşoguz, Türkmenistan 🇹🇲</h3>
+          <p id="locText">Türkmenistan'ın kuzeyinde, Özbekistan sınırına yakın tarihi şehir. Köklerimin ve memleketimin merkezi.</p>
+          <div class="loc-meta">
+            <a id="locLink" class="btn" href="https://www.google.com/maps/search/?api=1&query=Dasoguz+Turkmenistan" target="_blank" rel="noopener" data-magnetic>Haritada aç <i class="fas fa-arrow-up-right-from-square"></i></a>
           </div>
-          <div class="route-line">
-            <span>🇹🇲 Dashoguz</span>
-            <i class="fas fa-plane plane"></i>
-            <span>🇹🇷 Başakşehir, İST</span>
-          </div>
+          <svg class="route-svg" viewBox="0 0 400 120" aria-label="Daşoguz'dan İstanbul'a rota">
+            <path id="routePath" d="M340,82 C 280,10 140,10 60,82" fill="none" stroke="rgba(242,236,225,.2)" stroke-width="2" stroke-dasharray="4 6"/>
+            <path d="M340,82 C 280,10 140,10 60,82" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="300" stroke-dashoffset="300" stroke-linecap="round">
+              <animate attributeName="stroke-dashoffset" from="300" to="0" dur="3s" repeatCount="indefinite"/>
+            </path>
+            <circle cx="340" cy="82" r="6" fill="var(--accent)"/><circle cx="340" cy="82" r="6" fill="none" stroke="var(--accent)"><animate attributeName="r" from="6" to="18" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" from=".8" to="0" dur="2s" repeatCount="indefinite"/></circle>
+            <circle cx="60" cy="82" r="6" fill="#f2ece1"/>
+            <circle r="4.5" fill="#fff"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#routePath"/></animateMotion></circle>
+          </svg>
+          <div class="route-labels"><span><b>İstanbul</b> 🇹🇷</span><span><b>Daşoguz</b> 🇹🇲</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 04 TERMINAL -->
-  <section class="block" id="terminal">
+  <!-- 05 TERMINAL -->
+  <section class="block paper" id="terminal">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-num">04</span><h2>Etkileşimli <em>terminal.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[05]</b> — Terminal</span><h2 class="sec-title">Etkileşimli <em>terminal.</em></h2></div>
       <div class="term reveal" id="term">
-        <div class="term-head"><i></i><i></i><i></i><small>kuvanchbek@portfolio: ~</small></div>
+        <div class="term-head">
+          <div class="term-dots"><i></i><i></i><i></i></div>
+          <small>kuvanchbek@sec-node: ~</small>
+          <span class="term-badge">ROOTLESS SHELL</span>
+        </div>
         <div class="term-out" id="termOut"></div>
         <div class="term-in">
-          <span class="p">kuvanch@portfolio:~$</span>
-          <input id="termIn" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal komutu" placeholder="komut yaz… (help)">
+          <span class="p">kuvanch@sec-node:~$</span>
+          <input id="termIn" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal komutu" placeholder="komut yaz… (help, scan, matrix, neofetch)">
         </div>
       </div>
       <div class="quick reveal" id="quick">
         <button data-c="help">help</button>
-        <button data-c="neofetch">neofetch</button>
-        <button data-c="github">github</button>
-        <button data-c="matrix">matrix 🌧️</button>
+        <button data-c="whoami">whoami</button>
+        <button data-c="scan">scan</button>
+        <button data-c="matrix">matrix</button>
+        <button data-c="skills">skills</button>
+        <button data-c="roadmap">roadmap</button>
         <button data-c="music">music</button>
-        <button data-c="location">location</button>
-        <button data-c="sudo hire kuvanchbek">sudo hire</button>
+        <button data-c="neofetch">neofetch</button>
+        <button data-c="theme random">theme random</button>
+        <button data-c="sudo hire kuvanchbek">sudo hire kuvanchbek</button>
       </div>
     </div>
   </section>
 
-  <!-- 05 PROJECTS -->
+  <!-- 06 PROJECTS -->
   <section class="block" id="projects">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-num">05</span><h2>Öne Çıkan <em>projeler.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[06]</b> — Projeler</span><h2 class="sec-title">Projeler <em>&amp; deneyler.</em></h2></div>
       <div class="proj-grid">
-        <a class="spot proj reveal" href="https://github.com/lamer3455" target="_blank" rel="noopener">
+        <div class="spot proj reveal" data-proj="0" role="button" tabindex="0">
           <span class="big">01</span>
           <div class="ico"><i class="fas fa-robot"></i></div>
           <h3>Automation &amp; Web Scraping Bot</h3>
-          <p>Python kullanılarak geliştirilen, veri toplama ve rutin dijital görevleri otomatikleştiren özel bot projesi.</p>
+          <p>Python kullanılarak geliştirilen, veri toplama ve rutin dijital görevleri otomatikleştiren özel bot mimarisi.</p>
           <div class="tags"><span>#Python</span><span>#WebScraping</span><span>#Automation</span></div>
           <span class="go">↗</span>
-        </a>
-        <a class="spot proj reveal" style="--d:.1s" href="https://github.com/lamer3455" target="_blank" rel="noopener">
+        </div>
+        <div class="spot proj reveal" style="--d:.1s" data-proj="1" role="button" tabindex="0">
           <span class="big">02</span>
           <div class="ico"><i class="fas fa-diagram-project"></i></div>
           <h3>Data Structures &amp; Algoritma Çalışmaları</h3>
           <p>C ve Java dillerinde nesne yönelimli programlama (OOP) ve matris/sıralama algoritmaları üzerine geliştirilmiş uygulamalar.</p>
           <div class="tags"><span>#C</span><span>#Java</span><span>#AlgorithmAnalysis</span></div>
           <span class="go">↗</span>
-        </a>
+        </div>
       </div>
-      <div class="more reveal">
-        <a href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn" data-magnetic><i class="fab fa-github"></i> Tüm projelerimi GitHub'da gör →</a>
-      </div>
+      <div class="more reveal"><a href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn primary" data-magnetic><i class="fab fa-github"></i> GitHub'da tüm depoları gör</a></div>
     </div>
   </section>
 
-  <!-- 06 CERTS & LANGUAGES -->
-  <section class="block" id="certs">
+  <!-- 07 CERTS & LANGUAGES -->
+  <section class="block paper" id="certs">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-num">06</span><h2>Sertifika <em>&amp; diller.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[07]</b> — Sertifika &amp; Diller</span><h2 class="sec-title">Sertifika <em>&amp; diller.</em></h2></div>
       <div class="spot cert reveal">
         <div>
-          <h3>🦉 Duolingo English Test</h3>
-          <p>İngilizce Yeterlilik Sertifikası (B2 – C1 Seviyesi)</p>
+          <div class="badge"><i class="fas fa-circle-check"></i> Duolingo Verified</div>
+          <h3>Duolingo English Test</h3>
+          <p>English Proficiency Certificate — B2 / C1 Level</p>
         </div>
-        <a href="https://certs.duolingo.com/q3a4sguz9vyzo8k9" target="_blank" rel="noopener" class="btn" data-magnetic>Sertifikayı görüntüle →</a>
+        <a href="https://certs.duolingo.com/q3a4sguz9vyzo8k9" target="_blank" rel="noopener" class="btn" data-magnetic>Sertifikayı doğrula <i class="fas fa-arrow-up-right-from-square"></i></a>
       </div>
       <div class="langs reveal" id="langs">
-        <div class="spot lang">
-          <div class="lang-top"><h4>Türkmençe</h4><span class="flag">🇹🇲</span></div>
-          <div class="lvl">Native · Ana Dil</div>
-          <div class="bar"><div class="bar-fill" data-w="100"></div></div>
-        </div>
-        <div class="spot lang">
-          <div class="lang-top"><h4>Özbekçe</h4><span class="flag">🇺🇿</span></div>
-          <div class="lvl">Native · Ana Dil</div>
-          <div class="bar"><div class="bar-fill" data-w="100"></div></div>
-        </div>
-        <div class="spot lang">
-          <div class="lang-top"><h4>Türkçe</h4><span class="flag">🇹🇷</span></div>
-          <div class="lvl">Advanced · İleri Seviye</div>
-          <div class="bar"><div class="bar-fill" data-w="94"></div></div>
-        </div>
-        <div class="spot lang">
-          <div class="lang-top"><h4>English</h4><span class="flag">🇬🇧</span></div>
-          <div class="lvl">B2 – C1 · Upper-Intermediate</div>
-          <div class="bar"><div class="bar-fill" data-w="80"></div></div>
-        </div>
-        <div class="spot lang">
-          <div class="lang-top"><h4>Русский</h4><span class="flag">🇷🇺</span></div>
-          <div class="lvl">A1 · Başlangıç</div>
-          <div class="bar"><div class="bar-fill" data-w="25"></div></div>
-        </div>
-        <div class="spot lang">
-          <div class="lang-top"><h4>Deutsch</h4><span class="flag">🇩🇪</span></div>
-          <div class="lvl">A1 · Başlangıç</div>
-          <div class="bar"><div class="bar-fill" data-w="25"></div></div>
-        </div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">Türkmençe</span><span class="lang-flag">🇹🇲</span></div><div class="lang-tr">Türkmen dili</div><div class="lang-lvl">Native · Ana dil</div><div class="bar2"><span data-w="100"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">Oʻzbekcha</span><span class="lang-flag">🇺🇿</span></div><div class="lang-tr">Özbek dili</div><div class="lang-lvl">Native · Ana dil</div><div class="bar2"><span data-w="100"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">Türkçe</span><span class="lang-flag">🇹🇷</span></div><div class="lang-tr">Türkçe</div><div class="lang-lvl">Advanced · İleri</div><div class="bar2"><span data-w="95"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">English</span><span class="lang-flag">🇬🇧</span></div><div class="lang-tr">İngilizce</div><div class="lang-lvl">B2 – C1 · Upper-Int.</div><div class="bar2"><span data-w="82"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">Русский</span><span class="lang-flag">🇷🇺</span></div><div class="lang-tr">Rusça</div><div class="lang-lvl">A1 – A2 · Temel İletişim</div><div class="bar2"><span data-w="35"></span></div></div>
+        <div class="spot lang"><div class="lang-top"><span class="lang-name">Deutsch</span><span class="lang-flag">🇩🇪</span></div><div class="lang-tr">Almanca</div><div class="lang-lvl">A1 · Başlangıç</div><div class="bar2"><span data-w="25"></span></div></div>
       </div>
     </div>
   </section>
 
-  <!-- 07 MUSIC -->
+  <!-- 08 MUSIC -->
   <section class="block" id="music">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-num">07</span><h2>Müzik <em>&amp; hip-hop rotasyonu.</em></h2></div>
-      <div class="music-grid">
-        <div class="spot music-card reveal">
-          <h3><i class="fas fa-microphone-lines"></i> Turkish Rap</h3>
-          <div class="music-sub">// KOD YAZARKEN DÖNENLER</div>
-          <div class="artist-list">
-            <div class="artist-row">
-              <span class="artist-name"><span class="eq-bars"><span></span><span></span><span></span></span> Defkhan</span>
-              <span class="artist-note">Homie Bak</span>
-            </div>
-            <div class="artist-row">
-              <span class="artist-name">Stabil</span>
-              <span class="artist-note">Lirik &amp; Flow</span>
-            </div>
-            <div class="artist-row">
-              <span class="artist-name">Uzi</span>
-              <span class="artist-note">Sokak &amp; Enerji</span>
-            </div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[08]</b> — Vibe</span><h2 class="sec-title">Müzik <em>&amp; rap rotasyonu.</em></h2></div>
+
+      <div class="spot player reveal">
+        <div class="vinyl" id="vinyl"></div>
+        <div>
+          <div class="np-label">
+            <span class="eq" id="eq"><span></span><span></span><span></span><span></span></span>
+            <span>Şu an rotasyonda</span>
+            <button class="audio-pill" id="synthToggle" title="Tarayıcı içi Synth Beat aç/kapat"><i class="fas fa-volume-xmark"></i> Synth Beat: Kapalı</button>
           </div>
-        </div>
-        <div class="spot music-card reveal" style="--d:.08s">
-          <h3><i class="fas fa-headphones"></i> UK Drill &amp; Rap</h3>
-          <div class="music-sub">// LONDON SOUND</div>
-          <div class="artist-list">
-            <div class="artist-row">
-              <span class="artist-name"><span class="eq-bars"><span></span><span></span><span></span></span> Central Cee</span>
-              <span class="artist-note">UK Top Tier</span>
-            </div>
-            <div class="artist-row">
-              <span class="artist-name">BM</span>
-              <span class="artist-note">London View</span>
-            </div>
-          </div>
-        </div>
-        <div class="spot music-card reveal" style="--d:.16s">
-          <h3><i class="fas fa-record-vinyl"></i> US Hip-Hop Legends</h3>
-          <div class="music-sub">// OLD SCHOOL &amp; ICONS</div>
-          <div class="artist-list">
-            <div class="artist-row">
-              <span class="artist-name"><span class="eq-bars"><span></span><span></span><span></span></span> 2Pac &amp; Biggie</span>
-              <span class="artist-note">West &amp; East</span>
-            </div>
-            <div class="artist-row">
-              <span class="artist-name">Eminem &amp; 50 Cent</span>
-              <span class="artist-note">Shady / G-Unit</span>
-            </div>
-            <div class="artist-row">
-              <span class="artist-name">Snoop Dogg</span>
-              <span class="artist-note">G-Funk</span>
-            </div>
+          <div class="np-name" id="npName">Defkhan</div>
+          <div class="np-sub" id="npSub">Turkish Rap · Homie Bak</div>
+          <div class="np-bar"><span id="npBar"></span></div>
+          <div class="np-ctrl">
+            <button id="npPrev" aria-label="Önceki"><i class="fas fa-backward-step"></i></button>
+            <button id="npPlay" aria-label="Duraklat / Oynat"><i class="fas fa-pause"></i></button>
+            <button id="npNext" aria-label="Sonraki"><i class="fas fa-forward-step"></i></button>
           </div>
         </div>
       </div>
-      <div class="chips reveal" style="margin-top: 24px;">
-        <span class="chip"><i class="fas fa-futbol"></i>Futbol Oynamak</span>
-        <span class="chip"><i class="fas fa-gamepad"></i>Oyun &amp; PlayStation</span>
-        <span class="chip"><i class="fas fa-plane-departure"></i>Seyahat Etmek</span>
-        <span class="chip"><i class="fas fa-book"></i>Kitap Okumak</span>
-        <span class="chip"><i class="fas fa-language"></i>Yeni Diller Öğrenmek</span>
-        <span class="chip"><i class="fas fa-users"></i>Networking &amp; Sohbet</span>
+
+      <div class="music-grid">
+        <div class="spot mcard reveal">
+          <h3><i class="fas fa-microphone-lines"></i> Turkish Rap</h3>
+          <div class="msub">Kod yazarken dönenler</div>
+          <div class="alist">
+            <div class="arow" data-a="Defkhan"><b>Defkhan <i class="fas fa-star fav-star"></i></b><small>Homie Bak</small></div>
+            <div class="arow" data-a="Stabil"><b>Stabil</b><small>TR</small></div>
+            <div class="arow" data-a="Uzi"><b>Uzi</b><small>TR</small></div>
+          </div>
+        </div>
+        <div class="spot mcard reveal" style="--d:.08s">
+          <h3><i class="fas fa-headphones"></i> UK Rap &amp; Drill</h3>
+          <div class="msub">London sound</div>
+          <div class="alist">
+            <div class="arow" data-a="Central Cee"><b>Central Cee <i class="fas fa-star fav-star"></i></b><small>UK Top Tier</small></div>
+            <div class="arow" data-a="BM"><b>BM</b><small>"London View"</small></div>
+          </div>
+        </div>
+        <div class="spot mcard reveal" style="--d:.16s">
+          <h3><i class="fas fa-record-vinyl"></i> US Hip-Hop</h3>
+          <div class="msub">Efsaneler &amp; ikonlar</div>
+          <div class="alist">
+            <div class="arow" data-a="2Pac"><b>2Pac</b><small>West Coast</small></div>
+            <div class="arow" data-a="Biggie Smalls"><b>Biggie Smalls</b><small>East Coast</small></div>
+            <div class="arow" data-a="Snoop Dogg"><b>Snoop Dogg</b><small>G-Funk</small></div>
+            <div class="arow" data-a="50 Cent"><b>50 Cent</b><small>G-Unit</small></div>
+            <div class="arow" data-a="Eminem"><b>Eminem</b><small>Shady</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hobby reveal">
+        <h4>// boş zamanlarda</h4>
+        <div class="chips">
+          <span class="chip"><i class="fas fa-futbol"></i>Futbol Oynamak</span>
+          <span class="chip"><i class="fas fa-gamepad"></i>Oyun &amp; PlayStation</span>
+          <span class="chip"><i class="fas fa-plane-departure"></i>Seyahat Etmek</span>
+          <span class="chip"><i class="fas fa-book"></i>Kitap Okumak</span>
+          <span class="chip"><i class="fas fa-language"></i>Yeni Diller Öğrenmek</span>
+          <span class="chip"><i class="fas fa-users"></i>Yeni İnsanlarla Tanışmak &amp; Sohbet</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 08 CONTACT -->
+  <!-- 09 CONTACT -->
   <section class="block" id="contact">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-num">08</span><h2>İletişime <em>geç.</em></h2></div>
       <div class="reveal">
-        <div class="mail-row">
-          <a class="big-mail" href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com ↗</a>
-          <button class="btn copy-btn" id="copyBtn"><i class="far fa-copy"></i> kopyala</button>
+        <h2 class="contact-headline">Bir <em>fikir</em> mi var?<br><em>Konuşalım.</em></h2>
+        <a href="mailto:abdirimowkuwanchbek2@gmail.com" class="big-email">abdirimowkuwanchbek2<em>@</em>gmail.com</a>
+        <div class="mail-actions">
+          <a href="mailto:abdirimowkuwanchbek2@gmail.com" class="btn primary" data-magnetic><i class="fas fa-envelope"></i> E-posta gönder</a>
+          <button class="btn" id="copyBtn" data-magnetic><i class="far fa-copy"></i> Adresi kopyala</button>
         </div>
+
         <div class="socials">
-          <a class="social" href="https://github.com/lamer3455" target="_blank" rel="noopener">
-            <span class="left"><i class="fab fa-github brand"></i> GitHub</span>
-            <span class="ext">↗</span>
+          <a class="social gh" href="https://github.com/lamer3455" target="_blank" rel="noopener"><span class="left"><i class="fab fa-github brand"></i>GitHub</span><span class="ext">↗</span></a>
+          <a class="social li" href="https://www.linkedin.com/in/kuvanchbek-abdirimov-20baa9386" target="_blank" rel="noopener"><span class="left"><i class="fab fa-linkedin brand"></i>LinkedIn</span><span class="ext">↗</span></a>
+          <a class="social ig" href="https://www.instagram.com/kuwanch_the_best_007" target="_blank" rel="noopener"><span class="left"><i class="fab fa-instagram brand"></i>Instagram</span><span class="ext">↗</span></a>
+
+          <a class="social tg" href="https://t.me/kuvanch_3434" target="_blank" rel="noopener" title="Telegram'dan mesaj at">
+            <i class="fas fa-paper-plane tg-fly"></i><span class="tg-trail"></span>
+            <span class="left"><i class="fab fa-telegram-plane brand"></i>Telegram</span><span class="ext">✈</span>
           </a>
-          <a class="social" href="https://www.linkedin.com/in/kuvanchbek-abdirimov-20baa9386" target="_blank" rel="noopener">
-            <span class="left"><i class="fab fa-linkedin brand"></i> LinkedIn</span>
-            <span class="ext">↗</span>
-          </a>
-          <a class="social" href="https://www.instagram.com/kuwanch_the_best_007" target="_blank" rel="noopener">
-            <span class="left"><i class="fab fa-instagram brand"></i> Instagram</span>
-            <span class="ext">↗</span>
-          </a>
-          <a class="social tg-card" href="https://t.me/kuvanch_3434" target="_blank" rel="noopener" title="Telegram">
-            <span class="left"><i class="fab fa-telegram-plane brand"></i> Telegram</span>
-            <span class="ext">✈</span>
-          </a>
-          <a class="social" href="https://www.tiktok.com/@kuwanch_thebest" target="_blank" rel="noopener">
-            <span class="left"><i class="fab fa-tiktok brand"></i> TikTok</span>
-            <span class="ext">↗</span>
-          </a>
-          <a class="social wa-card" href="https://wa.me/905342145252" target="_blank" rel="noopener" title="WhatsApp">
-            <span class="ring-wave"></span>
-            <span class="left"><i class="fab fa-whatsapp brand"></i> WhatsApp</span>
-            <span class="ext"><i class="fas fa-phone-volume" style="font-size:0.85rem;"></i></span>
+
+          <a class="social tt" href="https://www.tiktok.com/@kuwanch_thebest" target="_blank" rel="noopener"><span class="left"><i class="fab fa-tiktok brand"></i>TikTok</span><span class="ext">↗</span></a>
+
+          <a class="social wa" href="https://wa.me/905342145252" target="_blank" rel="noopener" title="WhatsApp'tan yaz veya ara">
+            <span class="wa-wave"></span><span class="wa-wave"></span><span class="wa-wave"></span>
+            <span class="left"><i class="fab fa-whatsapp brand"></i>WhatsApp</span><span class="ext"><i class="fas fa-phone-volume"></i></span>
           </a>
         </div>
       </div>
@@ -1075,7 +897,13 @@
 </main>
 
 <footer>
-  <div class="container">© 2026 Kuvanchbek Abdirimov — <span class="accent">♥</span> ile Türkmenistan'dan İstanbul'a.</div>
+  <div class="container">
+    <div class="footer-inner">
+      <div>© 2026 Kuvanchbek Abdirimov</div>
+      <div><span class="a">♥</span> ile Daşoguz'dan İstanbul'a</div>
+      <a href="#hero" class="totop">Yukarı çık ↑</a>
+    </div>
+  </div>
 </footer>
 
 <script>
@@ -1083,572 +911,472 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isTouch = matchMedia('(hover: none)').matches;
+  const finePointer = matchMedia('(hover:hover) and (pointer:fine)').matches;
 
-  /* ========== BOOT SEQUENCE ========== */
-  const bootEl = $('#boot');
-  const bootLines = $('#bootLines');
-  const bootBar = $('#bootBar');
-  const bootPct = $('#bootPct');
-  const bootStatus = $('#bootStatus');
-
-  const bootSteps = [
-    ['Loading kernel modules…', 'ok'],
-    ['Mounting /dev/portfolio…', 'ok'],
-    ['Initializing security protocols…', 'ok'],
-    ['Loading cyber_security.sh…', 'ok'],
-    ['Fetching GitHub stats…', 'ok'],
-    ['Compiling personality.dat…', 'ok'],
-    ['Starting Kuvanchbek_OS v4.0…', 'ready']
-  ];
-
-  function runBoot() {
-    if (reduce) { bootEl.classList.add('done'); document.body.style.cursor = ''; return; }
-    let i = 0;
-    const total = bootSteps.length;
-    const interval = setInterval(() => {
-      if (i >= total) {
-        clearInterval(interval);
-        setTimeout(() => {
-          bootEl.classList.add('done');
-        }, 400);
-        return;
-      }
-      const [text, status] = bootSteps[i];
-      const line = document.createElement('div');
-      line.className = 'boot-line';
-      line.style.animationDelay = '0s';
-      line.innerHTML = `<span class="arrow">▶</span>${text} <span class="ok">[${status === 'ready' ? 'READY' : 'OK'}]</span>`;
-      bootLines.appendChild(line);
-      i++;
-      const pct = Math.round((i / total) * 100);
-      bootBar.style.width = pct + '%';
-      bootPct.textContent = pct + '%';
-      if (pct >= 100) bootStatus.textContent = 'ready ✓';
-    }, 220);
+  /* ---------- Loader ---------- */
+  const loader = $('#loader'), lb = $('#loadBar'), lc = $('#loadCount');
+  let pct = 0;
+  function start() {
+    loader.classList.add('done');
+    document.body.classList.add('loaded');
+    setTimeout(() => loader.style.display = 'none', 1200);
   }
-  runBoot();
-
-  /* ========== CUSTOM CURSOR ========== */
-  const dot = $('#cursorDot');
-  const ring = $('#cursorRing');
-  if (!isTouch) {
-    let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-    let rx = mx, ry = my;
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
-    });
-    function animateRing() {
-      rx += (mx - rx) * 0.18;
-      ry += (my - ry) * 0.18;
-      ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
-    document.addEventListener('mousedown', () => ring.classList.add('click'));
-    document.addEventListener('mouseup', () => ring.classList.remove('click'));
-    const hoverTargets = 'a, button, [data-magnetic], .spot, .social, .artist-row, .chip';
-    document.addEventListener('mouseover', e => {
-      if (e.target.closest(hoverTargets)) ring.classList.add('grow');
-    });
-    document.addEventListener('mouseout', e => {
-      if (e.target.closest(hoverTargets) && !e.relatedTarget?.closest(hoverTargets)) {
-        ring.classList.remove('grow');
-      }
-    });
-  } else {
-    dot.style.display = 'none';
-    ring.style.display = 'none';
-    document.body.style.cursor = 'auto';
+  if (reduce) { start(); }
+  else {
+    const t = setInterval(() => {
+      pct = Math.min(100, pct + Math.ceil(Math.random() * 11));
+      lb.style.width = pct + '%'; lc.textContent = String(pct).padStart(3, '0') + '%';
+      if (pct >= 100) { clearInterval(t); setTimeout(start, 220); }
+    }, 45);
   }
 
-  /* ========== PHOTO FALLBACK ========== */
+  /* ---------- Fotoğraf yedekleri ---------- */
   const photo = $('#photo');
-  const sources = ['profile.jpeg', 'profile.jpg', 'profile.png'];
+  const srcs = ['profile.jpeg', 'profile.jpg', 'profile.png'];
   let si = 0;
-  const fallback = "data:image/svg+xml;utf8," + encodeURIComponent(
-    "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='480'><rect width='100%' height='100%' fill='#13161b'/><text x='50%' y='54%' fill='#c9ff3f' font-family='monospace' font-size='110' font-weight='700' text-anchor='middle'>KA</text></svg>"
-  );
-  photo.onerror = () => { si++; photo.src = si < sources.length ? sources[si] : (photo.onerror = null, fallback); };
+  photo.onerror = () => { si++; if (si < srcs.length) photo.src = srcs[si]; else photo.remove(); };
 
-  /* ========== CLOCK ========== */
-  function updateClock() {
-    const t = new Date().toLocaleTimeString('tr-TR', {
-      timeZone: 'Europe/Istanbul', hour: '2-digit', minute: '2-digit'
-    });
-    const el = $('#clock');
-    if (el) el.textContent = 'IST ' + t;
-  }
-  updateClock();
-  setInterval(updateClock, 30000);
-
-  /* ========== THEME ========== */
-  const themes = {
-    lime:   ['#c9ff3f', '201,255,63'],
-    cyan:   ['#22d3ee', '34,211,238'],
-    violet: ['#a78bfa', '167,139,250'],
-    orange: ['#ff8a3d', '255,138,61'],
-    pink:   ['#ff4d8d', '255,77,141']
+  /* ---------- Saat ---------- */
+  const tick = () => {
+    $('#clock').textContent = 'IST ' + new Date().toLocaleTimeString('tr-TR', { timeZone: 'Europe/Istanbul', hour: '2-digit', minute: '2-digit' });
   };
-  let accentRGB = '201,255,63';
+  tick(); setInterval(tick, 20000);
+
+  /* ---------- Tema ---------- */
+  const themes = {
+    orange: ['#ff4d00', '255,77,0', '#d93b00', '#ffffff'],
+    lime:   ['#c9ff3f', '201,255,63', '#5c8a00', '#080807'],
+    cyan:   ['#22d3ee', '34,211,238', '#0a8aa6', '#080807'],
+    violet: ['#a78bfa', '167,139,250', '#6d3bea', '#080807'],
+    pink:   ['#ff4d8d', '255,77,141', '#d6155f', '#ffffff']
+  };
+  let accentRGB = '255,77,0';
   function setTheme(name) {
     const t = themes[name]; if (!t) return false;
-    const r = document.documentElement.style;
-    r.setProperty('--accent', t[0]);
-    r.setProperty('--accent-rgb', t[1]);
+    const s = document.documentElement.style;
+    s.setProperty('--accent', t[0]); s.setProperty('--accent-rgb', t[1]);
+    s.setProperty('--accent-d', t[2]); s.setProperty('--on-accent', t[3]);
     accentRGB = t[1];
-    $$('#swatches button').forEach(b => b.classList.toggle('on', b.dataset.t === name));
-    try { localStorage.setItem('theme', name); } catch (e) {}
+    $$('.swatches button').forEach(b => b.classList.toggle('on', b.dataset.t === name));
+    try { localStorage.setItem('kv-theme', name); } catch (e) {}
     return true;
   }
-  $$('#swatches button').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.t)));
-  try { const s = localStorage.getItem('theme'); if (s) setTheme(s); } catch (e) {}
+  $$('.swatches button').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.t)));
+  try { const s = localStorage.getItem('kv-theme'); if (s) setTheme(s); } catch (e) {}
 
-  /* ========== MOBILE MENU ========== */
-  const navLinks = $('#navLinks');
-  $('#menuBtn').addEventListener('click', () => navLinks.classList.toggle('open'));
-  $$('a', navLinks).forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  /* ---------- Mobil menü ---------- */
+  const mm = $('#mobileMenu');
+  $('#menuOpen').addEventListener('click', () => mm.classList.add('open'));
+  $('#menuClose').addEventListener('click', () => mm.classList.remove('open'));
+  $$('a', mm).forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
 
-  /* ========== MARQUEE ========== */
-  const words = ['SİBER GÜVENLİK','PYTHON OTOMASYON','WEB SCRAPING','LINUX & TERMUX','ALGORİTMALAR','C / C++','JAVA OOP','GIT & GITHUB'];
-  const mq = $('#marquee');
-  mq.innerHTML = [...words, ...words].map(w => `<span class="marquee-item">${w}</span>`).join('');
+  /* ---------- Marquee ---------- */
+  const mw = [['s', 'Cyber Security'], ['m', 'PYTHON AUTOMATION'], ['s', 'Web Scraping'], ['m', 'LINUX · TERMUX'],
+              ['s', 'Daşoguz → İstanbul'], ['m', 'C / C++ · JAVA'], ['s', 'Bot Architecture'], ['m', 'BAŞAKŞEHİR · IST'], ['s', 'Algorithms'], ['m', 'GIT & GITHUB']];
+  const mhtml = mw.map(([k, t]) => `<span class="${k === 's' ? 'sf' : ''}">${t}</span><i>✦</i>`).join('');
+  $('#marquee').innerHTML = `<div class="mi">${mhtml}</div><div class="mi">${mhtml}</div>`;
 
-  /* ========== SCRAMBLE ========== */
+  /* ---------- Scramble ---------- */
   const glyphs = '!<>-_\\/[]{}—=+*^?#01';
-  function scramble(el, text, dur = 900) {
+  function scramble(el, text, dur = 550) {
     if (reduce) { el.textContent = text; return; }
     const start = performance.now();
-    const order = [...text].map((_, i) => 0.25 + (i / text.length) * 0.75 * Math.random() + i / text.length * 0.1);
-    (function frame(now) {
+    const order = [...text].map((_, i) => .15 + (i / text.length) * .6 + Math.random() * .25);
+    (function f(now) {
       const p = Math.min(1, (now - start) / dur);
-      el.textContent = [...text].map((ch, i) => {
-        if (ch === ' ') return ' ';
-        return p >= order[i] ? ch : glyphs[Math.floor(Math.random() * glyphs.length)];
-      }).join('');
-      if (p < 1) requestAnimationFrame(frame);
-    })(performance.now());
+      el.textContent = [...text].map((c, i) => c === ' ' ? ' ' : (p >= order[i] ? c : glyphs[Math.floor(Math.random() * glyphs.length)])).join('');
+      if (p < 1) requestAnimationFrame(f); else el.textContent = text;
+    })(start);
   }
-  const n1 = $('#n1'), n2 = $('#n2');
-  setTimeout(() => {
-    scramble(n1, 'Kuvanchbek');
-    scramble(n2, 'Abdirimov.', 1100);
-  }, 1900);
-  $('.hero-name').addEventListener('mouseenter', () => {
-    scramble(n1, 'Kuvanchbek', 600);
-    scramble(n2, 'Abdirimov.', 700);
+  $$('[data-scramble]').forEach(el => {
+    const orig = el.textContent;
+    el.addEventListener('mouseenter', () => scramble(el, orig));
   });
 
-  /* ========== TYPING ========== */
-  const phrases = ['Software Engineering Student', 'Cyber Security Enthusiast', 'Python • C • Java Developer', 'Automation & Scraping Bots'];
-  const typingEl = $('#typing');
+  /* ---------- Yazma efekti ---------- */
+  const phrases = ['Software Engineering Student @ İGÜ', 'Cyber Security & Network Defense', 'Python • C/C++ • Java Developer', 'Automation & Web Scraping Bots'];
+  const te = $('#typing');
   let pi = 0, ci = 0, del = false;
   (function type() {
     const w = phrases[pi];
-    typingEl.textContent = '> ' + w.slice(0, ci);
-    if (!del && ci < w.length) { ci++; setTimeout(type, 65); }
+    te.textContent = '> ' + w.slice(0, ci);
+    if (!del && ci < w.length) { ci++; setTimeout(type, 60); }
     else if (!del) { del = true; setTimeout(type, 1600); }
-    else if (ci > 0) { ci--; setTimeout(type, 32); }
+    else if (ci > 0) { ci--; setTimeout(type, 28); }
     else { del = false; pi = (pi + 1) % phrases.length; setTimeout(type, 300); }
   })();
 
-  /* ========== CANVAS NETWORK ========== */
+  /* ---------- Parçacık Ağı + Matrix Modu ---------- */
   const cv = $('#net'), ctx = cv.getContext('2d');
-  let W, H, pts = [], mouse = { x: -999, y: -999 }, heroVisible = true;
+  let W, H, pts = [], drops = [], mouse = { x: -999, y: -999 }, heroVis = true, matrixMode = false;
   function resize() {
-    const r = cv.parentElement.getBoundingClientRect();
-    const dpr = Math.min(devicePixelRatio || 1, 2);
-    W = r.width; H = r.height;
-    cv.width = W * dpr; cv.height = H * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const n = Math.min(90, Math.floor(W * H / 14000));
-    pts = Array.from({ length: n }, () => ({
-      x: Math.random() * W, y: Math.random() * H,
-      vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35
-    }));
+    const r = cv.parentElement.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2);
+    W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const n = Math.min(85, Math.floor(W * H / 14500));
+    pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35 }));
+    const cols = Math.floor(W / 18);
+    drops = Array.from({ length: cols }, () => Math.random() * -40);
   }
   resize(); addEventListener('resize', resize);
-  cv.parentElement.addEventListener('mousemove', e => {
-    const r = cv.getBoundingClientRect();
-    mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
-  });
-  cv.parentElement.addEventListener('mouseleave', () => { mouse.x = mouse.y = -999; });
-  new IntersectionObserver(e => heroVisible = e[0].isIntersecting).observe(cv.parentElement);
+  cv.parentElement.addEventListener('mousemove', e => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+  cv.parentElement.addEventListener('mouseleave', () => mouse.x = mouse.y = -999);
+  new IntersectionObserver(e => heroVis = e[0].isIntersecting).observe(cv.parentElement);
+
   (function draw() {
     requestAnimationFrame(draw);
-    if (!heroVisible) return;
+    if (!heroVis) return;
+    if (matrixMode) {
+      ctx.fillStyle = 'rgba(8, 8, 7, 0.12)';
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = `rgba(${accentRGB}, 0.85)`;
+      ctx.font = '14px JetBrains Mono, monospace';
+      for (let i = 0; i < drops.length; i++) {
+        const ch = Math.random() > 0.5 ? '1' : '0';
+        ctx.fillText(ch, i * 18, drops[i] * 18);
+        if (drops[i] * 18 > H && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
+      }
+      return;
+    }
     ctx.clearRect(0, 0, W, H);
     for (const p of pts) {
       if (!reduce) { p.x += p.vx; p.y += p.vy; }
       if (p.x < 0 || p.x > W) p.vx *= -1;
       if (p.y < 0 || p.y > H) p.vy *= -1;
       const dx = p.x - mouse.x, dy = p.y - mouse.y, d = Math.hypot(dx, dy);
-      if (d < 120) { p.x += dx / d * 1.2; p.y += dy / d * 1.2; }
-      ctx.beginPath(); ctx.arc(p.x, p.y, 1.5, 0, 6.283);
-      ctx.fillStyle = `rgba(${accentRGB},.8)`; ctx.fill();
+      if (d < 120 && d > 0) { p.x += dx / d * 1.2; p.y += dy / d * 1.2; }
+      ctx.beginPath(); ctx.arc(p.x, p.y, 1.5, 0, 6.283); ctx.fillStyle = `rgba(${accentRGB},.8)`; ctx.fill();
     }
-    for (let i = 0; i < pts.length; i++) {
-      for (let j = i + 1; j < pts.length; j++) {
-        const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
-        if (d < 130) {
-          ctx.strokeStyle = `rgba(${accentRGB},${(1 - d / 130) * .22})`;
-          ctx.lineWidth = 1;
-          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
-        }
-      }
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (d < 130) { ctx.strokeStyle = `rgba(${accentRGB},${(1 - d / 130) * .22})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
     }
-    if (mouse.x > 0) {
-      for (const p of pts) {
-        const d = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-        if (d < 160) {
-          ctx.strokeStyle = `rgba(${accentRGB},${(1 - d / 160) * .5})`;
-          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-        }
-      }
+    if (mouse.x > 0) for (const p of pts) {
+      const d = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+      if (d < 160) { ctx.strokeStyle = `rgba(${accentRGB},${(1 - d / 160) * .5})`; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
     }
   })();
 
-  /* ========== CURSOR GLOW + SPOTLIGHT ========== */
-  const glow = $('#glow');
-  addEventListener('mousemove', e => {
-    glow.style.left = e.clientX + 'px';
-    glow.style.top = e.clientY + 'px';
-  }, { passive: true });
+  /* ---------- Özel imleç ---------- */
+  if (finePointer) {
+    const cur = $('#cursor'), dot = $('#cursorDot');
+    let mx = innerWidth / 2, my = innerHeight / 2, cx = mx, cy = my;
+    addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; dot.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`; }, { passive: true });
+    (function loop() { cx += (mx - cx) * .18; cy += (my - cy) * .18; cur.style.transform = `translate(${cx}px,${cy}px) translate(-50%,-50%)`; requestAnimationFrame(loop); })();
+    const hov = 'a,button,[data-magnetic],.tab,.arow,.spot';
+    document.addEventListener('mouseover', e => { if (e.target.closest(hov)) cur.classList.add('grow'); });
+    document.addEventListener('mouseout', e => { if (e.target.closest(hov)) cur.classList.remove('grow'); });
+    $$('iframe').forEach(f => { f.addEventListener('mouseenter', () => cur.classList.add('hide')); f.addEventListener('mouseleave', () => cur.classList.remove('hide')); });
+  }
+
+  /* ---------- Spotlight, Tilt & Magnetic ---------- */
   $$('.spot').forEach(c => c.addEventListener('mousemove', e => {
     const r = c.getBoundingClientRect();
     c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
     c.style.setProperty('--my', (e.clientY - r.top) + 'px');
   }));
-
-  /* ========== 3D TILT + PARALLAX ========== */
-  const tilt = $('#tilt');
-  if (!isTouch && !reduce) {
+  if (finePointer && !reduce) {
+    const tilt = $('#tilt');
     tilt.parentElement.addEventListener('mousemove', e => {
-      const r = tilt.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - .5;
-      const y = (e.clientY - r.top) / r.height - .5;
-      tilt.style.transform = `rotateY(${x * 14}deg) rotateX(${-y * 14}deg) translateZ(0)`;
+      const r = tilt.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      tilt.style.transform = `rotateY(${x * 14}deg) rotateX(${-y * 14}deg)`;
     });
     tilt.parentElement.addEventListener('mouseleave', () => tilt.style.transform = '');
-    addEventListener('scroll', () => {
-      const y = window.scrollY;
-      if (y < 900) tilt.style.transform = `translateY(${y * -0.05}px)`;
-    }, { passive: true });
+    $$('[data-magnetic]').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .24}px,${(e.clientY - r.top - r.height / 2) * .24}px)`;
+      });
+      el.addEventListener('mouseleave', () => el.style.transform = '');
+    });
   }
 
-  /* ========== SCROLL PROGRESS ========== */
-  const prog = $('#progress');
+  /* ---------- Scroll & Reveal ---------- */
+  const header = $('#header'), prog = $('#progress');
   addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', scrollY > 40);
     const h = document.documentElement;
     prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
   }, { passive: true });
 
-  /* ========== COUNTERS ========== */
-  function countUp(el) {
-    const target = +el.dataset.count;
-    let n = 0;
-    const t = setInterval(() => {
-      n++;
-      el.textContent = n;
-      if (n >= target) clearInterval(t);
-    }, 220);
-  }
-
-  /* ========== REVEAL + BARS ========== */
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
-    e.target.classList.add('in');
-    io.unobserve(e.target);
-    $$('.bar-fill', e.target).forEach(b => b.style.width = b.dataset.w + '%');
-  }), { threshold: .12 });
+    e.target.classList.add('in'); io.unobserve(e.target);
+    $$('.bar2 span', e.target).forEach(b => b.style.width = b.dataset.w + '%');
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
   $$('.reveal').forEach(n => io.observe(n));
-  $$('.stat b').forEach(countUp);
 
-  /* ========== NAV SPY ========== */
-  const secs = $$('section[id]');
+  $$('[data-count]').forEach(el => {
+    const target = +el.dataset.count;
+    let started = false;
+    const go = () => {
+      if (started) return; started = true;
+      let n = 0; const t = setInterval(() => { n++; el.textContent = n; if (n >= target) clearInterval(t); }, 180);
+    };
+    new IntersectionObserver((e, o) => { if (e[0].isIntersecting && document.body.classList.contains('loaded')) { go(); o.disconnect(); } }, { threshold: .5 }).observe(el);
+    setTimeout(() => { if (document.body.classList.contains('loaded')) go(); }, 2200);
+  });
+
   const links = $$('.nav-links a');
   const spy = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) {
-      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
-    }
+    if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
   }), { rootMargin: '-45% 0px -50% 0px' });
-  secs.forEach(s => spy.observe(s));
+  $$('section[id]').forEach(s => spy.observe(s));
 
-  /* ========== TOAST + COPY ========== */
+  /* ---------- Toast ---------- */
   const toast = $('#toast');
-  function showToast(msg) {
-    toast.textContent = msg;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 1900);
-  }
+  const showToast = m => { toast.textContent = m; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2100); };
   $('#copyBtn').addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText('abdirimowkuwanchbek2@gmail.com');
-      showToast('E-posta kopyalandı ✓');
-    } catch (e) {
-      showToast('Kopyalanamadı — elle seçebilirsin');
-    }
+    try { await navigator.clipboard.writeText('abdirimowkuwanchbek2@gmail.com'); showToast('E-posta kopyalandı ✓'); }
+    catch (e) { showToast('Kopyalanamadı — elle seçebilirsin'); }
   });
 
-  /* ========== MAGNETIC BUTTONS ========== */
-  $$('[data-magnetic]').forEach(el => {
-    if (isTouch) return;
-    el.addEventListener('mousemove', e => {
-      const r = el.getBoundingClientRect();
-      const x = e.clientX - r.left - r.width / 2;
-      const y = e.clientY - r.top - r.height / 2;
-      el.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-    });
-    el.addEventListener('mouseleave', () => el.style.transform = '');
+  /* ---------- Harita Sekmeleri ---------- */
+  const locs = {
+    dasoguz: {
+      q: 'Dasoguz, Turkmenistan', z: 9, ping: 'Daşoguz · Türkmenistan',
+      badge: '<i class="fas fa-earth-asia"></i> Doğduğum yer · Anavatan',
+      title: 'Daşoguz, Türkmenistan 🇹🇲',
+      text: "Türkmenistan'ın kuzeyinde, Özbekistan sınırına yakın tarihi şehir. Köklerimin ve memleketimin merkezi."
+    },
+    igu: {
+      q: 'Istanbul Gelisim Universitesi Avcilar', z: 15, ping: 'İGÜ · Avcılar Kampüsü',
+      badge: '<i class="fas fa-graduation-cap"></i> Okuduğum üniversite',
+      title: 'İstanbul Gelişim Üniversitesi 🎓',
+      text: 'Avcılar Kampüsü · Yazılım Mühendisliği Bölümü, 2. sınıf.'
+    },
+    basaksehir: {
+      q: 'Basaksehir, Istanbul', z: 12, ping: 'Başakşehir · İstanbul',
+      badge: '<i class="fas fa-house"></i> Yaşadığım bölge',
+      title: 'Başakşehir, İstanbul 🇹🇷',
+      text: "İstanbul'un Başakşehir ilçesinde yaşıyorum; kod, müzik ve kahve burada."
+    }
+  };
+  const frame = $('#mapFrame');
+  $$('#tabs .tab').forEach(tab => tab.addEventListener('click', () => {
+    const k = tab.dataset.k, L = locs[k];
+    $$('#tabs .tab').forEach(t => t.classList.toggle('on', t === tab));
+    frame.style.opacity = 0;
+    setTimeout(() => {
+      frame.src = `https://maps.google.com/maps?q=${encodeURIComponent(L.q)}&z=${L.z}&hl=tr&output=embed`;
+      frame.onload = () => frame.style.opacity = 1;
+      setTimeout(() => frame.style.opacity = 1, 900);
+    }, 250);
+    $('#mapPing').textContent = L.ping;
+    $('#locBadge').innerHTML = L.badge;
+    $('#locTitle').textContent = L.title;
+    $('#locText').textContent = L.text;
+    $('#locLink').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(L.q);
+  }));
+
+  /* ---------- Proje İnceleme Modalı ---------- */
+  const projData = [
+    {
+      tag: 'PYTHON · AUTOMATION · SCRAPING',
+      title: 'Automation & Web Scraping Bot',
+      desc: 'Hedef web kaynaklarından yapılandırılmış veri çıkaran, hız sınırlamalarını (rate-limit) yöneten ve tekrarlayan dijital iş akışlarını otonom olarak yürüten Python bot sistemi.',
+      specs: [
+        ['Dil & Çekirdek', 'Python 3 · Asyncio'],
+        ['Modüller', 'BeautifulSoup · Requests · CLI'],
+        ['Çıktı Formatı', 'JSON / CSV / Otomatik Rapor'],
+        ['Durum', 'Aktif Geliştirme (GitHub)']
+      ],
+      url: 'https://github.com/lamer3455'
+    },
+    {
+      tag: 'C / C++ · JAVA · ALGORITHMS',
+      title: 'Data Structures & Algoritma Çalışmaları',
+      desc: 'Bellek yönetimi, pointer aritmetiği, nesne yönelimli mimari (OOP), matris işlemleri ve zaman/alan karmaşıklığı analizleri üzerine inşa edilmiş mühendislik uygulamaları.',
+      specs: [
+        ['Diller', 'C / C++ & Java (JDK)'],
+        ['Odak Konular', 'Matris · Sıralama · Veri Yapıları'],
+        ['Paradigma', 'OOP & Low-Level Memory'],
+        ['Akademik Bağlam', 'İGÜ Yazılım Mühendisliği']
+      ],
+      url: 'https://github.com/lamer3455'
+    }
+  ];
+  const modalBg = $('#projModal');
+  function openModal(idx) {
+    const p = projData[idx]; if (!p) return;
+    $('#mTag').textContent = p.tag;
+    $('#mTitle').textContent = p.title;
+    $('#mDesc').textContent = p.desc;
+    $('#mRepo').href = p.url;
+    $('#mSpecs').innerHTML = p.specs.map(([k, v]) => `<div class="mspec"><span>${k}</span><b>${v}</b></div>`).join('');
+    modalBg.classList.add('open');
+  }
+  const closeModal = () => modalBg.classList.remove('open');
+  $$('[data-proj]').forEach(el => {
+    el.addEventListener('click', () => openModal(+el.dataset.proj));
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(+el.dataset.proj); } });
   });
+  $('#modalClose').addEventListener('click', closeModal);
+  $('#modalClose2').addEventListener('click', closeModal);
+  modalBg.addEventListener('click', e => { if (e.target === modalBg) closeModal(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); mm.classList.remove('open'); } });
 
-  /* ========== GITHUB API ========== */
-  const ghUser = 'lamer3455';
-  async function fetchGitHub() {
-    try {
-      const [userRes, reposRes] = await Promise.all([
-        fetch(`https://api.github.com/users/${ghUser}`),
-        fetch(`https://api.github.com/users/${ghUser}/repos?per_page=100`)
-      ]);
-      if (!userRes.ok) throw new Error('API limit');
-      const user = await userRes.json();
-      const repos = reposRes.ok ? await reposRes.json() : [];
-      $('#ghRepos').textContent = user.public_repos ?? '—';
-      $('#ghFollowers').textContent = user.followers ?? '—';
-      const stars = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
-      $('#ghStars').textContent = stars;
-      const langCount = {};
-      repos.forEach(r => { if (r.language) langCount[r.language] = (langCount[r.language] || 0) + 1; });
-      const topLang = Object.entries(langCount).sort((a, b) => b[1] - a[1])[0]?.[0] || '—';
-      $('#ghLang').textContent = topLang;
-    } catch (e) {
-      ['ghRepos', 'ghFollowers', 'ghStars', 'ghLang'].forEach(id => {
-        const el = $('#' + id);
-        if (el) el.textContent = '—';
-      });
-    }
+  /* ---------- Müzik Rotasyonu + Web Audio API Synth Beat ---------- */
+  const rot = [
+    ['Defkhan', 'Turkish Rap · Homie Bak'], ['Stabil', 'Turkish Rap · Lirik & Flow'], ['Uzi', 'Turkish Rap'],
+    ['Central Cee', 'UK Rap · En sevdiğim UK rapçi'], ['BM', 'UK Rap · "London View"'],
+    ['2Pac', 'US Hip-Hop · West Coast'], ['Biggie Smalls', 'US Hip-Hop · East Coast'],
+    ['Snoop Dogg', 'US Hip-Hop · G-Funk'], ['50 Cent', 'US Hip-Hop · G-Unit'], ['Eminem', 'US Hip-Hop · Shady']
+  ];
+  let ri = 0, playing = true, prog0 = 0;
+  const npName = $('#npName'), npSub = $('#npSub'), npBar = $('#npBar'), vinyl = $('#vinyl'), eq = $('#eq'), npPlay = $('#npPlay');
+  function setTrack(i) {
+    ri = (i + rot.length) % rot.length; prog0 = 0;
+    npName.textContent = rot[ri][0]; npSub.textContent = rot[ri][1];
+    $$('.arow').forEach(r => r.classList.toggle('cur', r.dataset.a === rot[ri][0]));
   }
-  fetchGitHub();
+  setTrack(ri);
+  setInterval(() => {
+    if (!playing) return;
+    prog0 += 100 / 60;
+    npBar.style.width = Math.min(prog0, 100) + '%';
+    if (prog0 >= 100) setTrack(ri + 1);
+  }, 100);
+  $('#npNext').addEventListener('click', () => setTrack(ri + 1));
+  $('#npPrev').addEventListener('click', () => setTrack(ri - 1));
+  npPlay.addEventListener('click', () => {
+    playing = !playing;
+    vinyl.classList.toggle('paused', !playing); eq.classList.toggle('off', !playing);
+    npPlay.innerHTML = `<i class="fas fa-${playing ? 'pause' : 'play'}"></i>`;
+  });
+  $$('.arow').forEach(r => r.addEventListener('click', () => {
+    const i = rot.findIndex(x => x[0] === r.dataset.a); if (i >= 0) setTrack(i);
+  }));
 
-  /* ========== MATRIX RAIN ========== */
-  const matrixCanvas = $('#matrix');
-  let matrixActive = false;
-  let matrixInterval = null;
-  function startMatrix() {
-    if (matrixActive) return;
-    matrixActive = true;
-    matrixCanvas.classList.add('on');
-    const mctx = matrixCanvas.getContext('2d');
-    let mW = matrixCanvas.width = window.innerWidth;
-    let mH = matrixCanvas.height = window.innerHeight;
-    const cols = Math.floor(mW / 14);
-    const drops = Array(cols).fill(1);
-    const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789ABCDEF';
-    function onResizeM() {
-      mW = matrixCanvas.width = window.innerWidth;
-      mH = matrixCanvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', onResizeM);
-    function drawMatrix() {
-      mctx.fillStyle = 'rgba(7,8,10,0.08)';
-      mctx.fillRect(0, 0, mW, mH);
-      mctx.fillStyle = '#' + accentRGB.split(',').map(n => parseInt(n).toString(16).padStart(2, '0')).join('');
-      mctx.font = '14px JetBrains Mono, monospace';
-      for (let i = 0; i < drops.length; i++) {
-        const ch = chars[Math.floor(Math.random() * chars.length)];
-        mctx.fillText(ch, i * 14, drops[i] * 14);
-        if (drops[i] * 14 > mH && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
-      }
-    }
-    matrixInterval = setInterval(drawMatrix, 55);
-    setTimeout(stopMatrix, 12000);
-  }
-  function stopMatrix() {
-    matrixActive = false;
-    matrixCanvas.classList.remove('on');
-    if (matrixInterval) clearInterval(matrixInterval);
-    const mctx = matrixCanvas.getContext('2d');
-    mctx.clearRect(0, 0, matrixCanvas.width, matrixCanvas.height);
-  }
-
-  /* ========== KONAMI CODE ========== */
-  const konami = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
-  let konamiIdx = 0;
-  document.addEventListener('keydown', e => {
-    if (e.key.toLowerCase() === konami[konamiIdx].toLowerCase()) {
-      konamiIdx++;
-      if (konamiIdx === konami.length) {
-        startMatrix();
-        showToast('🥚 Gizli mod aktif! Matrix çalışıyor.');
-        konamiIdx = 0;
-      }
+  // Zero-dependency Web Audio API Lo-Fi / Cyber Bass Synth
+  let audioCtx = null, synthTimer = null, synthOn = false, step = 0;
+  const notes = [110, 110, 130.81, 146.83, 98, 98, 130.81, 164.81];
+  const synthBtn = $('#synthToggle');
+  function toggleSynth() {
+    if (!synthOn) {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      synthOn = true;
+      synthBtn.classList.add('on');
+      synthBtn.innerHTML = '<i class="fas fa-volume-high"></i> Synth Beat: Açık';
+      synthTimer = setInterval(() => {
+        if (!playing || !synthOn) return;
+        const now = audioCtx.currentTime;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = step % 4 === 0 ? 'triangle' : 'sine';
+        osc.frequency.setValueAtTime(notes[step % notes.length], now);
+        gain.gain.setValueAtTime(0.06, now);
+        gain.gain.exponentialRampToValueAtTime(0.0008, now + 0.32);
+        osc.connect(gain); gain.connect(audioCtx.destination);
+        osc.start(now); osc.stop(now + 0.34);
+        step++;
+      }, 360);
     } else {
-      konamiIdx = 0;
+      synthOn = false;
+      clearInterval(synthTimer);
+      synthBtn.classList.remove('on');
+      synthBtn.innerHTML = '<i class="fas fa-volume-xmark"></i> Synth Beat: Kapalı';
     }
-  });
-
-  /* ========== TERMINAL ========== */
-  const out = $('#termOut');
-  const inp = $('#termIn');
-  const esc = s => s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
-  function line(html) {
-    const d = document.createElement('div');
-    d.className = 'tl';
-    d.innerHTML = html;
-    out.appendChild(d);
-    out.scrollTop = out.scrollHeight;
   }
-  const row = (k, v) => `<span class="p">${k.padEnd(12)}</span>${v}`;
+  synthBtn.addEventListener('click', toggleSynth);
+
+  /* ---------- Terminal ---------- */
+  const out = $('#termOut'), inp = $('#termIn');
+  const esc = s => s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+  const line = html => { const d = document.createElement('div'); d.className = 'tl'; d.innerHTML = html; out.appendChild(d); out.scrollTop = out.scrollHeight; };
+  const row = (k, v) => `<span class="p">${k.padEnd(13)}</span>${v}`;
   const cmds = {
     help: () => [
       '<span class="k">Kullanılabilir komutlar:</span>',
-      row('whoami', 'kısa tanıtım'),
-      row('neofetch', 'sistem bilgisi'),
-      row('about', 'hakkımda'),
-      row('location', 'konum bilgisi'),
-      row('skills', 'yetenekler'),
-      row('projects', 'projelerim'),
-      row('github', 'GitHub linkleri'),
-      row('music', 'müzik zevki'),
-      row('languages', 'diller'),
-      row('contact', 'iletişim'),
-      row('theme', 'lime|cyan|violet|orange|pink|random'),
-      row('matrix', '🌧️ matrix rain'),
-      row('coffee', 'kahve ☕'),
-      row('clear', 'temizle'),
-      '<span class="d">İpucu: ↑/↓ geçmiş, Tab tamamla. Konami: ↑↑↓↓←→←→BA</span>'
+      row('whoami', 'kısa tanıtım'), row('scan', 'ağ & port güvenlik taraması'),
+      row('matrix', 'arka planı Matrix yağmuruna çevir'), row('location', 'memleket, üniversite, ikamet'),
+      row('skills', 'yetenekler'), row('roadmap', 'gelişim alanlarım'),
+      row('music', 'favori sanatçılar'), row('languages', 'konuştuğum diller'),
+      row('projects', 'projelerim'), row('contact', 'iletişim bilgileri'),
+      row('neofetch', 'sistem özeti'), row('theme', 'theme orange|lime|cyan|violet|pink|random'),
+      row('clear', 'ekranı temizle'),
+      '<span class="d">İpucu: ↑ / ↓ geçmiş, Tab tamamlama. Bir de sudo dene 😏</span>'
     ],
-    whoami: () => [
-      'kuvanchbek_abdirimov',
-      '<span class="d">Yazılım Mühendisliği öğrencisi · Siber güvenlik meraklısı · Bot geliştiricisi</span>'
+    whoami: () => ['kuvanchbek_abdirimov', '<span class="d">İGÜ Yazılım Mühendisliği · Cyber Security &amp; Automation Developer</span>'],
+    location: () => [row('memleket', 'Daşoguz, Türkmenistan 🇹🇲'), row('ikamet', 'Başakşehir, İstanbul 🇹🇷'), row('üniversite', 'İstanbul Gelişim Üniversitesi (Avcılar)')],
+    skills: () => [row('diller', 'C / C++, Java, Python, HTML/CSS/JS'), row('araçlar', 'Linux, Termux, Git &amp; GitHub, VS Code'), row('alanlar', 'Ağ Güvenliği, Bot &amp; Script, Web Scraping, Algoritma')],
+    roadmap: () => [
+      row('aktif', 'Ağ &amp; Sistem Güvenliği · Linux · Otomasyon · Algoritmalar'),
+      row('sırada', 'Yapay Zekâ API Entegrasyonları · Modern Web &amp; Flutter'),
+      row('hedef', 'CTF &amp; Pentest · Erasmus &amp; Diller · Açık Kaynak')
     ],
-    neofetch: () => [
-      '<span class="p">       /\\      </span>  <span class="k">kuvanch@portfolio</span>',
-      '<span class="p">      /  \\     </span>  <span class="d">─────────────────</span>',
-      '<span class="p">     / /\\ \\    </span>  <span class="nf-key">OS</span>Kuvanchbek_OS v4.0',
-      '<span class="p">    / /  \\ \\   </span>  <span class="nf-key">Host</span>İstanbul, Türkiye',
-      '<span class="p">   / /    \\ \\  </span>  <span class="nf-key">Kernel</span>Software Engineering',
-      '<span class="p">  /_/      \\_\\ </span>  <span class="nf-key">Uptime</span>2 years · SWE',
-      '                    <span class="nf-key">Shell</span>python 3.x',
-      '                    <span class="nf-key">Focus</span>Cyber + Automation',
-      '                    <span class="nf-key">Theme</span>' + (localStorage.getItem('theme') || 'lime'),
-      '                    <span class="nf-key">Mood</span>● building things'
-    ],
-    about: () => [
-      'İGÜ Yazılım Mühendisliği 2. sınıf.',
-      'Sistem/ağ güvenliği, zafiyet analizi + Python ile otomasyon & scraping.',
-      'Doğum: Daşoğuz, Türkmenistan · İkamet: Başakşehir, İstanbul.'
-    ],
-    location: () => [
-      row('birthplace', 'Daşoğuz (Dashoguz), Türkmenistan 🇹🇲'),
-      row('lives_in', 'Başakşehir, İstanbul 🇹🇷'),
-      row('university', 'İstanbul Gelişim Üni. — Avcılar Kampüsü')
-    ],
-    skills: () => [
-      row('diller', 'C / C++, Java, Python'),
-      row('araçlar', 'Linux, Termux, Git &amp; GitHub, VS Code'),
-      row('alanlar', 'Bot &amp; Script, Web Scraping, AI API, Ağ Güvenliği')
-    ],
+    music: () => [row('Turkish Rap', 'Defkhan ★, Stabil, Uzi'), row('UK Rap', 'Central Cee ★, BM'), row('US Hip-Hop', '2Pac, Biggie, Snoop Dogg, 50 Cent, Eminem')],
+    languages: () => [row('Türkmençe', 'Native'), row('Oʻzbekcha', 'Native'), row('Türkçe', 'Advanced'), row('English', 'B2 – C1'), row('Русский', 'A1–A2'), row('Deutsch', 'A1')],
     projects: () => [
-      '<span class="p">[01]</span> Automation &amp; Web Scraping Bot <span class="d">#Python #WebScraping</span>',
-      '<span class="p">[02]</span> Data Structures &amp; Algoritma <span class="d">#C #Java</span>',
+      '<span class="p">[01]</span> Automation &amp; Web Scraping Bot  <span class="d">#Python #WebScraping</span>',
+      '<span class="p">[02]</span> Data Structures &amp; Algoritmalar  <span class="d">#C #Java #OOP</span>',
       '<a href="https://github.com/lamer3455" target="_blank" rel="noopener">github.com/lamer3455</a>'
-    ],
-    github: () => [
-      '<span class="k">GitHub:</span> <a href="https://github.com/lamer3455" target="_blank" rel="noopener">github.com/lamer3455</a>',
-      row('repos', $('#ghRepos').textContent),
-      row('followers', $('#ghFollowers').textContent),
-      row('stars', $('#ghStars').textContent),
-      row('top lang', $('#ghLang').textContent)
-    ],
-    music: () => [
-      '<span class="k">🎵 Rotasyon:</span>',
-      row('TR Rap', 'Defkhan, Stabil, Uzi'),
-      row('UK Rap', 'Central Cee, BM'),
-      row('US Hip-Hop', '2Pac, Biggie, Eminem, 50 Cent, Snoop Dogg')
-    ],
-    languages: () => [
-      row('Türkmençe', 'Ana Dil · Native'),
-      row('Özbekçe', 'Ana Dil · Native'),
-      row('Türkçe', 'İleri Seviye · Advanced'),
-      row('English', 'B2 – C1'),
-      row('Русский', 'A1'),
-      row('Deutsch', 'A1')
     ],
     contact: () => [
       row('e-posta', '<a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>'),
       row('github', '<a href="https://github.com/lamer3455" target="_blank" rel="noopener">lamer3455</a>'),
-      row('linkedin', '<a href="https://www.linkedin.com/in/kuvanchbek-abdirimov-20baa9386" target="_blank" rel="noopener">kuvanchbek-abdirimov</a>'),
       row('telegram', '<a href="https://t.me/kuvanch_3434" target="_blank" rel="noopener">@kuvanch_3434</a>'),
       row('whatsapp', '<a href="https://wa.me/905342145252" target="_blank" rel="noopener">+90 534 214 52 52</a>')
     ],
-    coffee: () => [
-      '     ( (', '      ) )', '   ........', '   |      |]', '   \\      /', '    `----\'',
-      '<span class="p">Kahve molası! ☕ Kod yazmaya devam.</span>'
+    neofetch: () => [
+      '<span class="p">kuvanch</span>@<span class="p">sec-node</span>',
+      '<span class="d">----------------------</span>',
+      row('OS', 'Cyber-Editorial OS v5.0'), row('Host', 'İstanbul / Başakşehir'), row('Origin', 'Daşoguz, Türkmenistan'),
+      row('Uni', 'İstanbul Gelişim Üni. (SWE)'), row('Shell', 'zsh + python3'), row('Langs', 'TM · UZ · TR · EN · RU · DE'),
+      row('Focus', 'Cyber Security · Automation'), row('Audio', 'WebAudio Synth Ready 🎧')
     ],
-    matrix: () => { startMatrix(); return ['<span class="p">🌧️ Matrix rain başlatıldı… 12 saniye sürecek.</span>']; },
-    ls: () => ['<span class="p">about.txt  skills.txt  projects/  languages.txt  contact.txt  .secret  journey.md</span>'],
-    date: () => [new Date().toLocaleString('tr-TR')],
+    matrix: () => {
+      matrixMode = !matrixMode;
+      return [matrixMode
+        ? '<span class="ok">[✓] Matrix rain aktif!</span> <span class="d">(Hero arka planına bak; kapatmak için tekrar matrix yaz)</span>'
+        : '<span class="p">[✓] Neural network moduna dönüldü.</span>'];
+    },
+    ls: () => ['<span class="p">about.txt  daşoguz.map  igu_campus.loc  skills.txt  roadmap.md  synth.audio  .secret</span>'],
+    date: () => [new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' })],
     clear: () => { out.innerHTML = ''; return []; }
   };
-  cmds.social = cmds.contact;
-  cmds['cat .secret'] = () => ['Gizli dosya yok… ya da var mı? 👀 <span class="d">(sudo dene ya da Konami kodunu gir)</span>'];
-
+  const hist = []; let hi = -1;
   function run(raw) {
-    const cmd = raw.trim();
-    if (!cmd) return;
-    line(`<span class="p">kuvanch@portfolio:~$</span> ${esc(cmd)}`);
+    const cmd = raw.trim(); if (!cmd) return;
+    line(`<span class="p">kuvanch@sec-node:~$</span> ${esc(cmd)}`);
     hist.unshift(cmd); hi = -1;
     const low = cmd.toLowerCase();
-
     if (low.startsWith('theme')) {
       let a = low.split(/\s+/)[1];
       if (a === 'random') a = Object.keys(themes)[Math.floor(Math.random() * 5)];
-      return line(setTheme(a)
-        ? `Tema değişti → <span class="p">${a}</span>`
-        : 'Kullanım: theme lime | cyan | violet | orange | pink | random');
+      return line(setTheme(a) ? `Tema değişti → <span class="p">${a}</span>` : 'Kullanım: theme orange | lime | cyan | violet | pink | random');
     }
     if (low.startsWith('sudo')) {
-      if (/hire/.test(low)) {
-        line('<span class="p">[sudo] yetki verildi ✓</span>');
-        line('Harika karar! 😄 Hemen yaz: <a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>');
-        return;
-      }
-      return line('Güzel deneme 😏 — bu kullanıcı sudoers dosyasında yok.');
+      if (/hire/.test(low)) { line('<span class="ok">[sudo] yetki verildi ✓</span>'); line('Harika karar! 😄 Hemen yaz: <a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>'); return; }
+      return line('<span class="warn">Güzel deneme 😏</span> — bu kullanıcı sudoers dosyasında yok. Olay loglandı.');
     }
-    if (low === 'hack' || low.startsWith('nmap')) {
-      const steps = ['Hedef taranıyor…', 'Portlar açılıyor…', 'Firewall atlatılıyor…', 'Erişim sağlandı…'];
-      steps.forEach((s, i) => setTimeout(() => {
-        line('<span class="p">[' + '█'.repeat(i + 1) + '░'.repeat(3 - i) + ']</span> ' + s);
-      }, i * 450));
-      setTimeout(() => line('Şaka şaka 😄 Etik hacker burada! 🛡️'), 2000);
+    if (low === 'scan' || low.startsWith('nmap') || low.startsWith('hack')) {
+      const steps = [
+        'PORT     STATE    SERVICE',
+        '22/tcp   <span class="ok">open</span>     ssh (OpenSSH 9.6)',
+        '80/tcp   <span class="ok">open</span>     http (lamer3455.github.io)',
+        '443/tcp  <span class="ok">open</span>     https (TLS 1.3 · Strict)',
+        '<span class="ok">[✓] Tarama tamamlandı: 0 kritik zafiyet, sistem güvenli.</span>'
+      ];
+      steps.forEach((s, i) => setTimeout(() => line(s), i * 320));
       return;
     }
+    if (low === 'cat .secret') return line('Gizli dosya yok… ya da var mı? 👀 <span class="d">(sudo hire kuvanchbek dene)</span>');
     const fn = cmds[low];
     if (fn) { const r = fn(); r && r.forEach(line); }
     else line(`<span class="d">komut bulunamadı:</span> ${esc(cmd)} <span class="d">— 'help' yaz.</span>`);
   }
-  const hist = []; let hi = -1;
   inp.addEventListener('keydown', e => {
     if (e.key === 'Enter') { run(inp.value); inp.value = ''; }
     else if (e.key === 'ArrowUp') { e.preventDefault(); if (hi < hist.length - 1) inp.value = hist[++hi]; }
     else if (e.key === 'ArrowDown') { e.preventDefault(); inp.value = hi > 0 ? hist[--hi] : (hi = -1, ''); }
-    else if (e.key === 'Tab') {
-      e.preventDefault();
-      const m = Object.keys(cmds).filter(k => k.startsWith(inp.value.toLowerCase()));
-      if (m.length === 1) inp.value = m[0];
-    }
+    else if (e.key === 'Tab') { e.preventDefault(); const m = Object.keys(cmds).filter(k => k.startsWith(inp.value.toLowerCase())); if (m.length === 1) inp.value = m[0]; }
   });
   $('#term').addEventListener('click', () => inp.focus({ preventScroll: true }));
   $$('#quick button').forEach(b => b.addEventListener('click', () => run(b.dataset.c)));
-
-  // Welcome
-  line('<span class="p">Kuvanchbek Portfolio OS v4.0</span> <span class="d">— boot complete ✓</span>');
-  line('<span class="d">Komutları görmek için</span> <span class="k">help</span> <span class="d">yaz.</span>');
-  line('<span class="d">Sürpriz:</span> <span class="k">neofetch</span>, <span class="k">matrix</span>, <span class="k">coffee</span>');
-  line('<span class="d">🥚 Konami kodu:</span> <span class="k">↑↑↓↓←→←→BA</span>');
+  line('<span class="p">Kuvanchbek Cyber-Editorial OS v5.0</span> <span class="d">— Başakşehir / İstanbul</span>');
+  line('<span class="d">Komutlar için</span> <span class="k">help</span> <span class="d">yaz ya da</span> <span class="k">scan</span> / <span class="k">matrix</span> <span class="d">komutlarını dene.</span>');
   line('');
 })();
 </script>
