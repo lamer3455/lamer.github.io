@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kuvanchbek Abdirimov — Software Engineering &amp; Cyber Security</title>
-<meta name="description" content="Kuvanchbek Abdirimov — 2nd-year Software Engineering student at Istanbul Gelisim University. Focused on cyber security, automation, and systems development.">
-<meta name="theme-color" content="#080807">
+<title>Kuvanchbek Abdirimov — Software Engineering & Cyber Security</title>
+<meta name="description" content="Kuvanchbek Abdirimov — İstanbul Gelişim Üniversitesi Software Engineering lisans öğrencisi. Hedef: Cyber Security & White Hat hacker.">
+<meta name="theme-color" content="#05070a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.loader{display:none!important}.hero-title .inner{transform:none!important}.hero-fade{opacity:1!important}</style></noscript>
 <style>
   :root{
-    --ink:#080807; --ink-2:#11100e; --paper:#f2ece1; --paper-2:#e5ddd0;
-    --accent:#ff4d00; --accent-rgb:255,77,0; --accent-d:#d93b00; --on-accent:#ffffff;
+    --ink:#05070a;
+    --accent:#c9ff3f; --accent-rgb:201,255,63; --on-accent:#05070a;
     --serif:'Instrument Serif',Georgia,serif;
     --sans:'Inter',system-ui,sans-serif;
     --mono:'JetBrains Mono',ui-monospace,monospace;
@@ -23,16 +23,17 @@
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
   body{
-    --t:#f2ece1; --m:#8c867a; --l:rgba(242,236,225,.13); --c:#11100e; --c2:#191714; --a:var(--accent);
+    --t:#e4efe9; --m:#7f918a; --l:rgba(170,255,210,.13); --c:#0a1013; --c2:#0f171b; --a:var(--accent);
     background:var(--ink);color:var(--t);font-family:var(--sans);font-size:16px;line-height:1.65;
     -webkit-font-smoothing:antialiased;overflow-x:hidden;
   }
-  .paper{
-    --t:#080807; --m:#635d52; --l:rgba(8,8,7,.14); --c:#faf6ee; --c2:#e8e0d2; --a:var(--accent-d);
-    background:var(--paper);color:var(--t);
+  /* CRT scanlines + grain */
+  body::before{
+    content:'';position:fixed;inset:0;pointer-events:none;z-index:9989;
+    background:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px);
   }
   body::after{
-    content:'';position:fixed;inset:0;pointer-events:none;z-index:9990;opacity:.042;mix-blend-mode:overlay;
+    content:'';position:fixed;inset:0;pointer-events:none;z-index:9990;opacity:.04;mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
   a{color:inherit;text-decoration:none}
@@ -41,34 +42,33 @@
   ::selection{background:var(--accent);color:var(--on-accent)}
   ::-webkit-scrollbar{width:8px}
   ::-webkit-scrollbar-track{background:var(--ink)}
-  ::-webkit-scrollbar-thumb{background:#292722;border-radius:4px}
+  ::-webkit-scrollbar-thumb{background:#1c2a26;border-radius:4px}
   ::-webkit-scrollbar-thumb:hover{background:var(--accent)}
   .container{max-width:1240px;margin:0 auto;padding:0 36px}
-  em.s,.serif-i{font-family:var(--serif);font-style:italic;font-weight:400}
 
-  /* Ambient */
   .aurora{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-  .aurora i{position:absolute;border-radius:50%;filter:blur(135px);background:var(--accent);opacity:.13;transition:background .6s}
+  .aurora i{position:absolute;border-radius:50%;filter:blur(140px);background:var(--accent);opacity:.11;transition:background .6s}
   .aurora i:nth-child(1){width:560px;height:560px;top:-170px;left:-140px;animation:drift 24s ease-in-out infinite alternate}
-  .aurora i:nth-child(2){width:460px;height:460px;bottom:-150px;right:-110px;opacity:.09;animation:drift 30s ease-in-out infinite alternate-reverse}
+  .aurora i:nth-child(2){width:460px;height:460px;bottom:-150px;right:-110px;opacity:.07;animation:drift 30s ease-in-out infinite alternate-reverse}
   @keyframes drift{to{transform:translate(130px,90px) scale(1.15)}}
 
-  /* Loader */
+  /* ===== LOADER (boot) ===== */
   .loader{
     position:fixed;inset:0;z-index:10000;background:var(--ink);display:flex;flex-direction:column;
-    align-items:center;justify-content:center;gap:16px;transition:transform .85s var(--ease) .1s;
-    animation:loaderFail 0s linear 4.5s forwards;
+    align-items:center;justify-content:center;gap:18px;transition:transform .85s var(--ease) .1s;
+    animation:loaderFail 0s linear 5s forwards;padding:24px
   }
   .loader.done{transform:translateY(-100%)}
   @keyframes loaderFail{to{visibility:hidden}}
-  .loader .brand{font-family:var(--serif);font-style:italic;font-size:clamp(2.4rem,8vw,4.6rem);letter-spacing:-.02em;color:var(--paper)}
+  .loader .brand{font-family:var(--serif);font-style:italic;font-size:clamp(2.4rem,8vw,4.4rem);letter-spacing:-.02em}
   .loader .brand b{color:var(--accent);font-style:normal}
-  .loader .sys{font-family:var(--mono);font-size:.72rem;color:var(--accent);letter-spacing:.14em;text-transform:uppercase}
-  .loader .count{font-family:var(--mono);font-size:.8rem;color:var(--m);letter-spacing:.2em}
-  .loader .bar{width:min(280px,65vw);height:2px;background:rgba(242,236,225,.12);overflow:hidden;border-radius:2px}
-  .loader .bar span{display:block;height:100%;width:0;background:var(--accent);transition:width .1s linear}
+  .boot{font-family:var(--mono);font-size:.78rem;color:var(--m);width:min(440px,100%);min-height:128px;line-height:1.8}
+  .boot .ok{color:var(--accent)}
+  .boot .grant{color:var(--accent);font-weight:700;letter-spacing:.18em;margin-top:6px}
+  .loader .bar{width:min(440px,100%);height:2px;background:rgba(170,255,210,.12);overflow:hidden;border-radius:2px}
+  .loader .bar span{display:block;height:100%;width:0;background:var(--accent);transition:width .2s linear}
 
-  /* Custom Cursor */
+  /* ===== CURSOR ===== */
   .cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;display:none}
   .cursor{width:34px;height:34px;border-radius:50%;border:1.5px solid #fff;transition:width .25s var(--ease),height .25s var(--ease),background .25s,opacity .2s}
   .cursor-dot{width:5px;height:5px;border-radius:50%;background:#fff}
@@ -80,62 +80,68 @@
     .cursor,.cursor-dot{display:block}
   }
 
-  /* Scroll Progress */
   .progress{position:fixed;top:0;left:0;right:0;height:2.5px;z-index:9998}
   .progress span{display:block;height:100%;width:0;background:var(--accent);box-shadow:0 0 12px var(--accent)}
 
-  /* Header */
+  /* ===== HEADER ===== */
   header{position:fixed;top:0;left:0;right:0;z-index:500;padding:20px 0;transition:padding .3s var(--ease),background .3s,border-color .3s;border-bottom:1px solid transparent}
-  header.scrolled{padding:12px 0;background:rgba(8,8,7,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom-color:rgba(242,236,225,.12)}
-  nav{display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--paper)}
-  .logo{font-family:var(--serif);font-size:1.45rem;font-style:italic;letter-spacing:-.01em;white-space:nowrap}
-  .logo .dot{color:var(--accent);font-style:normal}
+  header.scrolled{padding:12px 0;background:rgba(5,7,10,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom-color:var(--l)}
+  nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{font-family:var(--mono);font-weight:700;font-size:.95rem;white-space:nowrap}
+  .logo .p{color:var(--accent)}
+  .logo .cur{display:inline-block;width:.6ch;height:1.05em;background:var(--accent);vertical-align:-.15em;margin-left:2px;animation:blink 1s steps(1) infinite}
   .nav-links{display:flex;gap:4px;list-style:none;font-family:var(--mono);font-size:.69rem;text-transform:uppercase;letter-spacing:.08em}
-  .nav-links a{display:block;padding:7px 11px;border-radius:99px;color:#8c867a;transition:all .25s var(--ease)}
-  .nav-links a:hover{color:var(--paper)}
+  .nav-links a{display:block;padding:7px 11px;border-radius:99px;color:var(--m);transition:all .25s var(--ease)}
+  .nav-links a:hover{color:var(--t)}
   .nav-links a.active{color:var(--on-accent);background:var(--accent);font-weight:700}
   .nav-right{display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:.73rem}
   .clock{white-space:nowrap}
   .clock::before{content:'●';color:var(--accent);margin-right:7px;font-size:.65rem;animation:blink 2s infinite}
-  @keyframes blink{50%{opacity:.3}}
+  @keyframes blink{50%{opacity:.25}}
   .swatches{display:flex;gap:7px}
   .swatches button{width:15px;height:15px;border-radius:50%;border:2px solid transparent;background:var(--c);transition:transform .2s}
   .swatches button:hover{transform:scale(1.28)}
   .swatches button.on{border-color:#fff}
-  .menu-toggle{display:none;font-family:var(--mono);font-size:.78rem;padding:8px 16px;border:1px solid rgba(242,236,225,.2);border-radius:99px}
+  .menu-toggle{display:none;font-family:var(--mono);font-size:.78rem;padding:8px 16px;border:1px solid var(--l);border-radius:99px}
 
-  /* Mobile Drawer */
   .mobile-menu{
     position:fixed;inset:0;background:var(--ink);z-index:700;display:flex;flex-direction:column;justify-content:center;
-    padding:40px;transform:translateY(-100%);transition:transform .65s var(--ease);color:var(--paper)
+    padding:40px;transform:translateY(-100%);transition:transform .65s var(--ease)
   }
   .mobile-menu.open{transform:none}
   .mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:4px}
   .mobile-menu li a{font-family:var(--serif);font-style:italic;font-size:clamp(2rem,9vw,3.2rem);line-height:1.12;transition:color .2s,padding .3s var(--ease);display:inline-block}
   .mobile-menu li a:hover{color:var(--accent);padding-left:14px}
-  .mobile-menu .close{position:absolute;top:24px;right:24px;font-family:var(--mono);font-size:.82rem;color:#8c867a}
+  .mobile-menu .close{position:absolute;top:24px;right:24px;font-family:var(--mono);font-size:.82rem;color:var(--m)}
   .mobile-menu .swatches{margin-top:34px}
   .mobile-menu .swatches button{width:24px;height:24px}
 
-  /* Buttons */
+  /* ===== BUTTONS ===== */
   .btn{
     display:inline-flex;align-items:center;gap:10px;padding:14px 25px;border-radius:99px;
     font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;font-weight:500;
     border:1px solid var(--l);color:var(--t);transition:all .3s var(--ease);will-change:transform
   }
   .btn:hover{border-color:var(--a);color:var(--a)}
-  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:700}
   .btn.primary:hover{box-shadow:0 12px 38px -8px var(--accent);color:var(--on-accent);filter:brightness(1.08)}
 
-  /* Sections */
+  /* ===== SECTIONS ===== */
   section.block{position:relative;padding:116px 0;border-top:1px solid var(--l)}
+  section.alt{
+    background-color:#070b0e;
+    background-image:linear-gradient(rgba(var(--accent-rgb),.035) 1px,transparent 1px),linear-gradient(90deg,rgba(var(--accent-rgb),.035) 1px,transparent 1px);
+    background-size:52px 52px
+  }
   .sec-head{display:flex;align-items:flex-end;gap:24px;margin-bottom:60px;padding-bottom:22px;border-bottom:1px solid var(--l)}
   .sec-label{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--m);white-space:nowrap;padding-bottom:8px}
   .sec-label b{color:var(--a);font-weight:700}
   .sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,6vw,4.3rem);line-height:.95;letter-spacing:-.02em}
   .sec-title em{color:var(--a);font-style:italic}
+  .sub-h{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--m);display:flex;align-items:center;gap:16px;margin:70px 0 26px}
+  .sub-h::after{content:'';flex:1;height:1px;background:var(--l)}
+  .sub-h b{color:var(--a)}
 
-  /* Spotlight Cards */
   .spot{
     position:relative;overflow:hidden;background:var(--c);border:1px solid var(--l);border-radius:18px;padding:28px;
     transition:border-color .3s,transform .35s var(--ease)
@@ -154,14 +160,16 @@
     color:var(--t);display:inline-flex;align-items:center;gap:8px;transition:all .25s var(--ease);background:transparent
   }
   .chip i{color:var(--a);font-size:.8rem}
+  .chip small{font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;color:var(--m);padding-left:6px;border-left:1px solid var(--l)}
+  .chip small.ok{color:var(--a)}
   .chip:hover{border-color:var(--a);color:var(--a);transform:translateY(-2px);background:rgba(var(--accent-rgb),.08)}
 
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .85s var(--ease),transform .85s var(--ease);transition-delay:var(--d,0s)}
   .reveal.in{opacity:1;transform:none}
 
-  /* HERO */
+  /* ===== HERO ===== */
   #hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 0 90px;overflow:hidden;border-top:0}
-  #net{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.75}
+  #net{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.8}
   #hero .container{position:relative;z-index:1;width:100%}
   .hero-grid{display:grid;grid-template-columns:1.45fr .95fr;gap:64px;align-items:center}
   .hero-fade{opacity:0}
@@ -169,7 +177,7 @@
   @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
   .status{
     display:inline-flex;align-items:center;gap:10px;padding:8px 16px;margin-bottom:28px;border:1px solid var(--l);border-radius:99px;
-    font-family:var(--mono);font-size:.7rem;color:var(--m);text-transform:uppercase;letter-spacing:.1em;background:rgba(8,8,7,.65)
+    font-family:var(--mono);font-size:.7rem;color:var(--m);text-transform:uppercase;letter-spacing:.1em;background:rgba(5,7,10,.7)
   }
   .status .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);animation:blink 2s infinite}
   .hero-title{font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,9.5vw,7.6rem);line-height:.9;letter-spacing:-.035em;margin-bottom:28px}
@@ -180,16 +188,17 @@
   body.loaded .hero-title .line:nth-child(2) .inner{animation-delay:.26s}
   @keyframes rise{to{transform:none}}
   .hero-title em{font-style:italic;color:var(--accent)}
+  .hero-title:hover .line:nth-child(2) .inner{animation:glitch .45s steps(2) 2}
+  @keyframes glitch{0%{text-shadow:3px 0 rgba(255,0,80,.7),-3px 0 rgba(0,240,255,.7);transform:translate(1px,0)}50%{text-shadow:-3px 1px rgba(255,0,80,.7),3px -1px rgba(0,240,255,.7);transform:translate(-2px,1px)}100%{text-shadow:none;transform:none}}
   .typing{font-family:var(--mono);color:var(--accent);font-size:1.02rem;min-height:1.7em;margin-bottom:18px}
   .typing::after{content:'▍';margin-left:3px;animation:blink 1s steps(1) infinite}
   .hero-sub{display:flex;gap:18px;margin-bottom:36px}
   .hero-sub .bar{width:40px;height:1px;background:var(--accent);margin-top:14px;flex-shrink:0}
-  .hero-sub p{font-size:1.06rem;color:var(--m);max-width:530px}
+  .hero-sub p{font-size:1.06rem;color:var(--m);max-width:540px}
   .hero-sub strong{color:var(--t);font-weight:500}
   .hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:44px}
   .stats{display:flex;gap:38px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--l)}
-  .stat b{display:block;font-family:var(--serif);font-size:2.9rem;font-weight:400;line-height:1;letter-spacing:-.03em}
-  .stat b em{color:var(--accent)}
+  .stat b{display:block;font-family:var(--serif);font-size:2.9rem;font-weight:400;line-height:1;letter-spacing:-.03em;color:var(--accent)}
   .stat span{font-family:var(--mono);font-size:.68rem;color:var(--m);text-transform:uppercase;letter-spacing:.12em}
 
   .hero-visual{display:flex;justify-content:flex-end;perspective:1000px}
@@ -199,26 +208,26 @@
     transition:transform .4s var(--ease);z-index:0
   }
   .portrait-wrap:hover::before{transform:translate(8px,8px)}
-  .portrait{position:relative;z-index:1;aspect-ratio:4/5;background:var(--ink-2);border:1px solid var(--l);border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .portrait{position:relative;z-index:1;aspect-ratio:4/5;background:var(--c);border:1px solid var(--l);border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
   .portrait .initials{font-family:var(--serif);font-style:italic;font-size:8rem;color:var(--accent);letter-spacing:-.05em}
   .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:contrast(1.06) saturate(.94);z-index:2}
-  .portrait::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(8,8,7,.6));z-index:3;pointer-events:none}
+  .portrait::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(5,7,10,.65));z-index:3;pointer-events:none}
   .caption{
     position:absolute;z-index:5;bottom:-16px;left:-18px;background:var(--accent);color:var(--on-accent);padding:12px 16px;border-radius:6px;
-    font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;display:flex;flex-direction:column;gap:3px;box-shadow:0 12px 28px rgba(0,0,0,.4)
+    font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;display:flex;flex-direction:column;gap:3px;box-shadow:0 12px 28px rgba(0,0,0,.4);font-weight:700
   }
   .tag-float{
-    position:absolute;z-index:5;font-family:var(--mono);font-size:.7rem;padding:8px 13px;border-radius:10px;background:rgba(8,8,7,.92);
-    border:1px solid var(--l);backdrop-filter:blur(8px);white-space:nowrap;animation:float 5s ease-in-out infinite;color:var(--paper)
+    position:absolute;z-index:5;font-family:var(--mono);font-size:.7rem;padding:8px 13px;border-radius:10px;background:rgba(5,7,10,.92);
+    border:1px solid var(--l);backdrop-filter:blur(8px);white-space:nowrap;animation:float 5s ease-in-out infinite
   }
   .tag-float i{color:var(--accent);margin-right:6px}
   .tag-float.a{top:9%;right:-26px}
   .tag-float.b{top:52%;left:-38px;animation-delay:-2.5s}
   @keyframes float{50%{transform:translateY(-10px)}}
 
-  /* MARQUEE */
+  /* ===== MARQUEE ===== */
   .marquee{border-top:1px solid var(--l);border-bottom:1px solid var(--l);padding:22px 0;overflow:hidden;background:var(--ink)}
-  .marquee-track{display:flex;width:max-content;animation:scroll 40s linear infinite}
+  .marquee-track{display:flex;width:max-content;animation:scroll 42s linear infinite}
   .marquee:hover .marquee-track{animation-play-state:paused}
   @keyframes scroll{to{transform:translateX(-50%)}}
   .mi{display:flex;align-items:center;gap:36px;padding-right:36px;white-space:nowrap}
@@ -226,27 +235,43 @@
   .mi span.sf{font-family:var(--serif);font-style:italic;font-size:1.65rem;text-transform:none;letter-spacing:-.01em;color:var(--t)}
   .mi i{color:var(--accent);font-style:normal;font-size:.9rem}
 
-  /* ABOUT */
+  /* ===== ABOUT ===== */
   .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;align-items:start}
-  .about-text p{font-size:1.12rem;line-height:1.78;color:var(--m);margin-bottom:22px}
+  .about-text p{font-size:1.1rem;line-height:1.78;color:var(--m);margin-bottom:22px}
   .about-text p strong{color:var(--t);font-weight:600}
   .about-text p em{font-family:var(--serif);font-style:italic;color:var(--a);font-size:1.22em}
   .about-text p:first-child::first-letter{font-family:var(--serif);font-style:italic;font-size:4.5rem;float:left;line-height:.82;padding:8px 12px 0 0;color:var(--a)}
   .facts{display:flex;flex-direction:column}
   .fact{display:flex;justify-content:space-between;gap:14px;padding:15px 0;border-bottom:1px solid var(--l);font-family:var(--mono);font-size:.8rem}
   .fact:first-child{border-top:1px solid var(--l)}
-  .fact span{color:var(--m);text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;padding-top:2px}
-  .fact b{font-weight:600;text-align:right}
+  .fact span{color:var(--m);text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;padding-top:2px;white-space:nowrap}
+  .fact b{font-weight:500;text-align:right}
 
-  /* SKILLS */
+  /* ===== SKILLS ===== */
   .skill-row{display:grid;grid-template-columns:270px 1fr;gap:40px;padding:32px 0;border-top:1px solid var(--l);align-items:center;transition:padding .3s var(--ease)}
   .skill-row:last-child{border-bottom:1px solid var(--l)}
   .skill-row:hover{padding-left:16px}
   .skill-row:hover .skill-cat{color:var(--a)}
   .skill-cat{font-family:var(--mono);font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--m);transition:color .25s}
   .skill-cat::before{content:'/ ';color:var(--a)}
+  .skill-note{font-family:var(--mono);font-size:.74rem;color:var(--m);margin-top:22px}
+  .skill-note b{color:var(--a);font-weight:500}
 
-  /* ROADMAP */
+  /* ===== HAT CARDS ===== */
+  .goal-intro{font-size:1.12rem;color:var(--m);max-width:760px;margin-bottom:34px}
+  .goal-intro strong{color:var(--t);font-weight:500}
+  .hat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .hat{border-top:3px solid var(--hc);padding:26px;display:flex;flex-direction:column;min-height:260px}
+  .hat .hico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:1.15rem;color:var(--hc);background:rgba(255,255,255,.04);border:1px solid var(--l);margin-bottom:auto}
+  .hat h3{font-family:var(--serif);font-weight:400;font-size:1.75rem;line-height:1;margin:26px 0 4px}
+  .hat .en{font-family:var(--mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.12em;color:var(--m);margin-bottom:12px}
+  .hat p{color:var(--m);font-size:.92rem;margin-bottom:16px}
+  .hat .tg{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;padding:5px 11px;border-radius:99px;border:1px solid var(--l);width:fit-content;color:var(--m)}
+  .hat.goal{border-color:rgba(var(--accent-rgb),.7);border-top-color:var(--hc);box-shadow:0 0 0 1px rgba(var(--accent-rgb),.25),0 18px 50px -18px rgba(var(--accent-rgb),.35)}
+  .hat.goal .tg{color:var(--on-accent);background:var(--accent);border-color:var(--accent);font-weight:700}
+  .hat.goal .tg::before{content:'✓ '}
+
+  /* ===== ROADMAP ===== */
   .road-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .road{display:flex;flex-direction:column;min-height:225px}
   .road .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:auto}
@@ -257,7 +282,7 @@
   .road h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.05;letter-spacing:-.01em;margin:26px 0 8px}
   .road p{color:var(--m);font-size:.93rem}
 
-  /* LOCATIONS */
+  /* ===== LOCATIONS ===== */
   .geo-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
   .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
   .tab{font-family:var(--mono);font-size:.74rem;padding:9px 16px;border-radius:99px;border:1px solid var(--l);color:var(--m);transition:all .25s var(--ease)}
@@ -265,28 +290,51 @@
   .tab.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:700}
   .map-box{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--l);background:#0b0a09;aspect-ratio:16/10}
   .map-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(92%) hue-rotate(180deg) contrast(92%) saturate(.7);transition:opacity .4s}
-  .map-box .ping{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--mono);font-size:.68rem;background:rgba(8,8,7,.88);color:var(--paper);padding:6px 12px;border-radius:99px;border:1px solid rgba(242,236,225,.15);display:flex;gap:8px;align-items:center}
+  .map-box .ping{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--mono);font-size:.68rem;background:rgba(5,7,10,.9);color:var(--t);padding:6px 12px;border-radius:99px;border:1px solid var(--l);display:flex;gap:8px;align-items:center}
   .map-box .ping::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);animation:blink 1.6s infinite}
   .loc-info{display:flex;flex-direction:column;height:100%}
   .badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--a);background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.3);padding:6px 13px;border-radius:99px;width:fit-content;margin-bottom:18px}
   .loc-info h3{font-family:var(--serif);font-weight:400;font-size:2.05rem;line-height:1.05;letter-spacing:-.01em;margin-bottom:10px}
-  .loc-info p{color:var(--m);font-size:.96rem;margin-bottom:20px}
-  .loc-meta{margin-top:auto;display:flex;flex-direction:column;gap:12px}
-  .route-svg{margin-top:20px;width:100%;height:auto;border:1px solid var(--l);border-radius:14px;background:var(--c2)}
-  .route-labels{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.72rem;color:var(--m);margin-top:10px}
-  .route-labels b{color:var(--t);font-weight:500}
+  .loc-info p{color:var(--m);font-size:.96rem;margin-bottom:18px}
+  .loc-born{font-family:var(--mono);font-size:.76rem;padding:12px 14px;border:1px dashed var(--l);border-radius:12px;color:var(--m);margin-bottom:18px}
+  .loc-born b{color:var(--a);font-weight:500}
+  .loc-meta{margin-top:auto}
 
-  /* TERMINAL */
-  .term{background:#090b0e;border:1px solid #22262f;border-radius:16px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.48);font-family:var(--mono);font-size:.84rem;color:#c2c8d3}
-  .term-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#13161c;border-bottom:1px solid #22262f}
+  .route-card{margin-top:18px;padding:30px}
+  .route-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+  .route-head h3{font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.05;letter-spacing:-.01em}
+  .route-head h3 em{color:var(--a)}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:.7rem;color:var(--m)}
+  .legend span{display:inline-flex;align-items:center;gap:8px}
+  .legend i{display:inline-block;width:26px;height:0;border-top:2px solid var(--accent)}
+  .legend i.dot{border-top:2px dotted var(--accent)}
+  .route-svg{width:100%;height:auto;display:block;border:1px solid var(--l);border-radius:14px;background:#060a0d}
+  .route-svg text{font-family:var(--mono);font-size:13px;fill:#c8d6cf}
+  .route-svg .small{font-size:10px;fill:#6c7d76}
+  .route-svg .dream-arc{fill:none;stroke:var(--accent);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:1 8;opacity:.6;animation:march 1.4s linear infinite}
+  @keyframes march{to{stroke-dashoffset:-18}}
+  .route-svg .node .ring{fill:none;stroke:var(--accent);stroke-width:1.6;transition:all .3s}
+  .route-svg .node .core{fill:var(--accent);opacity:.9}
+  .route-svg .node text{transition:fill .3s}
+  .route-svg .node.hl .ring{stroke-width:3;r:10px}
+  .route-svg .node.hl text{fill:#fff;font-weight:700}
+  .route-svg .pulse{fill:none;stroke:var(--accent);stroke-width:1.4}
+  .dest{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .dest .chip{cursor:pointer}
+  .dest .chip.on{border-color:var(--a);color:var(--a);background:rgba(var(--accent-rgb),.1)}
+  .route-note{font-family:var(--mono);font-size:.72rem;color:var(--m);margin-top:14px}
+
+  /* ===== TERMINAL ===== */
+  .term{background:#04060a;border:1px solid rgba(var(--accent-rgb),.22);border-radius:16px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 40px -10px rgba(var(--accent-rgb),.18);font-family:var(--mono);font-size:.84rem;color:#c2cfc9}
+  .term-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#0c1216;border-bottom:1px solid var(--l)}
   .term-dots{display:flex;gap:7px}
   .term-dots i{width:11px;height:11px;border-radius:50%;display:block}
   .term-dots i:nth-child(1){background:#ff5f57}.term-dots i:nth-child(2){background:#febc2e}.term-dots i:nth-child(3){background:#28c840}
-  .term-head small{color:#8b919d;font-size:.73rem}
+  .term-head small{color:var(--m);font-size:.73rem}
   .term-badge{font-size:.66rem;color:var(--accent);border:1px solid rgba(var(--accent-rgb),.35);padding:2px 8px;border-radius:99px}
-  .term-out{height:365px;overflow-y:auto;padding:18px 20px 6px;scroll-behavior:smooth}
+  .term-out{height:380px;overflow-y:auto;padding:18px 20px 6px;scroll-behavior:smooth}
   .tl{white-space:pre-wrap;word-break:break-word;line-height:1.75}
-  .tl .p{color:var(--accent)}.tl .d{color:#8b919d}.tl .k{color:#fff}.tl .ok{color:#34d399}.tl .warn{color:#fbbf24}
+  .tl .p{color:var(--accent)}.tl .d{color:#7f918a}.tl .k{color:#fff}.tl .ok{color:#34d399}.tl .warn{color:#fbbf24}
   .tl a{color:var(--accent);border-bottom:1px dashed rgba(var(--accent-rgb),.5)}
   .term-in{display:flex;align-items:center;gap:10px;padding:8px 20px 16px}
   .term-in .p{color:var(--accent);white-space:nowrap}
@@ -295,7 +343,7 @@
   .quick button{font-family:var(--mono);font-size:.74rem;padding:8px 15px;border-radius:99px;border:1px solid var(--l);color:var(--m);transition:all .2s}
   .quick button:hover{color:var(--a);border-color:var(--a)}
 
-  /* PROJECTS */
+  /* ===== PROJECTS ===== */
   .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   .proj{display:flex;flex-direction:column;min-height:310px;padding:32px;cursor:pointer;text-align:left}
   .proj .big{position:absolute!important;right:24px;top:8px;font-family:var(--serif);font-style:italic;font-size:7rem;line-height:1;color:transparent;-webkit-text-stroke:1px var(--l);transition:-webkit-text-stroke-color .3s}
@@ -309,55 +357,65 @@
   .proj:hover .go{color:var(--a);transform:translate(5px,-5px)}
   .more{margin-top:44px;text-align:center}
 
-  /* Project Modal */
-  .modal-bg{
-    position:fixed;inset:0;z-index:8500;background:rgba(0,0,0,.78);backdrop-filter:blur(10px);
-    display:grid;place-items:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)
-  }
+  .modal-bg{position:fixed;inset:0;z-index:8500;background:rgba(0,0,0,.8);backdrop-filter:blur(10px);display:grid;place-items:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
   .modal-bg.open{opacity:1;pointer-events:auto}
-  .modal{
-    width:min(640px,100%);background:var(--ink-2);border:1px solid rgba(242,236,225,.18);border-radius:22px;
-    padding:36px;color:var(--paper);transform:translateY(24px) scale(.97);transition:transform .35s var(--ease);position:relative
-  }
+  .modal{width:min(620px,100%);background:#0a1013;border:1px solid rgba(var(--accent-rgb),.3);border-radius:22px;padding:36px;transform:translateY(24px) scale(.97);transition:transform .35s var(--ease);position:relative}
   .modal-bg.open .modal{transform:none}
-  .modal-close{position:absolute;top:22px;right:22px;font-family:var(--mono);font-size:.8rem;color:var(--m);padding:6px 12px;border:1px solid var(--l);border-radius:99px}
+  .modal-close{position:absolute;top:22px;right:22px;font-family:var(--mono);font-size:.78rem;color:var(--m);padding:6px 12px;border:1px solid var(--l);border-radius:99px}
   .modal-close:hover{color:var(--accent);border-color:var(--accent)}
-  .modal h3{font-family:var(--serif);font-size:2.3rem;font-weight:400;line-height:1.05;margin:12px 0 14px}
-  .modal p{color:#a8a296;font-size:.98rem;margin-bottom:20px}
+  .modal h3{font-family:var(--serif);font-size:2.2rem;font-weight:400;line-height:1.05;margin:12px 0 14px}
+  .modal p{color:var(--m);font-size:.98rem;margin-bottom:20px}
   .modal-specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
-  .mspec{padding:14px;border-radius:12px;background:#0a0908;border:1px solid rgba(242,236,225,.1)}
-  .mspec span{display:block;font-family:var(--mono);font-size:.66rem;color:var(--m);text-transform:uppercase;margin-bottom:4px}
-  .mspec b{font-family:var(--mono);font-size:.82rem;color:var(--accent);font-weight:500}
+  .mspec{padding:14px;border-radius:12px;background:#05080a;border:1px solid var(--l)}
+  .mspec span{display:block;font-family:var(--mono);font-size:.64rem;color:var(--m);text-transform:uppercase;margin-bottom:4px;letter-spacing:.08em}
+  .mspec b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
 
-  /* CERTS & LANGS */
-  .cert{display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap;margin-bottom:50px;padding:36px}
+  /* ===== LANGUAGES + WAVING FLAGS ===== */
+  .cert{display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap;margin-bottom:44px;padding:36px}
   .cert .badge{margin-bottom:12px}
   .cert h3{font-family:var(--serif);font-weight:400;font-size:2rem;letter-spacing:-.01em;margin-bottom:4px}
   .cert p{font-family:var(--mono);font-size:.82rem;color:var(--m)}
-  .langs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
-  .lang{padding:24px}
+  .flag-hint{font-family:var(--mono);font-size:.74rem;color:var(--m);margin-bottom:18px}
+  .flag-hint b{color:var(--a);font-weight:500}
+  .langs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .lang{padding:26px;min-height:170px;cursor:default}
   .lang-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-  .lang-name{font-family:var(--serif);font-size:1.75rem;line-height:1;letter-spacing:-.01em}
+  .lang-name{font-family:var(--serif);font-size:1.85rem;line-height:1;letter-spacing:-.01em}
   .lang-flag{font-size:1.5rem}
   .lang-tr{font-family:var(--mono);font-size:.68rem;color:var(--m);margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em}
   .lang-lvl{font-family:var(--mono);font-size:.72rem;color:var(--a);margin-bottom:10px;text-transform:uppercase;letter-spacing:.1em}
   .bar2{height:3px;background:var(--l);border-radius:3px;overflow:hidden}
   .bar2 span{display:block;height:100%;width:0;background:var(--a);border-radius:3px;transition:width 1.4s var(--ease)}
 
-  /* MUSIC */
+  .spot>.flag{
+    position:absolute!important;inset:-18px;z-index:0;opacity:0;visibility:hidden;pointer-events:none;
+    transition:opacity .55s ease,visibility 0s linear .55s
+  }
+  .flag svg{width:100%;height:100%;display:block;filter:url(#waveF)}
+  .flag::before{ /* cloth folds */
+    content:'';position:absolute;inset:0;z-index:2;mix-blend-mode:overlay;
+    background:linear-gradient(100deg,rgba(0,0,0,.38),rgba(255,255,255,.22) 14%,rgba(0,0,0,.38) 30%,rgba(255,255,255,.22) 46%,rgba(0,0,0,.38) 62%,rgba(255,255,255,.22) 78%,rgba(0,0,0,.38));
+    background-size:220% 100%;animation:cloth 2.6s linear infinite
+  }
+  .flag::after{ /* legibility */
+    content:'';position:absolute;inset:0;z-index:3;
+    background:linear-gradient(90deg,rgba(6,10,13,.82) 0%,rgba(6,10,13,.55) 50%,rgba(6,10,13,.18) 100%)
+  }
+  @keyframes cloth{to{background-position:-220% 0}}
+  .lang:hover>.flag,.lang.show>.flag{opacity:.95;visibility:visible;transition:opacity .55s ease,visibility 0s}
+
+  /* ===== MUSIC ===== */
   .player{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;padding:34px;margin-bottom:18px}
   .vinyl{
     width:150px;height:150px;border-radius:50%;position:relative;flex-shrink:0;
-    background:repeating-radial-gradient(circle at center,#0c0b0a 0 2px,#1a1712 2px 4px);
+    background:repeating-radial-gradient(circle at center,#06090b 0 2px,#10181c 2px 4px);
     border:1px solid var(--l);box-shadow:0 14px 40px rgba(0,0,0,.55);animation:spin 7s linear infinite
   }
   .vinyl.paused{animation-play-state:paused}
   .vinyl::before{content:'';position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 20deg,transparent 0 20%,rgba(255,255,255,.12) 25%,transparent 30% 70%,rgba(255,255,255,.09) 75%,transparent 80%)}
-  .vinyl::after{content:'';position:absolute;inset:36%;border-radius:50%;background:var(--accent);box-shadow:0 0 0 7px #0c0b0a}
+  .vinyl::after{content:'';position:absolute;inset:36%;border-radius:50%;background:var(--accent);box-shadow:0 0 0 7px #06090b}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .np-label{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:var(--m);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .audio-pill{font-size:.64rem;padding:3px 9px;border-radius:99px;border:1px solid var(--l);color:var(--a);cursor:pointer;transition:all .2s}
-  .audio-pill.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+  .np-label{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:var(--m);margin-bottom:6px;display:flex;align-items:center;gap:10px}
   .eq{display:inline-flex;align-items:flex-end;gap:2.5px;height:13px}
   .eq span{width:3px;background:var(--a);animation:eq .9s ease-in-out infinite alternate}
   .eq span:nth-child(1){height:5px}.eq span:nth-child(2){height:12px;animation-delay:.25s}.eq span:nth-child(3){height:8px;animation-delay:.45s}.eq span:nth-child(4){height:11px;animation-delay:.15s}
@@ -367,7 +425,7 @@
   .np-sub{font-family:var(--mono);font-size:.76rem;color:var(--m);margin-bottom:18px}
   .np-bar{height:3px;background:var(--l);border-radius:3px;overflow:hidden;margin-bottom:14px}
   .np-bar span{display:block;height:100%;width:0;background:var(--a)}
-  .np-ctrl{display:flex;gap:10px;align-items:center}
+  .np-ctrl{display:flex;gap:10px}
   .np-ctrl button{width:40px;height:40px;border-radius:50%;border:1px solid var(--l);display:grid;place-items:center;font-size:.85rem;transition:all .25s}
   .np-ctrl button:hover{border-color:var(--a);color:var(--a)}
   .music-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -383,7 +441,7 @@
   .hobby{margin-top:44px}
   .hobby h4{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--m);margin-bottom:16px;font-weight:500}
 
-  /* CONTACT */
+  /* ===== CONTACT ===== */
   #contact{padding-bottom:70px}
   #contact::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:900px;max-width:100%;height:500px;background:radial-gradient(ellipse at top,rgba(var(--accent-rgb),.13),transparent 65%);pointer-events:none}
   .contact-headline{font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,9.5vw,7.8rem);line-height:.92;letter-spacing:-.035em;text-align:center;margin-bottom:54px}
@@ -395,7 +453,7 @@
   .socials{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
   .social{
     position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;padding:22px 24px;border:1px solid var(--l);border-radius:14px;
-    font-family:var(--mono);font-size:.84rem;transition:border-color .3s,color .3s,transform .3s var(--ease),box-shadow .3s
+    font-family:var(--mono);font-size:.84rem;transition:border-color .3s,color .3s,transform .3s var(--ease),box-shadow .3s;background:var(--c)
   }
   .social .left{display:flex;align-items:center;gap:13px;position:relative;z-index:2}
   .social .brand{font-size:1.25rem;color:var(--a);display:inline-block;transition:color .3s}
@@ -405,9 +463,9 @@
   .social.gh:hover .brand{animation:spin .9s linear}
   .social.ig:hover{border-color:#e1306c;color:#e1306c}.social.ig:hover .brand{color:#e1306c;animation:pop .6s var(--ease)}
   .social.li:hover{border-color:#4aa3ff;color:#4aa3ff}.social.li:hover .brand{color:#4aa3ff;animation:pop .6s var(--ease)}
-  .social.tt:hover{border-color:#25f4ee;color:#fff}.social.tt:hover .brand{color:#fff;animation:glitch .5s steps(2) infinite}
+  .social.tt:hover{border-color:#25f4ee;color:#fff}.social.tt:hover .brand{color:#fff;animation:tglitch .5s steps(2) infinite}
   @keyframes pop{40%{transform:scale(1.35) rotate(-8deg)}100%{transform:scale(1)}}
-  @keyframes glitch{0%{text-shadow:2px 0 #fe2c55,-2px 0 #25f4ee}50%{text-shadow:-2px 1px #fe2c55,2px -1px #25f4ee;transform:translate(1px,-1px)}100%{text-shadow:2px -1px #fe2c55,-2px 1px #25f4ee}}
+  @keyframes tglitch{0%{text-shadow:2px 0 #fe2c55,-2px 0 #25f4ee}50%{text-shadow:-2px 1px #fe2c55,2px -1px #25f4ee;transform:translate(1px,-1px)}100%{text-shadow:2px -1px #fe2c55,-2px 1px #25f4ee}}
 
   .social.tg:hover{border-color:#2aabee;color:#2aabee;box-shadow:0 18px 40px rgba(42,171,238,.22)}
   .social.tg:hover .brand{color:#2aabee;animation:tgIcon .9s var(--ease) infinite}
@@ -428,20 +486,19 @@
   @keyframes ring{0%,100%{transform:rotate(0) scale(1.12)}15%{transform:rotate(-20deg) scale(1.18)}30%{transform:rotate(20deg) scale(1.18)}45%{transform:rotate(-15deg) scale(1.18)}60%{transform:rotate(15deg) scale(1.18)}75%{transform:rotate(0) scale(1.12)}}
   @keyframes wave{0%{transform:scale(.6);opacity:.9}100%{transform:scale(3.8);opacity:0}}
 
-  /* FOOTER */
   footer{padding:36px 0 30px;border-top:1px solid var(--l)}
   .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--m)}
   .footer-inner .a{color:var(--a)}
-  .totop{display:inline-flex;align-items:center;gap:8px;transition:color .2s}
   .totop:hover{color:var(--a)}
 
-  /* Toast */
   .toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,40px);opacity:0;z-index:9000;background:var(--accent);color:var(--on-accent);font-family:var(--mono);font-size:.8rem;font-weight:700;padding:12px 22px;border-radius:99px;transition:all .4s var(--ease);pointer-events:none}
   .toast.show{opacity:1;transform:translate(-50%,0)}
 
+  /* ===== RESPONSIVE ===== */
   @media (max-width:1100px){
     .nav-links,.nav-right .swatches,.clock{display:none}
     .menu-toggle{display:block}
+    .hat-grid{grid-template-columns:repeat(2,1fr)}
   }
   @media (max-width:900px){
     .container{padding:0 22px}
@@ -453,49 +510,62 @@
     #hero{padding-top:120px}
     .about-grid,.geo-grid,.proj-grid,.music-grid{grid-template-columns:1fr;gap:44px}
     .geo-grid,.proj-grid,.music-grid{gap:16px}
-    .road-grid{grid-template-columns:1fr}
+    .road-grid,.hat-grid{grid-template-columns:1fr}
     .skill-row{grid-template-columns:1fr;gap:16px}
     .sec-head{flex-direction:column;align-items:flex-start;gap:12px}
     .player{grid-template-columns:1fr;justify-items:center;text-align:center}
     .np-ctrl,.np-label{justify-content:center}
-    .term-out{height:320px}
+    .term-out{height:330px}
     .proj .big{font-size:5rem}
     .modal-specs{grid-template-columns:1fr}
+    .route-card{padding:20px}
   }
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
     .reveal{opacity:1;transform:none}
     .hero-fade{opacity:1}.hero-title .inner{transform:none}
+    .flag svg{filter:none}
   }
 </style>
 </head>
 <body>
 
-<!-- Loader -->
+<!-- SVG filter: bayrak dalgalanma efekti -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="waveF" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.035" numOctaves="1" seed="4" result="n">
+        <animate attributeName="baseFrequency" dur="5s" values="0.008 0.035;0.016 0.055;0.008 0.035" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="18" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- Boot loader -->
 <div class="loader" id="loader">
   <div class="brand">kuvanchbek<b>.</b></div>
-  <div class="sys">[ INITIALIZING CYBER-EDITORIAL OS v5.0 ]</div>
+  <div class="boot" id="boot"></div>
   <div class="bar"><span id="loadBar"></span></div>
-  <div class="count" id="loadCount">000%</div>
 </div>
 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="progress"><span id="progress"></span></div>
 <div class="aurora"><i></i><i></i></div>
-<div class="toast" id="toast">Email copied ✓</div>
+<div class="toast" id="toast">E-posta kopyalandı ✓</div>
 
-<!-- Project Inspection Modal -->
+<!-- Project modal -->
 <div class="modal-bg" id="projModal" role="dialog" aria-modal="true">
   <div class="modal">
-    <button class="modal-close" id="modalClose">ESC / close ×</button>
-    <div class="badge" id="mTag">ARCHITECTURE</div>
-    <h3 id="mTitle">Project Title</h3>
-    <p id="mDesc">Description</p>
+    <button class="modal-close" id="modalClose">ESC / kapat ×</button>
+    <div class="badge" id="mTag">PROJE</div>
+    <h3 id="mTitle">Proje</h3>
+    <p id="mDesc">Açıklama</p>
     <div class="modal-specs" id="mSpecs"></div>
     <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <a id="mRepo" href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn primary"><i class="fab fa-github"></i> Inspect Source Code</a>
-      <button class="btn" id="modalClose2">Close</button>
+      <a id="mRepo" href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn primary"><i class="fab fa-github"></i> GitHub'da bak</a>
+      <button class="btn" id="modalClose2">Kapat</button>
     </div>
   </div>
 </div>
@@ -504,52 +574,52 @@
 <header id="header">
   <div class="container">
     <nav>
-      <a href="#hero" class="logo">kuvanchbek<span class="dot">.</span></a>
+      <a href="#hero" class="logo"><span class="p">$</span> kuvanchbek<span class="cur"></span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" data-scramble>About</a></li>
+        <li><a href="#about" data-scramble>Hakkımda</a></li>
         <li><a href="#skills" data-scramble>Skills</a></li>
-        <li><a href="#roadmap" data-scramble>Roadmap</a></li>
-        <li><a href="#locations" data-scramble>Locations</a></li>
+        <li><a href="#goal" data-scramble>Hedef</a></li>
+        <li><a href="#locations" data-scramble>Konum</a></li>
         <li><a href="#terminal" data-scramble>Terminal</a></li>
-        <li><a href="#projects" data-scramble>Projects</a></li>
-        <li><a href="#certs" data-scramble>Languages</a></li>
+        <li><a href="#projects" data-scramble>Projeler</a></li>
+        <li><a href="#certs" data-scramble>Diller</a></li>
         <li><a href="#music" data-scramble>Vibe</a></li>
-        <li><a href="#contact" data-scramble>Contact</a></li>
+        <li><a href="#contact" data-scramble>İletişim</a></li>
       </ul>
       <div class="nav-right">
         <span class="clock" id="clock">IST --:--</span>
-        <div class="swatches" title="Accent theme">
-          <button style="--c:#ff4d00" data-t="orange" class="on" aria-label="Orange"></button>
-          <button style="--c:#c9ff3f" data-t="lime" aria-label="Lime"></button>
-          <button style="--c:#22d3ee" data-t="cyan" aria-label="Cyan"></button>
-          <button style="--c:#a78bfa" data-t="violet" aria-label="Violet"></button>
-          <button style="--c:#ff4d8d" data-t="pink" aria-label="Pink"></button>
+        <div class="swatches" title="Tema rengi">
+          <button style="--c:#c9ff3f" data-t="lime" class="on" aria-label="Lime"></button>
+          <button style="--c:#22d3ee" data-t="cyan" aria-label="Camgöbeği"></button>
+          <button style="--c:#00ff9c" data-t="matrix" aria-label="Matrix yeşili"></button>
+          <button style="--c:#a78bfa" data-t="violet" aria-label="Mor"></button>
+          <button style="--c:#ff4d8d" data-t="pink" aria-label="Pembe"></button>
         </div>
-        <button class="menu-toggle" id="menuOpen">menu</button>
+        <button class="menu-toggle" id="menuOpen">menü</button>
       </div>
     </nav>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <button class="close" id="menuClose">close ×</button>
+  <button class="close" id="menuClose">kapat ×</button>
   <ul>
-    <li><a href="#about">About</a></li>
+    <li><a href="#about">Hakkımda</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#locations">Locations</a></li>
+    <li><a href="#goal">Hedef</a></li>
+    <li><a href="#locations">Konum</a></li>
     <li><a href="#terminal">Terminal</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certs">Languages</a></li>
+    <li><a href="#projects">Projeler</a></li>
+    <li><a href="#certs">Diller</a></li>
     <li><a href="#music">Vibe</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact">İletişim</a></li>
   </ul>
   <div class="swatches">
-    <button style="--c:#ff4d00" data-t="orange" class="on" aria-label="Orange"></button>
-    <button style="--c:#c9ff3f" data-t="lime" aria-label="Lime"></button>
-    <button style="--c:#22d3ee" data-t="cyan" aria-label="Cyan"></button>
-    <button style="--c:#a78bfa" data-t="violet" aria-label="Violet"></button>
-    <button style="--c:#ff4d8d" data-t="pink" aria-label="Pink"></button>
+    <button style="--c:#c9ff3f" data-t="lime" class="on" aria-label="Lime"></button>
+    <button style="--c:#22d3ee" data-t="cyan" aria-label="Camgöbeği"></button>
+    <button style="--c:#00ff9c" data-t="matrix" aria-label="Matrix yeşili"></button>
+    <button style="--c:#a78bfa" data-t="violet" aria-label="Mor"></button>
+    <button style="--c:#ff4d8d" data-t="pink" aria-label="Pembe"></button>
   </div>
 </div>
 
@@ -559,7 +629,7 @@
     <canvas id="net"></canvas>
     <div class="container hero-grid">
       <div>
-        <div class="status hero-fade" style="--fd:.1s"><span class="dot"></span> Başakşehir, Istanbul · Open to collaboration</div>
+        <div class="status hero-fade" style="--fd:.1s"><span class="dot"></span> Başakşehir, İstanbul · yeni projelere open</div>
         <h1 class="hero-title">
           <span class="line"><span class="inner">Kuvanchbek</span></span>
           <span class="line"><span class="inner"><em>Abdirimov</em>.</span></span>
@@ -567,17 +637,17 @@
         <div class="typing hero-fade" id="typing" style="--fd:.55s"></div>
         <div class="hero-sub hero-fade" style="--fd:.65s">
           <span class="bar"></span>
-          <p>2nd-year Software Engineering student at <strong>Istanbul Gelisim University</strong>. Originally from <strong>Turkmenistan</strong> and based in <strong>Başakşehir, Istanbul</strong> — building cyber security tools, automation pipelines, and practical bot systems.</p>
+          <p><strong>İstanbul Gelişim Üniversitesi</strong>'nde <strong>Software Engineering</strong> okuyan 2. sınıf lisans öğrencisiyim. Hedefim: <strong>cyber security</strong> alanında kendimi geliştirip bir <strong>White Hat (etik) hacker</strong> olmak.</p>
         </div>
         <div class="hero-cta hero-fade" style="--fd:.8s">
-          <a href="#projects" class="btn primary" data-magnetic><i class="fas fa-arrow-right"></i> Projects</a>
-          <a href="#terminal" class="btn" data-magnetic><i class="fas fa-terminal"></i> Open Terminal</a>
+          <a href="#projects" class="btn primary" data-magnetic><i class="fas fa-arrow-right"></i> Projelere bak</a>
+          <a href="#terminal" class="btn" data-magnetic><i class="fas fa-terminal"></i> Terminali aç</a>
           <a href="#contact" class="btn" data-magnetic><i class="fas fa-paper-plane"></i> Contact</a>
         </div>
         <div class="stats hero-fade" style="--fd:.95s">
-          <div class="stat"><b><em data-count="6">0</em></b><span>Spoken Languages</span></div>
-          <div class="stat"><b><em data-count="4">0</em></b><span>Programming Languages</span></div>
-          <div class="stat"><b><em data-count="2">0</em></b><span>Year · SWE</span></div>
+          <div class="stat"><b data-count="6">0</b><span>Konuştuğum dil</span></div>
+          <div class="stat"><b data-count="3">0</b><span>Programlama dili</span></div>
+          <div class="stat"><b data-count="2">0</b><span>Yıl · Software Eng.</span></div>
         </div>
       </div>
 
@@ -587,33 +657,34 @@
             <span class="initials">KA</span>
             <img id="photo" src="profile.jpeg" alt="Kuvanchbek Abdirimov">
           </div>
-          <div class="tag-float a"><i class="fas fa-shield-halved"></i>cyber_security</div>
-          <div class="tag-float b"><i class="fab fa-python"></i>python_automation</div>
-          <div class="caption"><strong>IST / TR</strong><span>Dashoguz → Istanbul</span></div>
+          <div class="tag-float a"><i class="fas fa-user-shield"></i>target: white_hat</div>
+          <div class="tag-float b"><i class="fas fa-terminal"></i>termux_user</div>
+          <div class="caption"><strong>IST / TR</strong><span>Daşoğuz → İstanbul</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE -->
   <div class="marquee"><div class="marquee-track" id="marquee"></div></div>
 
-  <!-- 01 ABOUT -->
-  <section class="block paper" id="about">
+  <!-- 01 HAKKIMDA -->
+  <section class="block alt" id="about">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[01]</b> — About</span><h2 class="sec-title">In <em>brief.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[01]</b> — Hakkımda</span><h2 class="sec-title">Kısaca <em>ben.</em></h2></div>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p>I am a 2nd-year <strong>Software Engineering</strong> undergraduate at <strong>Istanbul Gelisim University</strong>. While strengthening my academic foundation in Object-Oriented Programming (OOP), data structures, and algorithm analysis, I focus on building practical systems for real-world problems.</p>
-          <p>In cyber security, I focus on <em>network and system defense</em>, vulnerability assessment, and hardening strategies. Using Python, C/C++, and Java, I develop automation scripts, web scraping engines, and AI-assisted bots aimed at creating <strong>secure, high-efficiency workflows</strong>.</p>
+          <p>Merhaba! <strong>12 Aralık 2007</strong>'de Türkmenistan'ın <strong>Daşoğuz</strong> şehrinde doğdum. Şu an <strong>İstanbul'un Başakşehir</strong> ilçesinde (Olimpiyat Stadı civarı) yaşıyorum ve <strong>İstanbul Gelişim Üniversitesi</strong>'nde <strong>Software Engineering</strong> (Yazılım Mühendisliği) bölümünde 2. sınıf lisans öğrencisiyim.</p>
+          <p>Kod yazmaya <strong>Java</strong> ve <strong>C</strong> ile temelimi attım; <strong>Python</strong>'u ise yeni yeni, biraz biliyorum, öğrenmeye devam ediyorum. Ayrıca <strong>Termux</strong> sayesinde telefonumda bile terminal üzerinden pratik yapabiliyorum.</p>
+          <p>Asıl hedefim <em>cyber security</em> alanında kendimi geliştirmek ve ileride yasal çerçevede çalışan bir <strong>White Hat hacker</strong> olmak. Bunun yanında <strong>Erasmus</strong> kazanıp Avrupa'yı görmek de en büyük hayallerimden biri.</p>
         </div>
         <div class="facts reveal" style="--d:.1s">
-          <div class="fact"><span>Hometown</span><b>Dashoguz, Turkmenistan 🇹🇲</b></div>
-          <div class="fact"><span>Based in</span><b>Başakşehir, Istanbul 🇹🇷</b></div>
-          <div class="fact"><span>University</span><b>Istanbul Gelisim University</b></div>
-          <div class="fact"><span>Major</span><b>Software Engineering</b></div>
-          <div class="fact"><span>Year</span><b>2nd Year · Undergraduate</b></div>
-          <div class="fact"><span>Focus</span><b>Cyber Security &amp; Automation</b></div>
+          <div class="fact"><span>Doğum</span><b>12 Aralık 2007 · Daşoğuz 🇹🇲</b></div>
+          <div class="fact"><span>Yaşadığı yer</span><b>Başakşehir, İstanbul 🇹🇷</b></div>
+          <div class="fact"><span>Üniversite</span><b>İstanbul Gelişim Üni.</b></div>
+          <div class="fact"><span>Bölüm</span><b>Software Engineering</b></div>
+          <div class="fact"><span>Seviye</span><b>2. sınıf · Lisans</b></div>
+          <div class="fact"><span>Hedef</span><b>Cyber Security · White Hat</b></div>
+          <div class="fact"><span>Hayal</span><b>Erasmus &amp; Avrupa turu</b></div>
         </div>
       </div>
     </div>
@@ -622,198 +693,217 @@
   <!-- 02 SKILLS -->
   <section class="block" id="skills">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[02]</b> — Capabilities</span><h2 class="sec-title">Skills <em>&amp; stack.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[02]</b> — Yetenekler</span><h2 class="sec-title">Skills <em>&amp; stack.</em></h2></div>
       <div class="reveal">
         <div class="skill-row">
-          <div class="skill-cat">Programming Languages</div>
+          <div class="skill-cat">Programlama dilleri</div>
           <div class="chips">
-            <span class="chip"><i class="fas fa-terminal"></i>C / C++</span>
-            <span class="chip"><i class="fab fa-java"></i>Java</span>
-            <span class="chip"><i class="fab fa-python"></i>Python</span>
-            <span class="chip"><i class="fab fa-js"></i>HTML / CSS / JS</span>
+            <span class="chip"><i class="fab fa-java"></i>Java<small class="ok">biliyorum</small></span>
+            <span class="chip"><i class="fas fa-terminal"></i>C<small class="ok">biliyorum</small></span>
+            <span class="chip"><i class="fab fa-python"></i>Python<small>az biraz · öğreniyorum</small></span>
           </div>
         </div>
         <div class="skill-row">
-          <div class="skill-cat">Tools &amp; Environments</div>
+          <div class="skill-cat">Araçlar &amp; ortam</div>
           <div class="chips">
-            <span class="chip"><i class="fab fa-linux"></i>Linux &amp; Bash</span>
-            <span class="chip"><i class="fas fa-mobile-screen"></i>Termux</span>
+            <span class="chip"><i class="fas fa-mobile-screen"></i>Termux<small class="ok">kullanıyorum</small></span>
+            <span class="chip"><i class="fab fa-linux"></i>Linux CLI<small>temel · gelişiyor</small></span>
             <span class="chip"><i class="fab fa-git-alt"></i>Git &amp; GitHub</span>
-            <span class="chip"><i class="fas fa-laptop-code"></i>VS Code &amp; NetBeans</span>
+            <span class="chip"><i class="fas fa-laptop-code"></i>VS Code</span>
           </div>
         </div>
         <div class="skill-row">
-          <div class="skill-cat">Core Domains</div>
+          <div class="skill-cat">Odak alanları</div>
           <div class="chips">
-            <span class="chip"><i class="fas fa-shield-halved"></i>Network &amp; System Security</span>
-            <span class="chip"><i class="fas fa-robot"></i>Bot &amp; Script Engineering</span>
-            <span class="chip"><i class="fas fa-spider"></i>Web Scraping</span>
-            <span class="chip"><i class="fas fa-gears"></i>Workflow Automation</span>
-            <span class="chip"><i class="fas fa-diagram-project"></i>Algorithm Analysis</span>
+            <span class="chip"><i class="fas fa-shield-halved"></i>Cyber Security<small>yoldayım</small></span>
+            <span class="chip"><i class="fas fa-diagram-project"></i>Algoritma &amp; OOP</span>
+            <span class="chip"><i class="fas fa-robot"></i>Bot &amp; script denemeleri</span>
+            <span class="chip"><i class="fas fa-spider"></i>Web scraping</span>
           </div>
         </div>
+        <div class="skill-note">// durum etiketleri dürüstlük için: <b>biliyorum</b> = rahat kullanıyorum · <b>öğreniyorum</b> = yolun başındayım</div>
       </div>
     </div>
   </section>
 
-  <!-- 03 ROADMAP -->
-  <section class="block paper" id="roadmap">
+  <!-- 03 HEDEF -->
+  <section class="block alt" id="goal">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[03]</b> — Trajectory</span><h2 class="sec-title">Areas of <em>growth.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[03]</b> — Hedef</span><h2 class="sec-title">Hedef: <em>White Hat.</em></h2></div>
+      <p class="goal-intro reveal">Hacker'lar şapka renkleriyle ayrılır. Ben <strong>yasal çerçevede</strong>, sistem sahibinin <strong>izniyle</strong> çalışan, zafiyetleri bulup raporlayan ve savunmayı güçlendiren bir <strong>beyaz şapkalı</strong> cyber security uzmanı olmak istiyorum.</p>
+      <div class="hat-grid">
+        <div class="spot hat goal reveal" style="--hc:#f4f4f4">
+          <div class="hico"><i class="fas fa-user-shield"></i></div>
+          <h3>Beyaz Şapka</h3><div class="en">White Hat · ethical hacker</div>
+          <p>Sistem sahibinin izniyle zafiyet arar, raporlar ve savunmayı güçlendirir. Yasal ve etik.</p>
+          <span class="tg">Hedefim</span>
+        </div>
+        <div class="spot hat reveal" style="--hc:#9aa3a8;--d:.06s">
+          <div class="hico"><i class="fas fa-user-secret"></i></div>
+          <h3>Gri Şapka</h3><div class="en">Gray Hat</div>
+          <p>İzinsiz bakar ama kötü niyetli değildir. Yasal açıdan riskli bir gri alan.</p>
+          <span class="tg">Yasal risk</span>
+        </div>
+        <div class="spot hat reveal" style="--hc:#ff4d4d;--d:.12s">
+          <div class="hico"><i class="fas fa-user-ninja"></i></div>
+          <h3>Kırmızı Şapka</h3><div class="en">Red Hat</div>
+          <p>Kötü niyetli hacker'lara karşı sert karşı hamleler yapar. Yöntemleri tartışmalıdır.</p>
+          <span class="tg">Tartışmalı</span>
+        </div>
+        <div class="spot hat reveal" style="--hc:#5b6268;--d:.18s">
+          <div class="hico"><i class="fas fa-skull-crossbones"></i></div>
+          <h3>Kara Şapka</h3><div class="en">Black Hat</div>
+          <p>İzinsiz, çıkar ya da zarar amaçlı saldırır. Yasa dışıdır.</p>
+          <span class="tg">Asla</span>
+        </div>
+      </div>
+
+      <div class="sub-h reveal"><b>//</b> gelişim roadmap'i</div>
       <div class="road-grid">
-        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-shield-halved"></i></div><span class="status-tag now">Active</span></div><h3>Network &amp; System Security</h3><p>Vulnerability analysis, packet inspection, defensive architecture, and system hardening.</p></div>
-        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fab fa-linux"></i></div><span class="status-tag now">Active</span></div><h3>Linux &amp; CLI Mastery</h3><p>Command-line operations, Termux environments, and shell scripting for daily automation.</p></div>
-        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fas fa-robot"></i></div><span class="status-tag now">Active</span></div><h3>Automation &amp; Bots</h3><p>Python data scraping pipelines, API automation, and custom Telegram/CLI bots.</p></div>
-        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-diagram-project"></i></div><span class="status-tag now">Active</span></div><h3>Algorithms &amp; Data Structures</h3><p>OOP design, time/space complexity analysis, sorting, and matrix algorithms in C &amp; Java.</p></div>
-        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fas fa-brain"></i></div><span class="status-tag">Next</span></div><h3>AI API Integrations</h3><p>Connecting LLM and Gemini APIs into developer assistants, code generators, and repo analyzers.</p></div>
-        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fas fa-code"></i></div><span class="status-tag">Next</span></div><h3>Modern Web &amp; Mobile</h3><p>Building fast, responsive, and resilient interfaces with modern web tools and Flutter.</p></div>
-        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-flag"></i></div><span class="status-tag">Goal</span></div><h3>CTF &amp; Pentest Labs</h3><p>Hands-on offensive and defensive security practice through Capture The Flag labs.</p></div>
-        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fas fa-graduation-cap"></i></div><span class="status-tag">Goal</span></div><h3>Erasmus &amp; Global Languages</h3><p>Advancing academic standing alongside C1 English and German proficiency for global exchange.</p></div>
-        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fab fa-github"></i></div><span class="status-tag">Goal</span></div><h3>Open Source Ecosystem</h3><p>Publishing modular, well-documented security and automation utilities on GitHub.</p></div>
+        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-shield-halved"></i></div><span class="status-tag now">Şu an</span></div><h3>Cyber Security temelleri</h3><p>Güvenlik mantığı, ağ ve sistem temelleri, savunma stratejileri.</p></div>
+        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fab fa-python"></i></div><span class="status-tag now">Şu an</span></div><h3>Python</h3><p>Az biraz biliyorum; script ve otomasyon yazacak seviyeye gelmek için pratik yapıyorum.</p></div>
+        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fab fa-java"></i></div><span class="status-tag now">Şu an</span></div><h3>Java &amp; C derinleşme</h3><p>OOP, veri yapıları, sıralama ve matris algoritmaları ile temeli sağlamlaştırmak.</p></div>
+        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-mobile-screen"></i></div><span class="status-tag now">Şu an</span></div><h3>Termux &amp; Linux CLI</h3><p>Terminal alışkanlığı, komut satırı araçları ve temel Linux kullanımı.</p></div>
+        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fas fa-network-wired"></i></div><span class="status-tag">Sırada</span></div><h3>Ağ güvenliği temelleri</h3><p>TCP/IP, port ve protokol mantığı; savunma tarafını iyi öğrenmek.</p></div>
+        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fab fa-github"></i></div><span class="status-tag">Sırada</span></div><h3>GitHub'ı büyütmek</h3><p>Projeleri düzenli paylaşmak, repo'ları temiz ve belgeli tutmak.</p></div>
+        <div class="spot road reveal"><div class="top"><div class="ico"><i class="fas fa-flag"></i></div><span class="status-tag">Hedef</span></div><h3>CTF &amp; lab pratiği</h3><p>Yasal lab ortamları ve CTF yarışmalarıyla güvenliği sahada denemek.</p></div>
+        <div class="spot road reveal" style="--d:.06s"><div class="top"><div class="ico"><i class="fas fa-graduation-cap"></i></div><span class="status-tag">Hedef</span></div><h3>Erasmus kazanmak</h3><p>Avrupa'da bir dönem okuyup hem akademik hem kültürel olarak gelişmek.</p></div>
+        <div class="spot road reveal" style="--d:.12s"><div class="top"><div class="ico"><i class="fas fa-language"></i></div><span class="status-tag">Hedef</span></div><h3>Diller</h3><p>English'te C1'i pekiştirmek, Deutsch ve Русский'i A1'den ilerletmek.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- 04 LOCATIONS -->
+  <!-- 04 KONUM -->
   <section class="block" id="locations">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[04]</b> — Geography</span><h2 class="sec-title">On the <em>map.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[04]</b> — Coğrafya</span><h2 class="sec-title">Haritada <em>ben.</em></h2></div>
       <div class="geo-grid">
         <div class="reveal">
           <div class="tabs" id="tabs">
-            <button class="tab on" data-k="dasoguz">🇹🇲 Dashoguz</button>
-            <button class="tab" data-k="igu">🎓 IGU Campus</button>
+            <button class="tab on" data-k="dasoguz">🇹🇲 Daşoğuz</button>
+            <button class="tab" data-k="igu">🎓 İGÜ Kampüsü</button>
             <button class="tab" data-k="basaksehir">🏠 Başakşehir</button>
           </div>
           <div class="map-box">
-            <span class="ping" id="mapPing">Dashoguz · Turkmenistan</span>
-            <iframe id="mapFrame" title="Location Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://maps.google.com/maps?q=Dasoguz%2C%20Turkmenistan&z=9&hl=en&output=embed"></iframe>
+            <span class="ping" id="mapPing">Daşoğuz · Türkmenistan</span>
+            <iframe id="mapFrame" title="Harita" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Dasoguz%2C%20Turkmenistan&z=9&hl=tr&output=embed"></iframe>
           </div>
         </div>
-
         <div class="spot loc-info reveal" style="--d:.1s">
-          <div class="badge" id="locBadge"><i class="fas fa-earth-asia"></i> Birthplace · Homeland</div>
-          <h3 id="locTitle">Dashoguz, Turkmenistan 🇹🇲</h3>
-          <p id="locText">Historic northern city in Turkmenistan near the Uzbek border — where my roots and journey began.</p>
+          <div class="badge" id="locBadge"><i class="fas fa-cake-candles"></i> Doğduğum şehir</div>
+          <h3 id="locTitle">Daşoğuz, Türkmenistan 🇹🇲</h3>
+          <p id="locText">Türkmenistan'ın kuzeyinde, Özbekistan sınırına yakın bir şehir. Memleketim.</p>
+          <div class="loc-born" id="locBorn">🎂 <b>12 Aralık 2007</b> · Daşoğuz'da doğdum</div>
           <div class="loc-meta">
-            <a id="locLink" class="btn" href="https://www.google.com/maps/search/?api=1&query=Dasoguz+Turkmenistan" target="_blank" rel="noopener" data-magnetic>Open in Maps <i class="fas fa-arrow-up-right-from-square"></i></a>
+            <a id="locLink" class="btn" href="https://www.google.com/maps/search/?api=1&query=Dasoguz+Turkmenistan" target="_blank" rel="noopener" data-magnetic>Haritada aç <i class="fas fa-arrow-up-right-from-square"></i></a>
           </div>
-          <svg class="route-svg" viewBox="0 0 400 120" aria-label="Route from Dashoguz to Istanbul">
-            <path id="routePath" d="M340,82 C 280,10 140,10 60,82" fill="none" stroke="rgba(242,236,225,.2)" stroke-width="2" stroke-dasharray="4 6"/>
-            <path d="M340,82 C 280,10 140,10 60,82" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="300" stroke-dashoffset="300" stroke-linecap="round">
-              <animate attributeName="stroke-dashoffset" from="300" to="0" dur="3s" repeatCount="indefinite"/>
-            </path>
-            <circle cx="340" cy="82" r="6" fill="var(--accent)"/><circle cx="340" cy="82" r="6" fill="none" stroke="var(--accent)"><animate attributeName="r" from="6" to="18" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" from=".8" to="0" dur="2s" repeatCount="indefinite"/></circle>
-            <circle cx="60" cy="82" r="6" fill="#f2ece1"/>
-            <circle r="4.5" fill="#fff"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#routePath"/></animateMotion></circle>
-          </svg>
-          <div class="route-labels"><span><b>Istanbul</b> 🇹🇷</span><span><b>Dashoguz</b> 🇹🇲</span></div>
         </div>
+      </div>
+
+      <div class="spot route-card reveal">
+        <div class="route-head">
+          <h3>Rota: geçmiş <em>→</em> bugün <em>→</em> hayal</h3>
+          <div class="legend"><span><i></i>gittiğim yol</span><span><i class="dot"></i>hayal (Erasmus &amp; gezi)</span></div>
+        </div>
+        <svg class="route-svg" id="routeSvg" viewBox="0 0 960 600" role="img" aria-label="Daşoğuz'dan İstanbul'a, İstanbul'dan Avrupa'ya rota haritası"></svg>
+        <div class="dest" id="dest"></div>
+        <div class="route-note">// hayal listesi: Erasmus ile görmek / gezmek istediğim şehirler · üstlerine gel</div>
       </div>
     </div>
   </section>
 
   <!-- 05 TERMINAL -->
-  <section class="block paper" id="terminal">
+  <section class="block alt" id="terminal">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[05]</b> — Console</span><h2 class="sec-title">Interactive <em>terminal.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[05]</b> — Console</span><h2 class="sec-title">Etkileşimli <em>terminal.</em></h2></div>
       <div class="term reveal" id="term">
         <div class="term-head">
           <div class="term-dots"><i></i><i></i><i></i></div>
-          <small>kuvanchbek@sec-node: ~</small>
-          <span class="term-badge">ROOTLESS SHELL</span>
+          <small>kuvanchbek@whitehat: ~</small>
+          <span class="term-badge">ETHICAL MODE</span>
         </div>
         <div class="term-out" id="termOut"></div>
         <div class="term-in">
-          <span class="p">kuvanch@sec-node:~$</span>
-          <input id="termIn" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command" placeholder="type a command… (help, scan, matrix, neofetch)">
+          <span class="p">kuvanch@whitehat:~$</span>
+          <input id="termIn" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal komutu" placeholder="komut yaz… (help, scan, matrix, hats)">
         </div>
       </div>
       <div class="quick reveal" id="quick">
-        <button data-c="help">help</button>
-        <button data-c="whoami">whoami</button>
-        <button data-c="scan">scan</button>
-        <button data-c="matrix">matrix</button>
-        <button data-c="skills">skills</button>
-        <button data-c="roadmap">roadmap</button>
-        <button data-c="music">music</button>
-        <button data-c="neofetch">neofetch</button>
-        <button data-c="theme random">theme random</button>
-        <button data-c="sudo hire kuvanchbek">sudo hire kuvanchbek</button>
+        <button data-c="help">help</button><button data-c="whoami">whoami</button><button data-c="goal">goal</button>
+        <button data-c="hats">hats</button><button data-c="scan">scan</button><button data-c="matrix">matrix</button>
+        <button data-c="uptime">uptime</button><button data-c="neofetch">neofetch</button>
+        <button data-c="theme random">theme random</button><button data-c="sudo hire kuvanchbek">sudo hire kuvanchbek</button>
       </div>
     </div>
   </section>
 
-  <!-- 06 PROJECTS -->
+  <!-- 06 PROJELER -->
   <section class="block" id="projects">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[06]</b> — Work</span><h2 class="sec-title">Projects <em>&amp; labs.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[06]</b> — Çalışmalar</span><h2 class="sec-title">Projects <em>&amp; denemeler.</em></h2></div>
       <div class="proj-grid">
         <div class="spot proj reveal" data-proj="0" role="button" tabindex="0">
           <span class="big">01</span>
           <div class="ico"><i class="fas fa-robot"></i></div>
           <h3>Automation &amp; Web Scraping Bot</h3>
-          <p>Custom Python bot architecture engineered to extract structured web data and automate repetitive digital workflows.</p>
-          <div class="tags"><span>#Python</span><span>#WebScraping</span><span>#Automation</span></div>
+          <p>Python ile geliştirdiğim; veri toplama ve rutin dijital görevleri otomatikleştiren bot denemesi.</p>
+          <div class="tags"><span>#Python</span><span>#WebScraping</span><span>#Git</span></div>
           <span class="go">↗</span>
         </div>
         <div class="spot proj reveal" style="--d:.1s" data-proj="1" role="button" tabindex="0">
           <span class="big">02</span>
           <div class="ico"><i class="fas fa-diagram-project"></i></div>
-          <h3>Data Structures &amp; Algorithm Labs</h3>
-          <p>Systems implementations in C and Java focusing on Object-Oriented Programming (OOP), sorting, and matrix algorithms.</p>
+          <h3>Data Structures &amp; Algoritma Çalışmaları</h3>
+          <p>C ve Java ile nesne yönelimli programlama (OOP), sıralama ve matris algoritmaları üzerine uygulamalar.</p>
           <div class="tags"><span>#C</span><span>#Java</span><span>#AlgorithmAnalysis</span></div>
           <span class="go">↗</span>
         </div>
       </div>
-      <div class="more reveal"><a href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn primary" data-magnetic><i class="fab fa-github"></i> View all repositories on GitHub</a></div>
+      <div class="more reveal"><a href="https://github.com/lamer3455" target="_blank" rel="noopener" class="btn primary" data-magnetic><i class="fab fa-github"></i> GitHub'da tüm repo'lar</a></div>
     </div>
   </section>
 
-  <!-- 07 CERTS & LANGUAGES -->
-  <section class="block paper" id="certs">
+  <!-- 07 DİLLER -->
+  <section class="block alt" id="certs">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[07]</b> — Credentials</span><h2 class="sec-title">Certification <em>&amp; languages.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[07]</b> — Sertifika &amp; Diller</span><h2 class="sec-title">Sertifika <em>&amp; diller.</em></h2></div>
       <div class="spot cert reveal">
         <div>
           <div class="badge"><i class="fas fa-circle-check"></i> Duolingo Verified</div>
           <h3>Duolingo English Test</h3>
-          <p>English Proficiency Certificate — B2 / C1 Level</p>
+          <p>İngilizce yeterlilik sertifikası — B2 / C1 seviyesi</p>
         </div>
-        <a href="https://certs.duolingo.com/q3a4sguz9vyzo8k9" target="_blank" rel="noopener" class="btn" data-magnetic>Verify Certificate <i class="fas fa-arrow-up-right-from-square"></i></a>
+        <a href="https://certs.duolingo.com/q3a4sguz9vyzo8k9" target="_blank" rel="noopener" class="btn" data-magnetic>Sertifikayı doğrula <i class="fas fa-arrow-up-right-from-square"></i></a>
       </div>
+      <div class="flag-hint reveal">// kartların üstüne gel (mobilde dokun) → <b>bayrak dalgalansın</b> 🏳️</div>
       <div class="langs reveal" id="langs">
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">Türkmençe</span><span class="lang-flag">🇹🇲</span></div><div class="lang-tr">Turkmen</div><div class="lang-lvl">Native · Mother Tongue</div><div class="bar2"><span data-w="100"></span></div></div>
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">Oʻzbekcha</span><span class="lang-flag">🇺🇿</span></div><div class="lang-tr">Uzbek</div><div class="lang-lvl">Native · Mother Tongue</div><div class="bar2"><span data-w="100"></span></div></div>
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">Türkçe</span><span class="lang-flag">🇹🇷</span></div><div class="lang-tr">Turkish</div><div class="lang-lvl">Advanced · Fluent</div><div class="bar2"><span data-w="95"></span></div></div>
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">English</span><span class="lang-flag">🇬🇧</span></div><div class="lang-tr">English</div><div class="lang-lvl">B2 – C1 · Upper-Int.</div><div class="bar2"><span data-w="82"></span></div></div>
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">Русский</span><span class="lang-flag">🇷🇺</span></div><div class="lang-tr">Russian</div><div class="lang-lvl">A1 – A2 · Conversational</div><div class="bar2"><span data-w="35"></span></div></div>
-        <div class="spot lang"><div class="lang-top"><span class="lang-name">Deutsch</span><span class="lang-flag">🇩🇪</span></div><div class="lang-tr">German</div><div class="lang-lvl">A1 · Elementary</div><div class="bar2"><span data-w="25"></span></div></div>
+        <div class="spot lang" data-f="tm"><div class="flag"></div><div class="lang-top"><span class="lang-name">Türkmençe</span><span class="lang-flag">🇹🇲</span></div><div class="lang-tr">Türkmen dili</div><div class="lang-lvl">Native · Ana dil</div><div class="bar2"><span data-w="100"></span></div></div>
+        <div class="spot lang" data-f="uz"><div class="flag"></div><div class="lang-top"><span class="lang-name">Oʻzbekcha</span><span class="lang-flag">🇺🇿</span></div><div class="lang-tr">Özbek dili</div><div class="lang-lvl">Native · Ana dil</div><div class="bar2"><span data-w="100"></span></div></div>
+        <div class="spot lang" data-f="tr"><div class="flag"></div><div class="lang-top"><span class="lang-name">Türkçe</span><span class="lang-flag">🇹🇷</span></div><div class="lang-tr">Türkçe</div><div class="lang-lvl">Advanced · İleri seviye</div><div class="bar2"><span data-w="94"></span></div></div>
+        <div class="spot lang" data-f="en"><div class="flag"></div><div class="lang-top"><span class="lang-name">English</span><span class="lang-flag">🇬🇧</span></div><div class="lang-tr">İngilizce</div><div class="lang-lvl">B2 – C1 · Upper-Intermediate</div><div class="bar2"><span data-w="80"></span></div></div>
+        <div class="spot lang" data-f="ru"><div class="flag"></div><div class="lang-top"><span class="lang-name">Русский</span><span class="lang-flag">🇷🇺</span></div><div class="lang-tr">Rusça</div><div class="lang-lvl">A1 · Başlangıç</div><div class="bar2"><span data-w="25"></span></div></div>
+        <div class="spot lang" data-f="de"><div class="flag"></div><div class="lang-top"><span class="lang-name">Deutsch</span><span class="lang-flag">🇩🇪</span></div><div class="lang-tr">Almanca</div><div class="lang-lvl">A1 · Başlangıç</div><div class="bar2"><span data-w="25"></span></div></div>
       </div>
     </div>
   </section>
 
-  <!-- 08 MUSIC -->
+  <!-- 08 VIBE -->
   <section class="block" id="music">
     <div class="container">
-      <div class="sec-head reveal"><span class="sec-label"><b>[08]</b> — Sound</span><h2 class="sec-title">Music <em>&amp; rap rotation.</em></h2></div>
+      <div class="sec-head reveal"><span class="sec-label"><b>[08]</b> — Vibe</span><h2 class="sec-title">Müzik <em>&amp; rap rotasyonu.</em></h2></div>
 
       <div class="spot player reveal">
         <div class="vinyl" id="vinyl"></div>
         <div>
-          <div class="np-label">
-            <span class="eq" id="eq"><span></span><span></span><span></span><span></span></span>
-            <span>Now in rotation</span>
-            <button class="audio-pill" id="synthToggle" title="Toggle Web Audio Synth Beat"><i class="fas fa-volume-xmark"></i> Synth Beat: Off</button>
-          </div>
-          <div class="np-name" id="npName">Defkhan</div>
-          <div class="np-sub" id="npSub">Turkish Rap · Homie Bak</div>
+          <div class="np-label"><span class="eq" id="eq"><span></span><span></span><span></span><span></span></span> Şu an rotasyonda</div>
+          <div class="np-name" id="npName">Central Cee</div>
+          <div class="np-sub" id="npSub">UK Rap</div>
           <div class="np-bar"><span id="npBar"></span></div>
           <div class="np-ctrl">
-            <button id="npPrev" aria-label="Previous"><i class="fas fa-backward-step"></i></button>
-            <button id="npPlay" aria-label="Pause / Play"><i class="fas fa-pause"></i></button>
-            <button id="npNext" aria-label="Next"><i class="fas fa-forward-step"></i></button>
+            <button id="npPrev" aria-label="Önceki"><i class="fas fa-backward-step"></i></button>
+            <button id="npPlay" aria-label="Duraklat / Oynat"><i class="fas fa-pause"></i></button>
+            <button id="npNext" aria-label="Sonraki"><i class="fas fa-forward-step"></i></button>
           </div>
         </div>
       </div>
@@ -821,9 +911,9 @@
       <div class="music-grid">
         <div class="spot mcard reveal">
           <h3><i class="fas fa-microphone-lines"></i> Turkish Rap</h3>
-          <div class="msub">Heavy coding rotation</div>
+          <div class="msub">Kod yazarken dönenler</div>
           <div class="alist">
-            <div class="arow" data-a="Defkhan"><b>Defkhan <i class="fas fa-star fav-star"></i></b><small>Homie Bak</small></div>
+            <div class="arow" data-a="Defkhan"><b>Defkhan</b><small>TR</small></div>
             <div class="arow" data-a="Stabil"><b>Stabil</b><small>TR</small></div>
             <div class="arow" data-a="Uzi"><b>Uzi</b><small>TR</small></div>
           </div>
@@ -832,13 +922,13 @@
           <h3><i class="fas fa-headphones"></i> UK Rap &amp; Drill</h3>
           <div class="msub">London sound</div>
           <div class="alist">
-            <div class="arow" data-a="Central Cee"><b>Central Cee <i class="fas fa-star fav-star"></i></b><small>UK Top Tier</small></div>
+            <div class="arow" data-a="Central Cee"><b>Central Cee <i class="fas fa-star fav-star"></i></b><small>en sevdiğim UK rapçi</small></div>
             <div class="arow" data-a="BM"><b>BM</b><small>"London View"</small></div>
           </div>
         </div>
         <div class="spot mcard reveal" style="--d:.16s">
           <h3><i class="fas fa-record-vinyl"></i> US Hip-Hop</h3>
-          <div class="msub">Legends &amp; icons</div>
+          <div class="msub">Efsaneler &amp; ikonlar</div>
           <div class="alist">
             <div class="arow" data-a="2Pac"><b>2Pac</b><small>West Coast</small></div>
             <div class="arow" data-a="Biggie Smalls"><b>Biggie Smalls</b><small>East Coast</small></div>
@@ -850,43 +940,40 @@
       </div>
 
       <div class="hobby reveal">
-        <h4>// off the clock</h4>
+        <h4>// boş zamanlarda</h4>
         <div class="chips">
-          <span class="chip"><i class="fas fa-futbol"></i>Football</span>
-          <span class="chip"><i class="fas fa-gamepad"></i>Gaming &amp; PlayStation</span>
-          <span class="chip"><i class="fas fa-plane-departure"></i>Traveling</span>
-          <span class="chip"><i class="fas fa-book"></i>Reading</span>
-          <span class="chip"><i class="fas fa-language"></i>Learning Languages</span>
-          <span class="chip"><i class="fas fa-users"></i>Networking &amp; Conversations</span>
+          <span class="chip"><i class="fas fa-futbol"></i>Futbol oynamak</span>
+          <span class="chip"><i class="fas fa-gamepad"></i>Oyun &amp; PlayStation</span>
+          <span class="chip"><i class="fas fa-plane-departure"></i>Seyahat</span>
+          <span class="chip"><i class="fas fa-book"></i>Kitap okumak</span>
+          <span class="chip"><i class="fas fa-language"></i>Yeni diller öğrenmek</span>
+          <span class="chip"><i class="fas fa-users"></i>Yeni insanlarla tanışmak &amp; sohbet</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 09 CONTACT -->
-  <section class="block" id="contact">
+  <!-- 09 İLETİŞİM -->
+  <section class="block alt" id="contact">
     <div class="container">
       <div class="reveal">
-        <h2 class="contact-headline">Have an <em>idea</em>?<br>Let's <em>talk.</em></h2>
+        <h2 class="contact-headline">Bir <em>fikrin</em> mi var?<br><em>Let's talk.</em></h2>
         <a href="mailto:abdirimowkuwanchbek2@gmail.com" class="big-email">abdirimowkuwanchbek2<em>@</em>gmail.com</a>
         <div class="mail-actions">
-          <a href="mailto:abdirimowkuwanchbek2@gmail.com" class="btn primary" data-magnetic><i class="fas fa-envelope"></i> Send Email</a>
-          <button class="btn" id="copyBtn" data-magnetic><i class="far fa-copy"></i> Copy Address</button>
+          <a href="mailto:abdirimowkuwanchbek2@gmail.com" class="btn primary" data-magnetic><i class="fas fa-envelope"></i> E-posta gönder</a>
+          <button class="btn" id="copyBtn" data-magnetic><i class="far fa-copy"></i> Adresi kopyala</button>
         </div>
 
         <div class="socials">
           <a class="social gh" href="https://github.com/lamer3455" target="_blank" rel="noopener"><span class="left"><i class="fab fa-github brand"></i>GitHub</span><span class="ext">↗</span></a>
           <a class="social li" href="https://www.linkedin.com/in/kuvanchbek-abdirimov-20baa9386" target="_blank" rel="noopener"><span class="left"><i class="fab fa-linkedin brand"></i>LinkedIn</span><span class="ext">↗</span></a>
           <a class="social ig" href="https://www.instagram.com/kuwanch_the_best_007" target="_blank" rel="noopener"><span class="left"><i class="fab fa-instagram brand"></i>Instagram</span><span class="ext">↗</span></a>
-
-          <a class="social tg" href="https://t.me/kuvanch_3434" target="_blank" rel="noopener" title="Message on Telegram">
+          <a class="social tg" href="https://t.me/kuvanch_3434" target="_blank" rel="noopener" title="Telegram'dan yaz">
             <i class="fas fa-paper-plane tg-fly"></i><span class="tg-trail"></span>
             <span class="left"><i class="fab fa-telegram-plane brand"></i>Telegram</span><span class="ext">✈</span>
           </a>
-
           <a class="social tt" href="https://www.tiktok.com/@kuwanch_thebest" target="_blank" rel="noopener"><span class="left"><i class="fab fa-tiktok brand"></i>TikTok</span><span class="ext">↗</span></a>
-
-          <a class="social wa" href="https://wa.me/905342145252" target="_blank" rel="noopener" title="Chat or call on WhatsApp">
+          <a class="social wa" href="https://wa.me/905342145252" target="_blank" rel="noopener" title="WhatsApp'tan yaz veya ara">
             <span class="wa-wave"></span><span class="wa-wave"></span><span class="wa-wave"></span>
             <span class="left"><i class="fab fa-whatsapp brand"></i>WhatsApp</span><span class="ext"><i class="fas fa-phone-volume"></i></span>
           </a>
@@ -900,8 +987,8 @@
   <div class="container">
     <div class="footer-inner">
       <div>© 2026 Kuvanchbek Abdirimov</div>
-      <div>Built with <span class="a">♥</span> from Dashoguz to Istanbul</div>
-      <a href="#hero" class="totop">Back to top ↑</a>
+      <div><span class="a">♥</span> ile Daşoğuz'dan İstanbul'a</div>
+      <a href="#hero" class="totop">Yukarı çık ↑</a>
     </div>
   </div>
 </footer>
@@ -913,73 +1000,87 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const finePointer = matchMedia('(hover:hover) and (pointer:fine)').matches;
 
-  /* ---------- Loader ---------- */
-  const loader = $('#loader'), lb = $('#loadBar'), lc = $('#loadCount');
-  let pct = 0;
+  /* ---------- Boot loader ---------- */
+  const loader = $('#loader'), boot = $('#boot'), lb = $('#loadBar');
+  const bootLines = [
+    'kernel yükleniyor…',
+    '/dev/skills mount → Java · C · Python',
+    'termux.session başlatıldı',
+    'profile: white_hat (hedef)',
+    'route: daşoğuz → istanbul → avrupa?'
+  ];
   function start() {
     loader.classList.add('done');
     document.body.classList.add('loaded');
-    setTimeout(() => loader.style.display = 'none', 1200);
+    setTimeout(() => loader.style.display = 'none', 1300);
   }
-  if (reduce) { start(); }
+  if (reduce) start();
   else {
+    let bi = 0;
     const t = setInterval(() => {
-      pct = Math.min(100, pct + Math.ceil(Math.random() * 11));
-      lb.style.width = pct + '%'; lc.textContent = String(pct).padStart(3, '0') + '%';
-      if (pct >= 100) { clearInterval(t); setTimeout(start, 220); }
-    }, 45);
+      if (bi < bootLines.length) {
+        const d = document.createElement('div');
+        d.innerHTML = `<span class="ok">[ OK ]</span> ${bootLines[bi]}`;
+        boot.appendChild(d);
+        bi++;
+        lb.style.width = (bi / (bootLines.length + 1) * 100) + '%';
+      } else {
+        clearInterval(t);
+        const g = document.createElement('div');
+        g.className = 'grant'; g.textContent = 'ACCESS GRANTED';
+        boot.appendChild(g); lb.style.width = '100%';
+        setTimeout(start, 600);
+      }
+    }, 240);
   }
 
-  /* ---------- Photo fallback ---------- */
+  /* ---------- Fotoğraf yedekleri ---------- */
   const photo = $('#photo');
   const srcs = ['profile.jpeg', 'profile.jpg', 'profile.png'];
   let si = 0;
   photo.onerror = () => { si++; if (si < srcs.length) photo.src = srcs[si]; else photo.remove(); };
 
-  /* ---------- Clock ---------- */
-  const tick = () => {
-    $('#clock').textContent = 'IST ' + new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Istanbul', hour: '2-digit', minute: '2-digit' });
-  };
+  /* ---------- Saat ---------- */
+  const tick = () => { $('#clock').textContent = 'IST ' + new Date().toLocaleTimeString('tr-TR', { timeZone: 'Europe/Istanbul', hour: '2-digit', minute: '2-digit' }); };
   tick(); setInterval(tick, 20000);
 
-  /* ---------- Theme ---------- */
+  /* ---------- Tema (turuncu yok) ---------- */
   const themes = {
-    orange: ['#ff4d00', '255,77,0', '#d93b00', '#ffffff'],
-    lime:   ['#c9ff3f', '201,255,63', '#5c8a00', '#080807'],
-    cyan:   ['#22d3ee', '34,211,238', '#0a8aa6', '#080807'],
-    violet: ['#a78bfa', '167,139,250', '#6d3bea', '#080807'],
-    pink:   ['#ff4d8d', '255,77,141', '#d6155f', '#ffffff']
+    lime:   ['#c9ff3f', '201,255,63'],
+    cyan:   ['#22d3ee', '34,211,238'],
+    matrix: ['#00ff9c', '0,255,156'],
+    violet: ['#a78bfa', '167,139,250'],
+    pink:   ['#ff4d8d', '255,77,141']
   };
-  let accentRGB = '255,77,0';
+  let accentRGB = '201,255,63';
   function setTheme(name) {
     const t = themes[name]; if (!t) return false;
     const s = document.documentElement.style;
     s.setProperty('--accent', t[0]); s.setProperty('--accent-rgb', t[1]);
-    s.setProperty('--accent-d', t[2]); s.setProperty('--on-accent', t[3]);
     accentRGB = t[1];
     $$('.swatches button').forEach(b => b.classList.toggle('on', b.dataset.t === name));
-    try { localStorage.setItem('kv-theme', name); } catch (e) {}
+    try { localStorage.setItem('kv-theme-v6', name); } catch (e) {}
     return true;
   }
   $$('.swatches button').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.t)));
-  try { const s = localStorage.getItem('kv-theme'); if (s) setTheme(s); } catch (e) {}
+  try { const s = localStorage.getItem('kv-theme-v6'); if (s) setTheme(s); } catch (e) {}
 
-  /* ---------- Mobile Menu ---------- */
+  /* ---------- Mobil menü ---------- */
   const mm = $('#mobileMenu');
   $('#menuOpen').addEventListener('click', () => mm.classList.add('open'));
   $('#menuClose').addEventListener('click', () => mm.classList.remove('open'));
   $$('a', mm).forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
 
   /* ---------- Marquee ---------- */
-  const mw = [['s', 'Cyber Security'], ['m', 'PYTHON AUTOMATION'], ['s', 'Web Scraping'], ['m', 'LINUX · TERMUX'],
-              ['s', 'Dashoguz → Istanbul'], ['m', 'C / C++ · JAVA'], ['s', 'Bot Architecture'], ['m', 'BAŞAKŞEHİR · IST'], ['s', 'Algorithms'], ['m', 'GIT & GITHUB']];
+  const mw = [['s', 'Cyber Security'], ['m', 'WHITE HAT HEDEFİ'], ['s', 'Software Engineering'], ['m', 'JAVA · C · PYTHON'],
+              ['s', 'Daşoğuz → İstanbul'], ['m', 'TERMUX & LINUX'], ['s', 'Erasmus hayali'], ['m', 'BAŞAKŞEHİR · IST'], ['s', 'Ethical Hacking'], ['m', 'GIT & GITHUB']];
   const mhtml = mw.map(([k, t]) => `<span class="${k === 's' ? 'sf' : ''}">${t}</span><i>✦</i>`).join('');
   $('#marquee').innerHTML = `<div class="mi">${mhtml}</div><div class="mi">${mhtml}</div>`;
 
-  /* ---------- Scramble ---------- */
+  /* ---------- Scramble (menü linkleri) ---------- */
   const glyphs = '!<>-_\\/[]{}—=+*^?#01';
   function scramble(el, text, dur = 550) {
-    if (reduce) { el.textContent = text; return; }
+    if (reduce) return;
     const start = performance.now();
     const order = [...text].map((_, i) => .15 + (i / text.length) * .6 + Math.random() * .25);
     (function f(now) {
@@ -988,25 +1089,22 @@
       if (p < 1) requestAnimationFrame(f); else el.textContent = text;
     })(start);
   }
-  $$('[data-scramble]').forEach(el => {
-    const orig = el.textContent;
-    el.addEventListener('mouseenter', () => scramble(el, orig));
-  });
+  $$('[data-scramble]').forEach(el => { const o = el.textContent; el.addEventListener('mouseenter', () => scramble(el, o)); });
 
-  /* ---------- Typing Effect ---------- */
-  const phrases = ['Software Engineering Student @ IGU', 'Cyber Security & Network Defense', 'Python • C/C++ • Java Developer', 'Automation & Web Scraping Bots'];
+  /* ---------- Yazma efekti (TR + EN karışık) ---------- */
+  const phrases = ['Software Engineering öğrencisi @ İGÜ', 'future White Hat hacker', 'Cyber Security yolcusu', 'Java • C • Python ile öğrenen kod yazıcı', 'Termux & Linux meraklısı'];
   const te = $('#typing');
   let pi = 0, ci = 0, del = false;
   (function type() {
     const w = phrases[pi];
     te.textContent = '> ' + w.slice(0, ci);
-    if (!del && ci < w.length) { ci++; setTimeout(type, 60); }
+    if (!del && ci < w.length) { ci++; setTimeout(type, 58); }
     else if (!del) { del = true; setTimeout(type, 1600); }
-    else if (ci > 0) { ci--; setTimeout(type, 28); }
+    else if (ci > 0) { ci--; setTimeout(type, 26); }
     else { del = false; pi = (pi + 1) % phrases.length; setTimeout(type, 300); }
   })();
 
-  /* ---------- Particle Network + Matrix Rain ---------- */
+  /* ---------- Parçacık ağı + Matrix rain ---------- */
   const cv = $('#net'), ctx = cv.getContext('2d');
   let W, H, pts = [], drops = [], mouse = { x: -999, y: -999 }, heroVis = true, matrixMode = false;
   function resize() {
@@ -1014,26 +1112,21 @@
     W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     const n = Math.min(85, Math.floor(W * H / 14500));
     pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35 }));
-    const cols = Math.floor(W / 18);
-    drops = Array.from({ length: cols }, () => Math.random() * -40);
+    drops = Array.from({ length: Math.floor(W / 18) }, () => Math.random() * -40);
   }
   resize(); addEventListener('resize', resize);
   cv.parentElement.addEventListener('mousemove', e => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
   cv.parentElement.addEventListener('mouseleave', () => mouse.x = mouse.y = -999);
   new IntersectionObserver(e => heroVis = e[0].isIntersecting).observe(cv.parentElement);
-
   (function draw() {
     requestAnimationFrame(draw);
     if (!heroVis) return;
     if (matrixMode) {
-      ctx.fillStyle = 'rgba(8, 8, 7, 0.12)';
-      ctx.fillRect(0, 0, W, H);
-      ctx.fillStyle = `rgba(${accentRGB}, 0.85)`;
-      ctx.font = '14px JetBrains Mono, monospace';
+      ctx.fillStyle = 'rgba(5,7,10,.13)'; ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = `rgba(${accentRGB},.85)`; ctx.font = '14px JetBrains Mono, monospace';
       for (let i = 0; i < drops.length; i++) {
-        const ch = Math.random() > 0.5 ? '1' : '0';
-        ctx.fillText(ch, i * 18, drops[i] * 18);
-        if (drops[i] * 18 > H && Math.random() > 0.975) drops[i] = 0;
+        ctx.fillText(Math.random() > .5 ? '1' : '0', i * 18, drops[i] * 18);
+        if (drops[i] * 18 > H && Math.random() > .975) drops[i] = 0;
         drops[i]++;
       }
       return;
@@ -1057,19 +1150,19 @@
     }
   })();
 
-  /* ---------- Custom Cursor ---------- */
+  /* ---------- Özel imleç ---------- */
   if (finePointer) {
     const cur = $('#cursor'), dot = $('#cursorDot');
     let mx = innerWidth / 2, my = innerHeight / 2, cx = mx, cy = my;
     addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; dot.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`; }, { passive: true });
     (function loop() { cx += (mx - cx) * .18; cy += (my - cy) * .18; cur.style.transform = `translate(${cx}px,${cy}px) translate(-50%,-50%)`; requestAnimationFrame(loop); })();
-    const hov = 'a,button,[data-magnetic],.tab,.arow,.spot';
+    const hov = 'a,button,[data-magnetic],.tab,.arow,.spot,.dest .chip';
     document.addEventListener('mouseover', e => { if (e.target.closest(hov)) cur.classList.add('grow'); });
     document.addEventListener('mouseout', e => { if (e.target.closest(hov)) cur.classList.remove('grow'); });
     $$('iframe').forEach(f => { f.addEventListener('mouseenter', () => cur.classList.add('hide')); f.addEventListener('mouseleave', () => cur.classList.remove('hide')); });
   }
 
-  /* ---------- Spotlight, Tilt & Magnetic ---------- */
+  /* ---------- Spotlight, tilt, magnetic ---------- */
   $$('.spot').forEach(c => c.addEventListener('mousemove', e => {
     const r = c.getBoundingClientRect();
     c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
@@ -1091,7 +1184,7 @@
     });
   }
 
-  /* ---------- Scroll & Reveal ---------- */
+  /* ---------- Scroll ---------- */
   const header = $('#header'), prog = $('#progress');
   addEventListener('scroll', () => {
     header.classList.toggle('scrolled', scrollY > 40);
@@ -1107,14 +1200,10 @@
   $$('.reveal').forEach(n => io.observe(n));
 
   $$('[data-count]').forEach(el => {
-    const target = +el.dataset.count;
-    let started = false;
-    const go = () => {
-      if (started) return; started = true;
-      let n = 0; const t = setInterval(() => { n++; el.textContent = n; if (n >= target) clearInterval(t); }, 180);
-    };
+    const target = +el.dataset.count; let started = false;
+    const go = () => { if (started) return; started = true; let n = 0; const t = setInterval(() => { n++; el.textContent = n; if (n >= target) clearInterval(t); }, 180); };
     new IntersectionObserver((e, o) => { if (e[0].isIntersecting && document.body.classList.contains('loaded')) { go(); o.disconnect(); } }, { threshold: .5 }).observe(el);
-    setTimeout(() => { if (document.body.classList.contains('loaded')) go(); }, 2200);
+    setTimeout(() => { if (document.body.classList.contains('loaded')) go(); }, 3200);
   });
 
   const links = $$('.nav-links a');
@@ -1123,42 +1212,45 @@
   }), { rootMargin: '-45% 0px -50% 0px' });
   $$('section[id]').forEach(s => spy.observe(s));
 
-  /* ---------- Toast ---------- */
+  /* ---------- Toast + kopyala ---------- */
   const toast = $('#toast');
   const showToast = m => { toast.textContent = m; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2100); };
   $('#copyBtn').addEventListener('click', async () => {
-    try { await navigator.clipboard.writeText('abdirimowkuwanchbek2@gmail.com'); showToast('Email copied ✓'); }
-    catch (e) { showToast('Copy failed — please select manually'); }
+    try { await navigator.clipboard.writeText('abdirimowkuwanchbek2@gmail.com'); showToast('E-posta kopyalandı ✓'); }
+    catch (e) { showToast('Kopyalanamadı — elle seçebilirsin'); }
   });
 
-  /* ---------- Map Tabs ---------- */
+  /* ---------- Harita sekmeleri ---------- */
   const locs = {
     dasoguz: {
-      q: 'Dasoguz, Turkmenistan', z: 9, ping: 'Dashoguz · Turkmenistan',
-      badge: '<i class="fas fa-earth-asia"></i> Birthplace · Homeland',
-      title: 'Dashoguz, Turkmenistan 🇹🇲',
-      text: 'Historic northern city in Turkmenistan near the Uzbek border — where my roots and journey began.'
+      q: 'Dasoguz, Turkmenistan', z: 9, ping: 'Daşoğuz · Türkmenistan',
+      badge: '<i class="fas fa-cake-candles"></i> Doğduğum şehir',
+      title: 'Daşoğuz, Türkmenistan 🇹🇲',
+      text: "Türkmenistan'ın kuzeyinde, Özbekistan sınırına yakın bir şehir. Memleketim.",
+      born: '🎂 <b>12 Aralık 2007</b> · Daşoğuz\'da doğdum'
     },
     igu: {
-      q: 'Istanbul Gelisim Universitesi Avcilar', z: 15, ping: 'IGU · Avcılar Campus',
-      badge: '<i class="fas fa-graduation-cap"></i> University',
-      title: 'Istanbul Gelisim University 🎓',
-      text: 'Avcılar Campus · Department of Software Engineering, 2nd Year.'
+      q: 'Istanbul Gelisim Universitesi Avcilar', z: 15, ping: 'İGÜ · Avcılar Kampüsü',
+      badge: '<i class="fas fa-graduation-cap"></i> Okuduğum üniversite',
+      title: 'İstanbul Gelişim Üniversitesi 🎓',
+      text: 'Avcılar Kampüsü. Software Engineering (Yazılım Mühendisliği) bölümünde 2. sınıf lisans öğrencisiyim.',
+      born: '💻 <b>Software Engineering</b> · 2. sınıf · lisans'
     },
     basaksehir: {
-      q: 'Basaksehir, Istanbul', z: 12, ping: 'Başakşehir · Istanbul',
-      badge: '<i class="fas fa-house"></i> Current Residence',
-      title: 'Başakşehir, Istanbul 🇹🇷',
-      text: 'Currently living in the Başakşehir district of Istanbul — code, music, and late-night builds.'
+      q: 'Ataturk Olimpiyat Stadi, Basaksehir, Istanbul', z: 14, ping: 'Başakşehir · Olimpiyat Stadı civarı',
+      badge: '<i class="fas fa-house"></i> Yaşadığım bölge',
+      title: 'Başakşehir, İstanbul 🇹🇷',
+      text: "İstanbul'un Başakşehir ilçesinde, Olimpiyat Stadı civarında yaşıyorum. Kod, müzik ve çalışma burada.",
+      born: '📍 <b>Başakşehir</b> · İstanbul'
     }
   };
   const frame = $('#mapFrame');
   $$('#tabs .tab').forEach(tab => tab.addEventListener('click', () => {
-    const k = tab.dataset.k, L = locs[k];
+    const L = locs[tab.dataset.k];
     $$('#tabs .tab').forEach(t => t.classList.toggle('on', t === tab));
     frame.style.opacity = 0;
     setTimeout(() => {
-      frame.src = `https://maps.google.com/maps?q=${encodeURIComponent(L.q)}&z=${L.z}&hl=en&output=embed`;
+      frame.src = `https://maps.google.com/maps?q=${encodeURIComponent(L.q)}&z=${L.z}&hl=tr&output=embed`;
       frame.onload = () => frame.style.opacity = 1;
       setTimeout(() => frame.style.opacity = 1, 900);
     }, 250);
@@ -1166,46 +1258,79 @@
     $('#locBadge').innerHTML = L.badge;
     $('#locTitle').textContent = L.title;
     $('#locText').textContent = L.text;
+    $('#locBorn').innerHTML = L.born;
     $('#locLink').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(L.q);
   }));
 
-  /* ---------- Project Inspection Modal ---------- */
+  /* ---------- Rota haritası (Daşoğuz → İstanbul → Avrupa hayali) ---------- */
+  const G = { W: 960, H: 600, lonMin: -8, lonMax: 66, latMin: 33, latMax: 64 };
+  const proj = (lat, lon) => [(lon - G.lonMin) / (G.lonMax - G.lonMin) * G.W, (G.latMax - lat) / (G.latMax - G.latMin) * G.H];
+  const city = {
+    das: { n: 'Daşoğuz', lat: 41.84, lon: 59.97 },
+    ist: { n: 'İstanbul', lat: 41.01, lon: 28.98 },
+    ber: { n: 'Berlin', lat: 52.52, lon: 13.40, flag: '🇩🇪', c: 'Almanya', lift: 85, anc: 'end', dx: -12, dy: 4 },
+    tll: { n: 'Tallinn', lat: 59.44, lon: 24.75, flag: '🇪🇪', c: 'Estonya', lift: 55, anc: 'middle', dx: 0, dy: -14 },
+    ams: { n: 'Amsterdam', lat: 52.37, lon: 4.90, flag: '🇳🇱', c: 'Hollanda', lift: 105, anc: 'end', dx: -12, dy: 4 },
+    par: { n: 'Paris', lat: 48.86, lon: 2.35, flag: '🇫🇷', c: 'Fransa', lift: 100, anc: 'end', dx: -12, dy: 4 },
+    mad: { n: 'Madrid', lat: 40.42, lon: -3.70, flag: '🇪🇸', c: 'İspanya', lift: 110, anc: 'start', dx: 12, dy: 20 },
+    rom: { n: 'Roma', lat: 41.90, lon: 12.50, flag: '🇮🇹', c: 'İtalya', lift: 50, anc: 'end', dx: -12, dy: -6 }
+  };
+  Object.values(city).forEach(c => { [c.x, c.y] = proj(c.lat, c.lon); });
+  const arc = (a, b, lift) => { const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2 - lift; return `M${a.x.toFixed(1)},${a.y.toFixed(1)} Q${mx.toFixed(1)},${my.toFixed(1)} ${b.x.toFixed(1)},${b.y.toFixed(1)}`; };
+
+  (function buildRoute() {
+    let s = `<defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="rgba(170,255,210,.10)"/></pattern></defs>`;
+    s += `<rect width="${G.W}" height="${G.H}" fill="url(#dots)"/>`;
+    for (let lon = 0; lon <= 60; lon += 10) { const [x] = proj(40, lon); s += `<line x1="${x}" y1="0" x2="${x}" y2="${G.H}" stroke="rgba(170,255,210,.08)"/><text class="small" x="${x + 4}" y="${G.H - 8}">${lon}°E</text>`; }
+    for (let lat = 35; lat <= 60; lat += 5) { const [, y] = proj(lat, 0); s += `<line x1="0" y1="${y}" x2="${G.W}" y2="${y}" stroke="rgba(170,255,210,.08)"/><text class="small" x="6" y="${y - 5}">${lat}°N</text>`; }
+    // geçmiş: Daşoğuz → İstanbul
+    const pastD = arc(city.das, city.ist, 70);
+    s += `<path id="pastPath" d="${pastD}" fill="none" stroke="rgba(170,255,210,.18)" stroke-width="2"/>`;
+    s += `<path d="${pastD}" pathLength="1" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur="3.2s" repeatCount="indefinite"/></path>`;
+    // hayal: İstanbul → Avrupa
+    ['ber', 'tll', 'ams', 'par', 'mad', 'rom'].forEach(k => { s += `<path class="dream-arc" d="${arc(city.ist, city[k], city[k].lift)}"/>`; });
+    // uçak noktası
+    s += `<circle r="5" fill="#fff"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#pastPath"/></animateMotion></circle>`;
+    // düğümler
+    const node = (k, big) => {
+      const c = city[k], dream = !big;
+      const lab = dream ? `<text x="${c.x + c.dx}" y="${c.y + c.dy}" text-anchor="${c.anc}">${c.n}</text>` : '';
+      return `<g class="node" id="n-${k}"><circle class="ring" cx="${c.x}" cy="${c.y}" r="${dream ? 6 : 8}"/><circle class="core" cx="${c.x}" cy="${c.y}" r="${dream ? 2.2 : 4}" ${dream ? 'style="opacity:.5"' : ''}/>${lab}</g>`;
+    };
+    ['ber', 'tll', 'ams', 'par', 'mad', 'rom'].forEach(k => s += node(k, false));
+    // Daşoğuz & İstanbul büyük düğümler + ping
+    [['das', 'end', -14, -16, 'Daşoğuz', '12.12.2007 · doğum'], ['ist', 'middle', 0, 30, 'İstanbul', 'bugün · Başakşehir']].forEach(([k, anc, dx, dy, n, sub]) => {
+      const c = city[k];
+      s += `<g class="node" id="n-${k}"><circle class="pulse" cx="${c.x}" cy="${c.y}" r="8"><animate attributeName="r" from="8" to="26" dur="2.2s" repeatCount="indefinite"/><animate attributeName="opacity" from=".8" to="0" dur="2.2s" repeatCount="indefinite"/></circle><circle class="ring" cx="${c.x}" cy="${c.y}" r="8"/><circle class="core" cx="${c.x}" cy="${c.y}" r="4.5"/><text x="${c.x + dx}" y="${c.y + dy}" text-anchor="${anc}" style="font-weight:700;fill:#fff">${n}</text><text class="small" x="${c.x + dx}" y="${c.y + dy + 15}" text-anchor="${anc}">${sub}</text></g>`;
+    });
+    $('#routeSvg').innerHTML = s;
+    // hayal şehir chip'leri
+    $('#dest').innerHTML = ['ber', 'tll', 'ams', 'par', 'mad', 'rom'].map(k => `<span class="chip" data-k="${k}">${city[k].flag} ${city[k].c}<small>${city[k].n}</small></span>`).join('');
+    $$('#dest .chip').forEach(ch => {
+      const n = $('#n-' + ch.dataset.k);
+      const on = () => { ch.classList.add('on'); n.classList.add('hl'); };
+      const off = () => { ch.classList.remove('on'); n.classList.remove('hl'); };
+      ch.addEventListener('mouseenter', on); ch.addEventListener('mouseleave', off);
+      ch.addEventListener('click', () => { ch.classList.contains('on') ? off() : on(); });
+    });
+  })();
+
+  /* ---------- Proje modal (sadece gerçek bilgiler) ---------- */
   const projData = [
-    {
-      tag: 'PYTHON · AUTOMATION · SCRAPING',
-      title: 'Automation & Web Scraping Bot',
-      desc: 'An autonomous Python bot system engineered to extract structured data from target web endpoints, handle rate limits gracefully, and automate repetitive digital workflows.',
-      specs: [
-        ['Core Language', 'Python 3 · Asyncio'],
-        ['Modules', 'BeautifulSoup · Requests · CLI'],
-        ['Output Pipeline', 'JSON / CSV / Automated Reports'],
-        ['Status', 'Active Development (GitHub)']
-      ],
-      url: 'https://github.com/lamer3455'
-    },
-    {
-      tag: 'C / C++ · JAVA · ALGORITHMS',
-      title: 'Data Structures & Algorithm Labs',
-      desc: 'Systems-level implementations covering memory management, pointer arithmetic, Object-Oriented Programming (OOP), matrix operations, and time/space complexity analysis.',
-      specs: [
-        ['Languages', 'C / C++ & Java (JDK)'],
-        ['Core Topics', 'Matrices · Sorting · Data Structures'],
-        ['Paradigm', 'OOP & Low-Level Memory'],
-        ['Academic Context', 'IGU Software Engineering']
-      ],
-      url: 'https://github.com/lamer3455'
-    }
+    { tag: 'PYTHON · OTOMASYON', title: 'Automation & Web Scraping Bot',
+      desc: 'Python ile geliştirdiğim; veri toplama ve rutin dijital görevleri otomatikleştiren bot denemesi.',
+      specs: [['Dil', 'Python'], ['Konu', 'Web scraping & otomasyon'], ['Versiyon kontrol', 'Git & GitHub'], ['Durum', 'GitHub\'da · gelişiyor']] },
+    { tag: 'C · JAVA · ALGORİTMA', title: 'Data Structures & Algoritma Çalışmaları',
+      desc: 'C ve Java ile nesne yönelimli programlama (OOP), sıralama ve matris algoritmaları üzerine uygulamalar.',
+      specs: [['Diller', 'C & Java'], ['Konular', 'OOP · sıralama · matris'], ['Bağlam', 'İGÜ Software Engineering'], ['Durum', 'GitHub\'da']] }
   ];
   const modalBg = $('#projModal');
-  function openModal(idx) {
-    const p = projData[idx]; if (!p) return;
-    $('#mTag').textContent = p.tag;
-    $('#mTitle').textContent = p.title;
-    $('#mDesc').textContent = p.desc;
-    $('#mRepo').href = p.url;
+  const openModal = i => {
+    const p = projData[i]; if (!p) return;
+    $('#mTag').textContent = p.tag; $('#mTitle').textContent = p.title; $('#mDesc').textContent = p.desc;
     $('#mSpecs').innerHTML = p.specs.map(([k, v]) => `<div class="mspec"><span>${k}</span><b>${v}</b></div>`).join('');
     modalBg.classList.add('open');
-  }
+  };
   const closeModal = () => modalBg.classList.remove('open');
   $$('[data-proj]').forEach(el => {
     el.addEventListener('click', () => openModal(+el.dataset.proj));
@@ -1216,14 +1341,29 @@
   modalBg.addEventListener('click', e => { if (e.target === modalBg) closeModal(); });
   addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); mm.classList.remove('open'); } });
 
-  /* ---------- Music Rotation + Web Audio API Synth Beat ---------- */
+  /* ---------- Dalgalanan bayraklar ---------- */
+  const S = 'preserveAspectRatio="xMidYMid slice"';
+  const FLAGS = {
+    tm: `<svg viewBox="0 0 60 40" ${S}><rect width="60" height="40" fill="#00843d"/><rect x="6" width="8" height="40" fill="#b3202a"/><g fill="#f4c20d"><path d="M10,3l3,3-3,3-3-3z"/><path d="M10,12l3,3-3,3-3-3z"/><path d="M10,21l3,3-3,3-3-3z"/><path d="M10,30l3,3-3,3-3-3z"/></g><circle cx="22" cy="8" r="4.2" fill="#fff"/><circle cx="23.6" cy="7.2" r="3.7" fill="#00843d"/><g fill="#fff"><circle cx="27" cy="4.5" r=".9"/><circle cx="28.4" cy="7" r=".9"/><circle cx="28.6" cy="9.8" r=".9"/><circle cx="27.4" cy="12.3" r=".9"/><circle cx="25.6" cy="13.6" r=".9"/></g></svg>`,
+    uz: `<svg viewBox="0 0 60 40" ${S}><rect width="60" height="40" fill="#1eb53a"/><rect width="60" height="27" fill="#fff"/><rect width="60" height="13" fill="#0099b5"/><rect y="13" width="60" height="1" fill="#ce1126"/><rect y="26" width="60" height="1" fill="#ce1126"/><circle cx="8" cy="6.5" r="4.2" fill="#fff"/><circle cx="9.6" cy="5.7" r="3.7" fill="#0099b5"/><g fill="#fff"><circle cx="17" cy="3" r=".85"/><circle cx="20" cy="3" r=".85"/><circle cx="23" cy="3" r=".85"/><circle cx="15.5" cy="6.2" r=".85"/><circle cx="18.5" cy="6.2" r=".85"/><circle cx="21.5" cy="6.2" r=".85"/><circle cx="24.5" cy="6.2" r=".85"/><circle cx="14" cy="9.4" r=".85"/><circle cx="17" cy="9.4" r=".85"/><circle cx="20" cy="9.4" r=".85"/><circle cx="23" cy="9.4" r=".85"/><circle cx="26" cy="9.4" r=".85"/></g></svg>`,
+    tr: `<svg viewBox="0 0 60 40" ${S}><rect width="60" height="40" fill="#e30a17"/><circle cx="22" cy="20" r="10" fill="#fff"/><circle cx="25" cy="20" r="8" fill="#e30a17"/><polygon fill="#fff" points="34,15 35.12,18.46 38.76,18.46 35.82,20.59 36.94,24.05 34,21.91 31.06,24.05 32.18,20.59 29.24,18.46 32.88,18.46"/></svg>`,
+    en: `<svg viewBox="0 0 60 30" ${S}><rect width="60" height="30" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" stroke="#c8102e" stroke-width="2"/><path d="M30,0V30M0,15H60" stroke="#fff" stroke-width="10"/><path d="M30,0V30M0,15H60" stroke="#c8102e" stroke-width="6"/></svg>`,
+    ru: `<svg viewBox="0 0 60 40" ${S}><rect width="60" height="13.4" fill="#fff"/><rect y="13.3" width="60" height="13.4" fill="#0039a6"/><rect y="26.6" width="60" height="13.4" fill="#d52b1e"/></svg>`,
+    de: `<svg viewBox="0 0 60 40" ${S}><rect width="60" height="13.4" fill="#000"/><rect y="13.3" width="60" height="13.4" fill="#dd0000"/><rect y="26.6" width="60" height="13.4" fill="#ffce00"/></svg>`
+  };
+  $$('.lang').forEach(card => {
+    $('.flag', card).innerHTML = FLAGS[card.dataset.f] || '';
+    if (!finePointer) card.addEventListener('click', () => card.classList.toggle('show'));
+  });
+
+  /* ---------- Müzik rotasyonu ---------- */
   const rot = [
-    ['Defkhan', 'Turkish Rap · Homie Bak'], ['Stabil', 'Turkish Rap · Lyricism & Flow'], ['Uzi', 'Turkish Rap'],
-    ['Central Cee', 'UK Rap · Favorite UK Artist'], ['BM', 'UK Rap · "London View"'],
+    ['Defkhan', 'Turkish Rap'], ['Stabil', 'Turkish Rap'], ['Uzi', 'Turkish Rap'],
+    ['Central Cee', 'UK Rap · en sevdiğim UK rapçi'], ['BM', 'UK Rap · "London View"'],
     ['2Pac', 'US Hip-Hop · West Coast'], ['Biggie Smalls', 'US Hip-Hop · East Coast'],
     ['Snoop Dogg', 'US Hip-Hop · G-Funk'], ['50 Cent', 'US Hip-Hop · G-Unit'], ['Eminem', 'US Hip-Hop · Shady']
   ];
-  let ri = 0, playing = true, prog0 = 0;
+  let ri = 3, playing = true, prog0 = 0;
   const npName = $('#npName'), npSub = $('#npSub'), npBar = $('#npBar'), vinyl = $('#vinyl'), eq = $('#eq'), npPlay = $('#npPlay');
   function setTrack(i) {
     ri = (i + rot.length) % rot.length; prog0 = 0;
@@ -1233,8 +1373,7 @@
   setTrack(ri);
   setInterval(() => {
     if (!playing) return;
-    prog0 += 100 / 60;
-    npBar.style.width = Math.min(prog0, 100) + '%';
+    prog0 += 100 / 60; npBar.style.width = Math.min(prog0, 100) + '%';
     if (prog0 >= 100) setTrack(ri + 1);
   }, 100);
   $('#npNext').addEventListener('click', () => setTrack(ri + 1));
@@ -1244,127 +1383,121 @@
     vinyl.classList.toggle('paused', !playing); eq.classList.toggle('off', !playing);
     npPlay.innerHTML = `<i class="fas fa-${playing ? 'pause' : 'play'}"></i>`;
   });
-  $$('.arow').forEach(r => r.addEventListener('click', () => {
-    const i = rot.findIndex(x => x[0] === r.dataset.a); if (i >= 0) setTrack(i);
-  }));
-
-  let audioCtx = null, synthTimer = null, synthOn = false, step = 0;
-  const notes = [110, 110, 130.81, 146.83, 98, 98, 130.81, 164.81];
-  const synthBtn = $('#synthToggle');
-  function toggleSynth() {
-    if (!synthOn) {
-      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      if (audioCtx.state === 'suspended') audioCtx.resume();
-      synthOn = true;
-      synthBtn.classList.add('on');
-      synthBtn.innerHTML = '<i class="fas fa-volume-high"></i> Synth Beat: On';
-      synthTimer = setInterval(() => {
-        if (!playing || !synthOn) return;
-        const now = audioCtx.currentTime;
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = step % 4 === 0 ? 'triangle' : 'sine';
-        osc.frequency.setValueAtTime(notes[step % notes.length], now);
-        gain.gain.setValueAtTime(0.06, now);
-        gain.gain.exponentialRampToValueAtTime(0.0008, now + 0.32);
-        osc.connect(gain); gain.connect(audioCtx.destination);
-        osc.start(now); osc.stop(now + 0.34);
-        step++;
-      }, 360);
-    } else {
-      synthOn = false;
-      clearInterval(synthTimer);
-      synthBtn.classList.remove('on');
-      synthBtn.innerHTML = '<i class="fas fa-volume-xmark"></i> Synth Beat: Off';
-    }
-  }
-  synthBtn.addEventListener('click', toggleSynth);
+  $$('.arow').forEach(r => r.addEventListener('click', () => { const i = rot.findIndex(x => x[0] === r.dataset.a); if (i >= 0) setTrack(i); }));
 
   /* ---------- Terminal ---------- */
   const out = $('#termOut'), inp = $('#termIn');
   const esc = s => s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
   const line = html => { const d = document.createElement('div'); d.className = 'tl'; d.innerHTML = html; out.appendChild(d); out.scrollTop = out.scrollHeight; };
   const row = (k, v) => `<span class="p">${k.padEnd(13)}</span>${v}`;
+  const BORN = new Date(2007, 11, 12);
+  function ageInfo() {
+    const now = new Date();
+    let y = now.getFullYear() - BORN.getFullYear();
+    const bd = new Date(now.getFullYear(), 11, 12);
+    if (now < bd) y--;
+    const next = now <= bd ? bd : new Date(now.getFullYear() + 1, 11, 12);
+    const days = Math.ceil((next - now) / 86400000);
+    return { y, days, total: Math.floor((now - BORN) / 86400000) };
+  }
   const cmds = {
     help: () => [
-      '<span class="k">Available commands:</span>',
-      row('whoami', 'short bio & role'), row('scan', 'run network & port security scan'),
-      row('matrix', 'toggle Matrix rain background'), row('location', 'hometown, university, residence'),
-      row('skills', 'technical stack & tools'), row('roadmap', 'current & upcoming focus areas'),
-      row('music', 'favorite hip-hop & rap rotation'), row('languages', 'spoken languages'),
-      row('projects', 'featured engineering repositories'), row('contact', 'direct communication channels'),
-      row('neofetch', 'system summary'), row('theme', 'theme orange|lime|cyan|violet|pink|random'),
-      row('clear', 'clear console output'),
-      '<span class="d">Tip: ↑ / ↓ for history, Tab for autocomplete. Also try sudo 😏</span>'
+      '<span class="k">Kullanılabilir komutlar:</span>',
+      row('whoami', 'kısa tanıtım'), row('about', 'hakkımda'), row('goal', 'hedefim (White Hat)'),
+      row('hats', 'hacker şapka renkleri'), row('scan', 'skill taraması'), row('skills', 'yeteneklerim'),
+      row('roadmap', 'gelişim planı'), row('location', 'doğum yeri, üniversite, ikamet'),
+      row('uptime', 'kaç gündür online? 🎂'), row('languages', 'konuştuğum diller'), row('music', 'rap rotasyonu'),
+      row('projects', 'projelerim'), row('contact', 'iletişim'), row('neofetch', 'sistem özeti'),
+      row('matrix', 'Matrix yağmuru aç/kapat'), row('theme', 'theme lime|cyan|matrix|violet|pink|random'), row('clear', 'ekranı temizle'),
+      '<span class="d">İpucu: ↑ / ↓ geçmiş, Tab tamamlama. Bir de sudo dene 😏</span>'
     ],
-    whoami: () => ['kuvanchbek_abdirimov', '<span class="d">IGU Software Engineering · Cyber Security &amp; Automation Developer</span>'],
-    location: () => [row('hometown', 'Dashoguz, Turkmenistan 🇹🇲'), row('residence', 'Başakşehir, Istanbul 🇹🇷'), row('university', 'Istanbul Gelisim University (Avcılar)')],
-    skills: () => [row('languages', 'C / C++, Java, Python, HTML/CSS/JS'), row('tools', 'Linux, Termux, Git &amp; GitHub, VS Code'), row('domains', 'Network Security, Bots &amp; Scripts, Web Scraping, Algorithms')],
+    whoami: () => ['kuvanchbek_abdirimov', '<span class="d">Software Engineering lisans öğrencisi @ İGÜ · future White Hat hacker</span>'],
+    about: () => [
+      'Daşoğuz doğumlu (12.12.2007), Başakşehir/İstanbul\'da yaşıyor.',
+      'İGÜ Software Engineering, 2. sınıf. Java & C biliyor, Python öğreniyor, Termux kullanıyor.',
+      'Hedef: cyber security → White Hat hacker. Hayal: Erasmus & Avrupa.'
+    ],
+    goal: () => [
+      row('hedef', 'Cyber Security uzmanı · White Hat (etik) hacker'),
+      row('kural', 'sadece yasal & izinli sistemler'),
+      row('yan hedef', 'Erasmus kazanmak · Avrupa\'yı gezmek')
+    ],
+    hats: () => [
+      '<span class="k">Hacker şapkaları:</span>',
+      row('⚪ White', 'izinli, etik, savunma odaklı  <span class="ok">← hedefim</span>'),
+      row('🔘 Gray', 'izinsiz ama kötü niyetsiz  <span class="warn">(yasal risk)</span>'),
+      row('🔴 Red', 'kötü hacker\'lara karşı sert hamleler  <span class="warn">(tartışmalı)</span>'),
+      row('⚫ Black', 'izinsiz, zararlı, yasa dışı  <span class="warn">(asla)</span>')
+    ],
+    scan: () => ['[scan] skills.db taranıyor…'],
+    skills: () => [row('diller', 'Java ✓ · C ✓ · Python (öğreniyorum)'), row('araçlar', 'Termux, Linux CLI, Git & GitHub, VS Code'), row('odak', 'Cyber Security, OOP, algoritma, bot denemeleri')],
     roadmap: () => [
-      row('active', 'Network &amp; System Security · Linux · Automation · Algorithms'),
-      row('next', 'AI API Integrations · Modern Web &amp; Flutter'),
-      row('goals', 'CTF &amp; Pentest Labs · Erasmus &amp; Languages · Open Source')
+      row('şu an', 'Cyber Security temelleri · Python · Java & C · Termux'),
+      row('sırada', 'Ağ güvenliği temelleri · GitHub\'ı büyütmek'),
+      row('hedef', 'CTF & lab · Erasmus · English C1 / Deutsch / Русский')
     ],
-    music: () => [row('Turkish Rap', 'Defkhan ★, Stabil, Uzi'), row('UK Rap', 'Central Cee ★, BM'), row('US Hip-Hop', '2Pac, Biggie, Snoop Dogg, 50 Cent, Eminem')],
-    languages: () => [row('Türkmençe', 'Native'), row('Oʻzbekcha', 'Native'), row('Türkçe', 'Advanced'), row('English', 'B2 – C1'), row('Русский', 'A1–A2'), row('Deutsch', 'A1')],
+    location: () => [row('doğum', '12 Aralık 2007 · Daşoğuz, Türkmenistan 🇹🇲'), row('ikamet', 'Başakşehir, İstanbul 🇹🇷 (Olimpiyat Stadı civarı)'), row('üniversite', 'İstanbul Gelişim Üniversitesi — Avcılar')],
+    uptime: () => { const a = ageInfo(); return [`up ${a.y} yıl (${a.total.toLocaleString('tr-TR')} gün) · sonraki doğum günü: <span class="p">${a.days} gün</span> sonra 🎂`]; },
+    languages: () => [row('Türkmençe', 'Native'), row('Oʻzbekcha', 'Native'), row('Türkçe', 'Advanced'), row('English', 'B2 – C1'), row('Русский', 'A1'), row('Deutsch', 'A1')],
+    music: () => [row('Turkish Rap', 'Defkhan, Stabil, Uzi'), row('UK Rap', 'Central Cee ★, BM'), row('US Hip-Hop', '2Pac, Biggie, Snoop Dogg, 50 Cent, Eminem')],
     projects: () => [
-      '<span class="p">[01]</span> Automation &amp; Web Scraping Bot  <span class="d">#Python #WebScraping</span>',
-      '<span class="p">[02]</span> Data Structures &amp; Algorithm Labs  <span class="d">#C #Java #OOP</span>',
+      '<span class="p">[01]</span> Automation & Web Scraping Bot  <span class="d">#Python</span>'.replace('&', '&amp;'),
+      '<span class="p">[02]</span> Data Structures &amp; Algoritma  <span class="d">#C #Java #OOP</span>',
       '<a href="https://github.com/lamer3455" target="_blank" rel="noopener">github.com/lamer3455</a>'
     ],
     contact: () => [
-      row('email', '<a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>'),
+      row('e-posta', '<a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>'),
       row('github', '<a href="https://github.com/lamer3455" target="_blank" rel="noopener">lamer3455</a>'),
       row('telegram', '<a href="https://t.me/kuvanch_3434" target="_blank" rel="noopener">@kuvanch_3434</a>'),
       row('whatsapp', '<a href="https://wa.me/905342145252" target="_blank" rel="noopener">+90 534 214 52 52</a>')
     ],
     neofetch: () => [
-      '<span class="p">kuvanch</span>@<span class="p">sec-node</span>',
-      '<span class="d">----------------------</span>',
-      row('OS', 'Cyber-Editorial OS v5.0'), row('Host', 'Istanbul / Başakşehir'), row('Origin', 'Dashoguz, Turkmenistan'),
-      row('Uni', 'Istanbul Gelisim Uni. (SWE)'), row('Shell', 'zsh + python3'), row('Langs', 'TM · UZ · TR · EN · RU · DE'),
-      row('Focus', 'Cyber Security · Automation'), row('Audio', 'WebAudio Synth Ready 🎧')
+      '<span class="p">kuvanch</span>@<span class="p">whitehat</span>', '<span class="d">----------------------</span>',
+      row('OS', 'Portfolio OS v6'), row('Host', 'Başakşehir, İstanbul'), row('Origin', 'Daşoğuz, Türkmenistan'),
+      row('Uni', 'İGÜ · Software Eng.'), row('Shell', 'termux + bash'), row('Langs', 'TM · UZ · TR · EN · RU · DE'),
+      row('Goal', 'White Hat · Cyber Security'), row('Mood', 'rap + kod 🎧')
     ],
-    matrix: () => {
-      matrixMode = !matrixMode;
-      return [matrixMode
-        ? '<span class="ok">[✓] Matrix rain enabled!</span> <span class="d">(Check the hero canvas; run matrix again to revert)</span>'
-        : '<span class="p">[✓] Reverted to neural network mesh.</span>'];
-    },
-    ls: () => ['<span class="p">about.txt  dashoguz.map  igu_campus.loc  skills.txt  roadmap.md  synth.audio  .secret</span>'],
-    date: () => [new Date().toLocaleString('en-GB', { timeZone: 'Europe/Istanbul' })],
+    matrix: () => { matrixMode = !matrixMode; return [matrixMode ? '<span class="ok">[✓] Matrix aktif</span> <span class="d">(hero alanına bak · tekrar yaz → kapanır)</span>' : '<span class="p">[✓] Ağ görünümüne dönüldü.</span>']; },
+    ls: () => ['<span class="p">about.txt  daşoğuz.map  igu_campus.loc  skills.txt  roadmap.md  hats.md  playlist.m3u  .secret</span>'],
+    date: () => [new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' })],
     clear: () => { out.innerHTML = ''; return []; }
   };
   const hist = []; let hi = -1;
   function run(raw) {
     const cmd = raw.trim(); if (!cmd) return;
-    line(`<span class="p">kuvanch@sec-node:~$</span> ${esc(cmd)}`);
+    line(`<span class="p">kuvanch@whitehat:~$</span> ${esc(cmd)}`);
     hist.unshift(cmd); hi = -1;
     const low = cmd.toLowerCase();
     if (low.startsWith('theme')) {
       let a = low.split(/\s+/)[1];
       if (a === 'random') a = Object.keys(themes)[Math.floor(Math.random() * 5)];
-      return line(setTheme(a) ? `Accent theme switched → <span class="p">${a}</span>` : 'Usage: theme orange | lime | cyan | violet | pink | random');
+      return line(setTheme(a) ? `Tema değişti → <span class="p">${a}</span>` : 'Kullanım: theme lime | cyan | matrix | violet | pink | random');
     }
     if (low.startsWith('sudo')) {
-      if (/hire/.test(low)) { line('<span class="ok">[sudo] privileges granted ✓</span>'); line('Great call! 😄 Reach out directly: <a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>'); return; }
-      return line('<span class="warn">Nice try 😏</span> — user is not in the sudoers file. This incident has been logged.');
+      if (/hire/.test(low)) { line('<span class="ok">[sudo] yetki verildi ✓</span>'); line('Harika karar! 😄 Hemen yaz: <a href="mailto:abdirimowkuwanchbek2@gmail.com">abdirimowkuwanchbek2@gmail.com</a>'); return; }
+      return line('<span class="warn">Güzel deneme 😏</span> — bu kullanıcı sudoers dosyasında yok. Olay raporlanacak.');
     }
-    if (low === 'scan' || low.startsWith('nmap') || low.startsWith('hack')) {
+    if (low === 'scan') {
       const steps = [
-        'PORT     STATE    SERVICE',
-        '22/tcp   <span class="ok">open</span>     ssh (OpenSSH 9.6)',
-        '80/tcp   <span class="ok">open</span>     http (lamer3455.github.io)',
-        '443/tcp  <span class="ok">open</span>     https (TLS 1.3 · Strict)',
-        '<span class="ok">[✓] Scan complete: 0 critical vulnerabilities, host hardened.</span>'
+        '[scan] skills.db taranıyor…',
+        '<span class="ok">[✓]</span> Java ........ biliyorum',
+        '<span class="ok">[✓]</span> C ........... biliyorum',
+        '<span class="warn">[~]</span> Python ...... az biraz, öğreniyorum',
+        '<span class="ok">[✓]</span> Termux ...... kullanıyorum',
+        '<span class="p">[→]</span> Cyber Security  yoldayım — hedef: White Hat'
       ];
-      steps.forEach((s, i) => setTimeout(() => line(s), i * 320));
+      steps.forEach((s, i) => setTimeout(() => line(s), i * 300));
       return;
     }
-    if (low === 'cat .secret') return line('No hidden files here… or is there? 👀 <span class="d">(try sudo hire kuvanchbek)</span>');
+    if (low.startsWith('hack') || low.startsWith('nmap')) {
+      ['Hedef taranıyor…', 'İzin kontrol ediliyor…', 'İzin yok ✗'].forEach((s, i) => setTimeout(() => line((i < 2 ? '<span class="p">[·]</span> ' : '<span class="warn">[!]</span> ') + s), i * 450));
+      setTimeout(() => line('Ben <span class="ok">White Hat</span>\'ım: <span class="k">izin yoksa test yok.</span> 🛡️'), 1600);
+      return;
+    }
+    if (low === 'cat .secret') return line('Gizli dosya yok… ya da var mı? 👀 <span class="d">(sudo dene)</span>');
     const fn = cmds[low];
     if (fn) { const r = fn(); r && r.forEach(line); }
-    else line(`<span class="d">command not found:</span> ${esc(cmd)} <span class="d">— type 'help'.</span>`);
+    else line(`<span class="d">komut bulunamadı:</span> ${esc(cmd)} <span class="d">— 'help' yaz.</span>`);
   }
   inp.addEventListener('keydown', e => {
     if (e.key === 'Enter') { run(inp.value); inp.value = ''; }
@@ -1374,8 +1507,8 @@
   });
   $('#term').addEventListener('click', () => inp.focus({ preventScroll: true }));
   $$('#quick button').forEach(b => b.addEventListener('click', () => run(b.dataset.c)));
-  line('<span class="p">Kuvanchbek Cyber-Editorial OS v5.0</span> <span class="d">— Başakşehir / Istanbul</span>');
-  line('<span class="d">Type</span> <span class="k">help</span> <span class="d">for available commands or try</span> <span class="k">scan</span> / <span class="k">matrix</span><span class="d">.</span>');
+  line('<span class="p">Kuvanchbek Portfolio OS v6</span> <span class="d">— Başakşehir / İstanbul</span>');
+  line('<span class="d">Komutlar için</span> <span class="k">help</span> <span class="d">yaz; ya da</span> <span class="k">hats</span> / <span class="k">scan</span> / <span class="k">matrix</span> <span class="d">dene.</span>');
   line('');
 })();
 </script>
